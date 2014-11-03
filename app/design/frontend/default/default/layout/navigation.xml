@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+  /**
+     * Mtoo Co.
+     *
+     * NOTICE OF LICENSE
+     *
+     * This source file is subject to the EULA
+     * that is bundled with this package in the file LICENSE.txt.
+     * It is also available through the world-wide-web at this URL:
+     * http://www.magento800.com/LICENSE.txt
+     *
+
+      before='catalog.leftnav'
+
+
+     * @category   Mtoo
+     * @package    Mtoo_Navitation
+     * @copyright  Copyright (c) 2010 Mtoo Co. (http://www.magento800.com)
+     * @license    http://www.magento800.com/LICENSE.txt
+     */
+-->
+<layout version="0.1.0">
+    <default>
+    	<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>navigation/css/nav.css</name></action>
+		</reference>
+    	<reference name="left">
+            <block type="navigation/navigation" name="navigation_left" template="navigation/left.phtml"  before='-'/>
+        </reference>        
+    </default>
+    <catalog_product_view>
+        <reference name="content">
+            <block type="navigation/navigation" name="navigation" template="navigation/left_content.phtml"  before='-'/>
+        </reference>
+    </catalog_product_view>
+    <customer_account_login translate="label">   
+        <reference name="content">
+            <block type="navigation/navigation" name="navigation" template="navigation/left_customer.phtml"  before='-'/>
+        </reference>
+    </customer_account_login>
+    <cms_page>
+        <reference name="content">
+            <block type="navigation/navigation" name="navigation_content" template="navigation/left_page.phtml"  before='-'/>
+        </reference>
+    </cms_page>
+    <sales_guest_form translate="label">    
+        <reference name="content">
+            <block type="navigation/navigation" name="navigation" template="navigation/left_content.phtml"  before='-'/>
+        </reference>
+    </sales_guest_form>
+    <catalogsearch_term_popular translate="label">
+        <reference name="content">
+            <block type="navigation/navigation" name="navigation" template="navigation/left_customer.phtml"  before='-'/>
+        </reference>
+    </catalogsearch_term_popular>
+    <checkout_cart_index>
+        <reference name="content">
+            <block type="navigation/navigation" name="navigation" template="navigation/left_customer.phtml"  before='-'/>
+        </reference>
+    </checkout_cart_index>
+    <cms_index_index>        
+        <remove name="navigation_content"/>
+    </cms_index_index>
+</layout> 

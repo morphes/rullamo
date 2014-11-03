@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <TempMela_Template>
+            <active>true</active>
+            <codePool>local</codePool>
+        </TempMela_Template>
+    </modules>
+</config>

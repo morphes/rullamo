@@ -1,0 +1,34 @@
+<dl class="sp-methods" id="checkout-payment-method-load">
+    <?php
+    $methods = $this->getMethods();
+    $oneMethod = count($methods) <= 1;
+    ?>
+    <?php
+    foreach ($methods as $_method):
+        $_code = $_method->getCode();
+        ?>
+        <dt>
+        <?php if (!$oneMethod): ?>
+            <input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio" name="payment[method]" title="<?php echo $this->htmlEscape($_method->getTitle()) ?>" <?php if ($this->getSelectedMethodCode() == $_code): ?> checked="checked"<?php endif; ?> class="radio" />
+        <?php else: ?>
+            <span class="no-display"><input id="p_method_<?php echo $_code ?>" value="<?php echo $_code ?>" type="radio" name="payment[method]" checked="checked" class="radio" /></span>
+                <?php $oneMethod = $_code; ?>
+            <?php endif; ?>
+        <label for="p_method_<?php echo $_code ?>"><?php echo $this->getMethodTitle($_method) ?> <?php echo $this->getMethodLabelAfterHtml($_method) ?></label>
+        </dt>
+        <?php if ($html = $this->getPaymentMethodFormHtml($_method)): ?>
+            <dd>
+                <?php echo $html; ?>
+            </dd>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</dl>
+<?php echo $this->getChildChildHtml('additional'); ?>
+<script type="text/javascript">
+    //<![CDATA[
+    sheepla_payment_method_change();
+    sheepla.query(".sp-methods input[type=radio]").change(function() {
+        sheepla_payment_method_change();
+    })
+    //]]>
+</script>

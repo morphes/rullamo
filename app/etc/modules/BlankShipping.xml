@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Mba_BlankShipping>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Mba_BlankShipping>
+  </modules>
+</config>

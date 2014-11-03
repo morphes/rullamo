@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <onepagecheckout_index_success translate="label">
+        <reference name="content">    
+            <block type="pay/success" name="morphes.success" template="pay/pd-4.phtml"/>
+        </reference>
+    </onepagecheckout_index_success>
+</layout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Morphes_Adminregion>
+            <version>0.0.1</version>
+        </Morphes_Adminregion>
+    </modules>
+    <global>
+        <models>
+           <adminregion_adminhtml>
+               <class>Morphes_Adminregion_Adminhtml_Model</class>
+           </adminregion_adminhtml>
+        </models>
+    </global>
+</config>

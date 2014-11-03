@@ -1,0 +1,17 @@
+=====================================
+This file describes changes between versions of module ET_RussianLanguage for Magento.
+
+Legend:
+* bug fix
++ added functionality
+- removed functionality
+
+=====================================
+TODO: 
+
+
+
+=====================================
+
+ver. 1.0.0
++ stable relize

@@ -1,0 +1,17 @@
+
+
+<div class="j2t-overlay" id="j2t-overlay" style="display: none;">&nbsp;</div>
+
+<div style="display: none; width: <?php if(isset($loading_arr[0])) echo $loading_arr[0];?>px; height: <?php if(isset($loading_arr[1]))  echo $loading_arr[1];?>px; top: 550px;" class="j2tajax-progress appstockus-ajax-progress" id="j2t_ajax_progress">
+        &nbsp;
+</div>
+<div class="j2t-loading-data appstockus-loading-data" id="j2t-loading-data">
+    <img alt="<?php echo $this->__('loading...');?>" src="<?php echo $this->getSkinUrl();?>images/j2t/ajax-loader.gif"/>
+    <p><?php echo $this->__('loading...');?></p>
+</div>
+
+<div style="display: none; width: <?php if(isset($confirm_arr[0]))  echo $confirm_arr[0];?>px; height: <?php if(isset($confirm_arr[1])) echo $confirm_arr[1];?>px; position: fixed; top: 496px;" class="j2tajax-confirm" id="j2t_ajax_confirm">
+        &nbsp;
+</div>
+
+<div id="j2t-temp-div" style="display:none;"></div>

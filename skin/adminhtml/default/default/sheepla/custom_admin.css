@@ -1,0 +1,14 @@
+.sheepla-widget-add-shipment-button{
+	display:none;
+}
+
+#sheepla-widget-shipment-simple-tab{
+	margin-top:0px;
+}
+#sheepla-widget-shipment-simple-tab .sheepla-widget-first{
+	width:200px;
+}
+
+.sheepla-sdk-area {
+    padding-top: 20px;
+}

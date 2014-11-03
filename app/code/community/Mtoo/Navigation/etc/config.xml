@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<!--
+  /**
+     * Mtoo Co.
+     *
+     * NOTICE OF LICENSE
+     *
+     * This source file is subject to the EULA
+     * that is bundled with this package in the file LICENSE.txt.
+     * It is also available through the world-wide-web at this URL:
+     * http://www.magento800.com/LICENSE.txt
+     *
+     * @category   Mtoo
+     * @package    Mtoo_Navitation
+     * @copyright  Copyright (c) 2010 Mtoo Co. (http://www.magento800.com)
+     * @license    http://www.magento800.com/LICENSE.txt
+     */
+-->
+<config>
+    <modules>
+        <Mtoo_Navigation>
+            <version>1.0.0.2</version>
+        </Mtoo_Navigation>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <navigation>
+                    <file>navigation.xml</file>
+                </navigation>
+            </updates>
+        </layout>
+        <category>
+            <collection>
+                <attributes>
+                    <category_ad/>
+                </attributes>
+            </collection>
+        </category>
+    </frontend>
+    <global>
+        <resources>
+            <navigation_setup>
+                <setup>
+                    <module>Mtoo_Navigation</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </navigation_setup>
+            <navigation_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </navigation_write>
+            <navigation_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </navigation_read>
+        </resources>
+        <blocks>
+            <navigation>
+                <class>Mtoo_Navigation_Block</class>
+            </navigation>
+        </blocks>
+    </global>
+</config>

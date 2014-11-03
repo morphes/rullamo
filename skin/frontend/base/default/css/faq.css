@@ -1,0 +1,76 @@
+.faq-input {
+    height: 23px;
+    width: 339px;
+    border-radius: 4px;
+    padding: 2px; 
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #B6B6B6;
+}
+.faq-input-fieldset {
+    margin-left: 6px;
+}
+.faq-textarea {
+    background: #fff;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    width: 338px;
+    height: 142px;
+}
+button.btn-checkout span span {
+    padding: 0 127px 0 123px;
+}
+.faq-item-faq {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 7px 0px;
+    border-bottom: 1px dotted #D5E6B7;
+}
+.creation-date {
+    width: 92px;
+    float: left;
+}
+.faq-content {
+    float: left; 
+    width:400px;
+    border-left: 1px dotted #D5E6B7;
+    padding-left: 15px;
+}
+dl.faq-items {
+    border-top: 1px dotted #D5E6B7;
+}
+.creation-date h4 {
+    padding-left: 1px;
+    font-size: 10px !important;
+}
+.answers-and-questions {
+    text-align: left;
+    font-size: 17px;
+    color: #3A648F;
+}
+.faq-questioner-question, .faq-answerer-question {
+    font-size: 1em;
+    color: #000000;
+}
+.faq-questioner-name h4, .faq-answerer-name h4  {
+    font-size: 11px !important;
+    color: #879631;
+}
+.faq-main-wrapper .limiter {
+width: 312px;
+float: left;
+}
+.faq-main-wrapper .pager {
+background: #F2F4E8;
+}
+.last3-messages {
+color: #173C62 !important;
+font: bold 13px/16px Tahoma, Arial, Helvetica, sans-serif !important;
+}
+.side-nav-faq .block .block-content {
+    padding-top: 4px !important;
+}
+#categories_block_left .block-title {
+padding-top:4px !important;
+}
+

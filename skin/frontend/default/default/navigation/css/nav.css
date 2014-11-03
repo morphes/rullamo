@@ -1,0 +1,173 @@
+/* CSS Document */
+
+#sidenav{text-align:left;z-index:50;}
+#sidenav .sidenav_h{height:30px;background:#334154;padding-left:10px; border-radius:3px 3px 0px 0px;}
+#sidenav .sidenav_h a{height:30px;background:url(../images/common/menu_ico.gif) 95% 10px no-repeat;line-height:26px;font-size:12px;color:#fff;display:block;font-weight:bold;}
+#sidenav .sidenav_h a:hover{color:#eee;text-decoration:none}
+#sidenav .sidebar_menu{font-size:12px;width:100%;position:relative;}
+#sidenav .sidebar_menu .subitem{background:#FFF;border:#313131 solid 1px;border-bottom:#313131 solid 2px;border-right:#313131313131 solid 2px;position:absolute;left:220px;top:0;z-index:51;}
+#sidenav .sidebar_menu .litem{
+	height: 39px;
+	overflow:hidden;
+	float:left;	
+	background: white;
+	border-bottom:none;
+	border-left:#313131 solid 1px;
+	border-right:#313131 solid 1px;	
+	-moz-box-shadow: 2px 2px 3px #313131;
+	-webkit-box-shadow: 2px 2px 3px #313131;
+	box-shadow: 2px 2px 3px #313131;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#313131')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#313131');
+}
+#sidenav .sidebar_menu .litem:last-child {
+	border-bottom: #313131 solid 1px;
+}
+#sidenav .sidebar_menu .litem:first-child {
+	border-top: #313131 solid 1px;
+}
+#sidenav .sidebar_menu .litem span{
+	display:block;
+	width:100%;
+	/*height:28px;*/
+	height: 39px;
+	line-height:28px;
+	position:relative;}
+#sidenav .sidebar_menu .litem.hoverClass{
+	/*border:#313131 solid 1px;*/
+	border-right:none;
+	
+	color: white !important;
+	 /*height:28px;*/
+	  width:100%;}
+#sidenav .sidebar_menu .litem.hoverClass span{
+	/*position:relative;*/
+	background: url(http://dachniki-club.ru/skin/frontend/default/default/navigation/images/arrow_grey_submenu.png) no-repeat -148px 7px;
+	z-index:50;
+	position: absolute;
+	width: 203px;
+}
+.sitemap_menu {
+	position: absolute;
+}
+#sidenav .sidebar_menu .litem.hoverClass span a {
+	color: white !important;
+
+}
+#sidenav .sidebar_menu .litem.hoverClass {
+	background: url(http://dachniki-club.ru/skin/frontend/default/default/navigation/images/arrow_grey_submenu.png) white no-repeat -148px 7px;
+}
+#sidenav .hoverClass:before {	
+	background: url(http://dachniki-club.ru/skin/frontend/default/default/navigation/images/arrow_grey_submenu.png) white no-repeat -148px 7px;	
+}
+#sidenav .sidebar_menu .litem span a{
+	display: block;
+	width: 100%;
+	/* font-weight: bold; */
+	font-size: 12px;
+	text-decoration: none;
+	color: #333;
+	padding: 0;
+	text-indent: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 6px;
+}
+#sidenav a {
+	font-family: Arial, Helvetica, sans-serif;
+}
+#sidenav .sidebar_menu .litem.hoverClass span a{color:#666}
+#sidenav .sidebar_menu .litem span em.dow_ico{ width:3px; height:5px; position:absolute; right:10px; top:12px; display:block; background:url(../images/common/footer_ico.gif) no-repeat}
+#sidenav .sidebar_menu .litem .subitem{width:814px;display:none;height:auto;padding:15px 0px 17px 0px;border-bottom:#313131 solid 2px;border-right:#313131 solid 2px;position:absolute;z-index:49;-webkit-box-shadow:8px 5px 5px 0px rgba(0,0,40,.4);-moz-box-shadow:8px 5px 5px 0px rgba(0,0,40,.4);box-shadow:8px 5px 5px 0px rgba(0,0,40,.4);}
+#sidenav .sidebar_menu .litem .subitem.w634{width:690px;}
+#sidenav .sidebar_menu .litem .subitem.w604{width:660px;}
+#sidenav .sidebar_menu .litem .subitem.w594{width:650px}
+#sidenav .sidebar_menu .litem .subitem.w383{width:425px}
+#sidenav .sidebar_menu .litem .subitem.w470{width:470px}
+#sidenav .sidebar_menu .litem .subitem.w700{width:650px;}
+.subitem .subitem_list{width:auto;border-right:#eee solid 1px;margin-left:15px;display:inline;}
+.subitem .special{width:160px;height:auto;margin-left:20px;display:inline;}
+.subitem .subitem_list ul{width:190px;height:auto;margin-left:5px;overflow:hidden;padding-right:15px}
+.subitem .subitem_list ul.w230{width:230px}
+.subitem .subitem_list ul.w200{width:200px}
+.subitem .subitem_list ul ul{width:180px;margin-left:0px;margin-top:4px;margin-left:3px;}
+.subitem .subitem_list ul li.addborder{background:url(../images/common/silder_menu_bg.jpg) center bottom no-repeat;border:none;padding:0;}
+.subitem .subitem_list ul li{width:185px;float:left;word-break:break-all;white-space:nowrap;overflow:hidden;}
+.subitem .subitem_list ul li.sub_category_self{margin-bottom:10px;padding-bottom:10px;}
+.subitem .subitem_list ul .blue{color:#024c9e;background:none;}
+.subitem .subitem_list ul .red{color:black;}
+.subitem .subitem_list ul .green{color:#449000;}
+.subitem .subitem_list ul.w230 li{width:225px;}
+.subitem .subitem_list ul.w200 li{width:195px;}
+.subitem_in .subitem_list ul li.nochildren p.nochildrenlinks{display:block;background:url(../images/common/litem_ico.jpg) 0 7px no-repeat;padding:0 0 0 12px;}
+.subitem_in .subitem_list ul li.nochildren p.nochildrenlinks a{padding:0;display:inline;color:#000}
+.subitem .subitem_list ul li.cc20{background:url(../images/common/ico.png) -10px -502px no-repeat;}
+.subitem .subitem_list ul li a{color:#000}
+.subitem .subitem_list ul li a.cc20{color:black}
+.subitem .subitem_list ul li ul li{background:url(../images/common/footer_ico.gif) 0 6px no-repeat;padding-left:6px;float:left;line-height:16px;word-break:break-all;white-space:nowrap;overflow:hidden;}
+.subitem .subitem_list ul li ul li.viewall{background:none;padding-left:0;}
+.subitem .subitem_list ul li ul li.viewall a{color:#114ea6;text-decoration:none;}
+.subitem .subitem_list ul li ul li.viewall a:hover{text-decoration:underline}
+.subitem .subitem_list ul li ul li a{font-size:11px;color:#666}
+.subitem .special .pro_special{margin-bottom:10px;height:auto;overflow:hidden}
+.subitem .special .pro_special li{margin-bottom:5px;float:left;}
+.subitem .special .pro_special li.spro_title{color:black;padding-top:5px;}
+.subitem .special .pro_special li.spro_img{width:155px;height:120px;border:#ddd solid 1px;overflow:hidden;position:relative;}
+.pro_special li.spro_img .spro_off{width:50px;height:33px;padding:10px 0 0 15px;text-align:center;position:absolute;right:-1px;top:78px;background:url(../images/list/sale_zk.gif) 0 0 no-repeat;}
+.subitem .special .pro_special li.spro_name a{color:#000;font-size:11px;}
+.subitem .special ul.special_links li{float:left;height:18px;width:140px;line-height:18px;overflow:hidden;background:url(../images/common/ico.png) -13px -440px no-repeat;padding-left:10px;}
+.special .special_links li a{color:#004e86;font-size:11px;}
+.subitem .special .pro_brand li{margin-bottom:5px;float:left;}
+.subitem .special .pro_brand li.brand_title{color:black;}
+.subitem .special .pro_brand li.brand_img{width:150px;height:47px;border:#ddd solid 1px;overflow:hidden;}
+.subitem .fleft{ float:left}
+.subitem .fright{ float:left}
+.subitem .clear{clear:both}
+.subitem ul { padding:0px;margin:0px;}
+#sidenav .sidenav_bot{width:220px; height:2px; background:url(../images/common/categories_botbg.gif) no-repeat; clear:left}
+/*.sidebar_menu:before {
+	width: 0;
+	height: 0;
+	content: '';
+	position: absolute;
+	top: -9px;
+	left: 14px;
+	background: transparent;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 9px solid #313131;
+}*/
+#sidenav {
+	margin-top: -11px;
+	margin-left: 1px;
+}
+.menu.home-link.home-active {
+	margin-left: 1px;
+}
+.litem {
+	width:191px !important;
+}
+#sitemap_menu {
+	width: 191px !important;
+	height: 236px;
+}
+#sitemap_menu.home-active {
+	position: absolute;
+	z-index: 10;
+}
+#sidenav.sidenav-content {
+	width: 192px;
+	position: absolute;
+	z-index: 500;
+	margin-top: -42px;
+	margin-left: -7px;
+}
+#sidenav.sidenav-customer {
+	margin-top: -20px;
+	margin-left: -7px;
+	position:absolute;
+}
+#sidenav.sidenav-page {
+	margin-top: -42px;
+	margin-left: -209px;
+	position: absolute;
+}

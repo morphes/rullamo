@@ -1,0 +1,186 @@
+div.j2tajax-confirm div.j2tajax-checkout-img{
+    float:left; margin-right:5px;
+	border:3px solid #ddd;
+}
+
+div.j2tajax-confirm .success-msg {
+    background:none;
+    color:#000;
+    padding: 8px !important;
+    text-align:left;
+    border:none !important;
+}
+#j2t_ajax_confirm_wrapper .buttons-set {margin-top:14px !important;}
+div.j2t-cart-bts {clear:both; height:31px; margin-top:20px;}
+
+
+div.j2tajax-confirm, div.j2tajax-progress{
+    border:#ccc solid 1px; z-index:999;
+    text-align:center;
+}
+div.j2tajax-progress{padding:5px; z-index: 999;}
+
+
+div.j2t-overlay{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+a.j2t-checkout-link{
+    background: transparent url('../../images/j2t/j2t-button-gray-left.gif') no-repeat top left;
+    display: block;
+    float: right;
+    font-size:11px;
+    line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+    height: 24px; /* Height of button background height */
+    padding-left: 11px; /* Width of left menu image */
+    text-decoration: none;
+    margin-right:10px;
+}
+
+a:link.j2t-checkout-link, a:visited.j2t-checkout-link, a:active.j2t-checkout-link{
+    color: #fff; /*button text color*/ font-weight:bold;
+}
+
+a.j2t-checkout-link span{
+    background: transparent url('../../images/j2t/j2t-button-gray-right.gif') no-repeat top right;
+    display: block;
+    padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
+}
+
+a.j2t-checkout-link:hover{ /* Hover state CSS */
+    background-position: bottom left;
+}
+
+a.j2t-checkout-link:hover span{ /* Hover state CSS */
+    background-position: bottom right;
+    color:#fff;
+}
+
+
+
+span.j2t-or{
+    display:none;
+}
+a.j2t-continue-link{
+    background: transparent url('../../images/j2t/j2t-button-green-left.gif') no-repeat top left;
+    display: block;
+    float: left;
+    font-size:11px;
+    line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
+    height: 25px; /* Height of button background height */
+    padding-left: 11px; /* Width of left menu image */
+    text-decoration: none;
+    margin-left:10px;
+}
+
+a:link.j2t-continue-link, a:visited.j2t-continue-link, a:active.j2t-continue-link{
+    color: #fff; /*button text color*/ font-weight:bold;
+}
+
+a.j2t-continue-link span{
+    background: transparent url('../../images/j2t/j2t-button-green-right.gif') no-repeat top right;
+    display: block;
+    padding: 3px 11px 6px 0; /*Set 11px below to match value of 'padding-left' value above*/
+}
+
+a.j2t-continue-link:hover{ /* Hover state CSS */
+    background-position: bottom left;
+}
+
+a.j2t-continue-link:hover span{ /* Hover state CSS */
+    background-position: bottom right;
+    color: #fff;
+}
+
+span.j2t-upsells-list-wrapper {display:block; text-align:left;}
+
+table.j2t-upsell-product-table {clear:both;}
+table td.j2t-upsells-list-item h5.j2t-product-lnk {}
+table td.j2t-upsells-list-item h5.j2t-product-lnk a {font-size: 11px; font-weight: normal;}
+h4.j2t-upsells-title {display:block; clear:both; padding-left:10px;padding-top:5px;}
+
+div.j2tajax-progress, div.j2tajax-confirm {background:#fff; border:5px solid #2C5987;}
+#wrapper-cart {width: 500px; height: 400px; }
+#header-cart {height: 30px;width: 100%;padding: 8px;}
+#cart-icon {background: url(../../images/intex/cart-icon.png) no-repeat; width: 55px; height: 50px; float: left; }
+#header-cart-message {width: 440px; float: left; height: 50px;margin-top: 8px;text-align: left;}
+#count-cart-href a {
+    color: #264c74; text-decoration: underline;
+font-size: 17px;
+}
+#on-summ {font-size: 17px;
+color: black;
+margin-left: 4px;}
+#on-summ-text {font-size: 17px;
+color: black;}
+#body-cart {width: 533px; height: 191px;padding: 8px;}
+#cart-product-image {width: 180px; height: 200px; float: left;}
+#cart-product-descr {width: 300px; height: 200px; float: left;}
+#product-name {color: #416285; height:40px;}
+#product-name a {color: #2c6291; font-size: 14px;font-weight:normal !important;}
+#minus, #plus {width: 23px; float: left;cursor: pointer;-moz-user-select: -moz-none;-o-user-select: none;-khtml-user-select: none;-webkit-user-select: none;user-select: none; height: 19px;}
+#product-count-input {width: 52px; float: left;}
+#product-count {margin-left: 6px;
+margin-top: 10px;
+height: 27px;}
+#minus {
+    background: url(/skin/frontend/default/toys/images/minus_cart.png) no-repeat; 
+    margin-top: 4px; }
+#plus {
+    background: url(/skin/frontend/default/toys/images/plus_cart.png) no-repeat; 
+    margin-left:4px; margin-top: 4px;}
+#product-count-input {background-color: #f2f4e8;}
+#product-count-input input {width: 40px;margin: 4px; outline: none;text-align: center;}
+#by-price {width: 157px;
+float: left;
+margin-top: 0px;
+font-size: 15px;
+font-weight: normal;
+margin-left: 8px;
+text-align: left;}
+.continue-image {background: url(../../images/intex/reload.png) no-repeat 0px 2px; width: 20px; float: left;cursor:pointer;}
+.continuation {color: #264c74; border-bottom: 1px dashed #264c74;font-weight: bold;font-size:14px;cursor:pointer;}
+#send-a-call {background: #F2F4E8;; height: 125px;}
+#order-text { color: rgb(148,151,144); font-size: 11px; padding-top:8px;text-align: left;}
+#order-header {height: 27px; text-align: left;}
+#order-text-wrapper {margin-left: 15px;
+text-align: left;
+margin-right: 12px;}
+#form-order {width: 533px;margin-top:3px;}
+#form-order-col1, #form-order-col2 {/*width: 154px;*/
+float: left;
+/*margin-left: 34px;*/
+margin-top: 7px;}
+#form-order-col1 {
+    width: 196px;
+    margin-left: 11px;
+    margin-top: 11px;
+}
+#form-order-col2 {
+    margin-top:11px;
+    width: 221px;
+}
+#form-order-col3 {float:left; width:90px;}
+.form-order-input {width: 159px;border: 1px solid #cecdcd; height: 25px; font-size:12px;font-style:italic; }
+.hint-order {color: #484848; font-size: 10px;  margin-left: 6px; margin-top: 2px;text-align: left;}
+.order-cart-button {margin-top: 60px !important;
+margin-left: 5px !important;}
+.green-button {margin-top:1px !important;}
+#order-header {font-weight: normal;
+margin-left: 15px;
+color: rgb(148,151,144);
+font-size: 14px;
+line-height: 1px !important;}
+.anons-text {
+width: 22px;
+float: left;
+line-height: 12px;
+margin-top: 9px;
+   color: #797A77;
+}

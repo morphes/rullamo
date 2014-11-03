@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<frontend>
+		<layout>
+			<updates>
+				<tempmela>
+					<file>tempmela.xml</file>
+				</tempmela>
+			</updates>
+		</layout>
+	</frontend>
+</config>

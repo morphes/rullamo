@@ -1,0 +1,19 @@
+/**
+ * @category    Morphes
+ * @package     MorphesPro_FilterSlider
+ * @copyright   Copyright (c) http://www.morphes.ru
+ * @license     http://www.morphes.ru/license  Proprietary License
+ */
+.m-filter-slider { height: 17px; position: relative; background: transparent url(../images/morphespro_filterslider/bkg_slider.png) 1px 6px no-repeat; background-size: 157px;}
+.m-filter-slider > .m-slider-from, .m-filter-slider > .m-slider-to { height: 17px; width: 18px; position: absolute; }
+.m-filter-slider > .m-slider-span {margin-left:-6px; height: 17px; position: absolute; background: transparent url(../images/morphespro_filterslider/tracker.png) -1px 6px repeat-x;/* border-bottom: 2px solid #969696; */}
+.m-filter-slider > .m-slider-from { background: transparent url(../images/morphespro_filterslider/slider.png) 0 0 no-repeat; cursor: pointer; }
+.m-filter-slider > .m-slider-to { background: transparent url(../images/morphespro_filterslider/slider.png) -1px 0 no-repeat; cursor: pointer; }
+
+.m-slider-values {text-align: center; margin-top: 3px; } 
+.m-slider-values .m-slider-min-value { float: left; }
+.m-slider-values .m-slider-max-value { float: right;}
+.m-slider-selected-value {}
+#diametr_test-range-from {display:none !important;}
+#diametr_test-range-to {display:none !important;}
+#price-range-from, #price-range-to {display: none !important}

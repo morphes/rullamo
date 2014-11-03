@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category    Edost
+ * @package     Edost_Rus
+ * @copyright   Copyright (c) 2011, 2012 eDost.ru (http://www.eDost.ru)
+ */
+-->
+<config>
+	<modules>
+		<Edost_Rus>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+				<Mage_Shipping />
+			</depends>
+		</Edost_Rus>
+	</modules>
+</config>

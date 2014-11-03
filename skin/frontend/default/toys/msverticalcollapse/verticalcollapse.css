@@ -1,0 +1,129 @@
+#verticalcollapse {
+	display: inline-block;
+}
+#verticalcollapse li.level0 {
+	position: relative;
+}
+#verticalcollapse li {
+	position: static;	
+	font-weight:normal;
+	list-style:none;
+	float:left;
+}
+/* level 1 */
+#verticalcollapse li {
+	width: 190px;
+}
+
+#verticalcollapse li a {
+	padding: 5px 5px 5px 10px;
+	display:block;
+	color: #28517B;
+	text-decoration: none;
+	font-weight:bold;
+	border-bottom:1px dotted #ddd;
+}
+#verticalcollapse li.active a{
+	color: #28517B;
+}
+
+#verticalcollapse li a:hover {
+	color: #FF6C08;
+}
+/* level 2*/
+#verticalcollapse li.active ul li.active a, #verticalcollapse li.active ul li a:hover {
+	color: #FF6C08;
+}
+#verticalcollapse li.active ul li a {
+	color: #2f2f2f;
+}
+#verticalcollapse ul.level0 {
+	clear:both;
+	display: none;
+}
+#verticalcollapse li.active ul.level0 {
+	display: inline-block;
+}
+#verticalcollapse ul li a { 
+	text-decoration:none;
+	text-transform:none;
+	padding: 3px 5px 3px 10px;
+	font-weight:normal;
+	color:#444;
+	margin-left:10px;
+}
+#verticalcollapse ul li a {
+	background:url(bull.gif) no-repeat left 10px;
+}
+
+/* level 3 */
+#verticalcollapse li.active ul li.active ul li.active a{
+	color: #666;
+}
+#verticalcollapse li.active ul li.active ul li a:hover {
+	color: #FF6C08;
+}
+#verticalcollapse li.active ul li.active ul li a {
+	color: #2f2f2f;
+}
+#verticalcollapse ul ul {
+	float:left;
+	padding:0px;
+	width:100%;
+	display: inline-block !important;
+}
+#verticalcollapse ul ul li { }
+#verticalcollapse ul ul li a { 
+	background:url(bull2.gif) no-repeat scroll left 10px transparent;  	
+	padding: 3px 5px 3px 10px;
+	margin-left:15px;
+}
+/* level 4 */
+#verticalcollapse li.active ul li.active ul li.active ul li.active a, #verticalcollapse li.active ul li.active ul li.active ul li a:hover {
+	color: #666;
+}
+#verticalcollapse li.active ul li.active ul li.active ul li a {
+	color: #2f2f2f;
+}
+#verticalcollapse ul ul ul li a {
+	padding: 3px 5px 3px 40px;
+	background-position: 30px 9px;
+}
+/* level 5 */
+#verticalcollapse li.active ul li.active ul li.active ul li.active ul li.active a, #verticalcollapse li.active ul li.active ul li.active ul li.active ul li a:hover {
+	color: #666;
+}
+#verticalcollapse li.active ul li.active ul li.active ul li.active ul li a {
+	color: #2f2f2f;
+}
+#verticalcollapse ul ul ul ul li a {
+	padding: 3px 5px 3px 50px;
+	background-position: 40px 9px;
+}
+/* button accordion */
+#verticalcollapse span.head {
+	position: absolute;
+	top: 0;
+	right: 8px;
+}
+#verticalcollapse span.head a { 
+	background:url(collapsed.gif) no-repeat;
+	color:#333333;
+	display:block;
+	height:15px;
+	margin-top:5px;
+	padding:0;
+	width:15px;
+	border:none;
+}
+#verticalcollapse span.head a:hover {
+	background:url(expanded.gif) no-repeat;
+}
+#verticalcollapse li.selected span.head a {
+	background:url(expanded.gif) no-repeat;
+}
+#verticalcollapse li.selected span.head a:hover {
+	background:url(collapsed.gif) no-repeat;
+}
+
+/* ======================================================================================= */

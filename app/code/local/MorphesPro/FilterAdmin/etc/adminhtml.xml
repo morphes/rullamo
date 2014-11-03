@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+@category    Morphes
+@package     MorphesPro_FilterAdmin
+@copyright   Copyright (c) http://www.morphes.ru
+@license     http://www.morphes.ru/license  Proprietary License
+ -->
+<config>
+	<menu>
+		<morphes>
+            <title>Intex</title>
+            <sort_order>79</sort_order>
+			<children>
+                <filters translate="title" module="morphespro_filteradmin">
+                    <title>Установить ползунки для атрибутов</title>
+                    <action>adminhtml/morphes_filters/</action>
+                    <sort_order>100</sort_order>
+                </filters>
+			</children>
+		</morphes>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<morphes translate="title" module="morphespro_filteradmin">
+                        <title>Configure Morphes Extensions</title>
+                        <sort_order>79</sort_order>
+						<children>
+							<filters translate="title" module="morphespro_filteradmin">
+								<title>Layered Navigation</title>
+		                        <sort_order>100</sort_order>
+							</filters>
+						</children>
+					</morphes>
+					<system>
+						<children>
+							<config>
+								<children>
+									<morphes_filters translate="title" module="morphespro_filteradmin">
+										<title>MORPHESdev Layered Navigation</title>
+									</morphes_filters>
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

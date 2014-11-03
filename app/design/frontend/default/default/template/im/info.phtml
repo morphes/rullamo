@@ -1,0 +1,27 @@
+<?php
+/*
+ *
+ * @category   Community
+ * @package    IntellectMoney
+ * @copyright  http://intellectmoney.ru
+ * @license    Open Software License (OSL 3.0)
+ *
+ */
+
+/*
+ * IntellectMoney payment module
+ *
+ * @author     intellectmoney.ru
+ *
+ */
+echo $this->__('IntellectMoney');
+
+$orderId = $this->getRequest()->getParam('order_id', false);
+
+if($orderId) {
+    $url=$this->getMethod()->getOrderPlaceRedirectUrl();
+    echo ' | <a href="'.$url.'">'. $this->__('Payment for order #').$orderId.' </a>';
+}
+
+?>
+

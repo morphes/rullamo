@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+  <modules>
+    <Smile_CategoryAttribute>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Smile_CategoryAttribute>
+  </modules>
+</config>

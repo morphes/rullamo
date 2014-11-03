@@ -1,0 +1,30 @@
+<?php
+class Morphes_Order_IndexController extends Mage_Core_Controller_Front_Action
+{
+    public function indexAction()
+    {
+       $url = $_REQUEST['url'];
+       $url = explode('/', $url);
+       $id = $url[11];
+       $product = Mage::getModel('catalog/product')->setStoreId(Mage::app()->getStore()->getId())->load($id);
+       $name = $product->getName(); 
+       $mail = Mage::getModel('core/email');
+       $mail->setToName('Mike');
+       $mail->setToEmail('sazon@nxt.ru');
+       $mail->setBody($_REQUEST['fio'].$_REQUEST['phone'].$name);
+       $mail->setSubject('=?utf-8?B?'.base64_encode('Новый заказ с формы заказа').'?=');
+       $mail->setFromEmail("admin@intex.ru");
+       $mail->setFromName("Intex");
+       $mail->setType('text');
+ 
+    try {
+        $mail->send();
+    }
+    catch (Exception $e) {
+        Mage::logException($e);
+        return false;
+    }
+ 
+       exit();
+    }
+}

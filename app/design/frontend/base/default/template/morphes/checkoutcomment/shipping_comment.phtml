@@ -1,0 +1,7 @@
+<?php 
+$_comment = $this->getLayout()->createBlock('checkoutcomment/widget_comment');
+if ($_comment->isEnabled()) : ?>
+    <div class="field">
+        <?php echo $_comment->setComment($this->getQuote()->getCustomerNotes())->setFieldIdFormat('%s')->setFieldNameFormat('%s')->toHtml() ?>
+    </div>
+<?php endif; ?>

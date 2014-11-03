@@ -1,0 +1,101 @@
+/*-- jShowOff module styles --*/
+#features, #slidingFeatures, #labelFeatures, #basicFeatures, #thumbFeatures {	
+	position: relative;
+	overflow: hidden;
+	width: 601px;
+	height: 236px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	}
+.jshowoff {
+	width: 621px;
+	margin:0px 0;
+	}
+.jshowoff div {	
+	width: 754px;
+	height: 236px;
+	}
+.jshowoff div, .jshowoff img, .jshowoff {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	}
+#basicFeatures, .jshowoff.basicFeatures, .jshowoff.basicFeatures img, .jshowoff.basicFeatures div {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	}
+.jshowoff div p, .jshowoff div h2 {
+	_background-color: #efefef;
+	position:absolute;
+	bottom:15px;
+	background:none;
+	padding:0px;
+	}
+.jshowoff h2, .jshowoff p {
+	font-size: 18px;
+	padding: 15px 20px 0px;
+	margin: 0;
+	}
+.jshowoff p {
+	font-size: 13px;
+	line-height: 15px;
+	}
+.eddie {
+	float: right;
+	padding: 15px 20px 15px 20px;
+	}
+.jshowoff p.jshowoff-slidelinks {
+	position: absolute;
+	bottom: 12px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	}
+.jshowoff-slidelinks a, .jshowoff-controls a {
+	background:url(numberbg.gif) no-repeat left top;
+	display: block;
+	color: #000;
+	padding:2px 7px 4px;
+	margin: 5px 0 0 5px;
+	float: left;
+	text-decoration: none;
+	outline: none;
+	font-size: 11px;
+	line-height: 14px;
+	font-weight:bold;
+}
+.jshowoff-slidelinks a:hover, .jshowoff-controls a:hover { 	background:url(number_activebg.gif) no-repeat left top; color: #fff;	}
+.jshowoff-slidelinks a.jshowoff-active, .jshowoff-slidelinks a.jshowoff-active:hover { background:url(number_activebg.gif) no-repeat left top; color: #fff;	}
+
+p.jshowoff-controls {
+	display:none;
+	background: #aaa;
+	overflow: auto;
+	/*height: 12%;*/
+	padding: 0 0 5px 5px;
+	margin: 0;
+	left:15px;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	}
+.jshowoff-controls a {
+	margin: 5px 5px 0 0;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 4px 8px 5px;
+	}
+
+.jshowoff-pausetext {
+	color: #fff;
+}
+#features, #slidingFeatures, #labelFeatures, #basicFeatures, #thumbFeatures {	
+	width: 751px;	
+}
+.slideDx {
+	width: 200px; 
+	float:left;
+}
+

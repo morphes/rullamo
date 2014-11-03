@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Morphes_Call>
+            <version>0.1.0</version>
+        </Morphes_Call>
+    </modules>
+    <frontend>
+        <routers>
+            <Morphes_Call>
+                <use>standard</use>
+                <args>
+                    <module>Morphes_Call</module>
+                    <frontName>sendcall</frontName>
+                </args>
+            </Morphes_Call>
+        </routers>
+    </frontend>
+</config>

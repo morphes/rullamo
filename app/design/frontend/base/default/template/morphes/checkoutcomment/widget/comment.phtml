@@ -1,0 +1,5 @@
+
+<label for="<?php echo $this->getFieldId('customer_notes')?>"><?php echo $this->__('Customer Comments') ?></label>
+<div class="input-box">
+    <textarea id="<?php echo $this->getFieldId('customer_notes')?>" name="<?php echo $this->getFieldName('customer_notes')?>" class="input-text" <?php echo $this->getFieldParams() ?>><?php echo $this->htmlEscape($this->getComment()) ?></textarea>
+</div>

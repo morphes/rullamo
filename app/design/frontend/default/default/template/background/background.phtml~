@@ -1,0 +1,33 @@
+<script type="text/javascript">
+$js = jQuery.noConflict();
+$js(document).ready(function($js) {
+ 	changeBG();
+});
+function changeBG(){
+
+	<?php 
+
+				$backgroundImg = Mage::getModel('background/background')->getCollection()->addFieldToFilter("status",1);
+				foreach($backgroundImg as $bgimg){
+				 $bgimage=$bgimg->getImageValue();
+				 $bgcolor=$bgimg->getColorValue();
+				 $bgoptions=$bgimg->getOptions();
+				}
+				
+				if($bgoptions==0){
+			s	?>
+				
+
+				document.getElementsByTagName("body")[0].style.backgroundImage = "url('<?php echo $bgimage; ?>')";
+				<?php
+				}
+				else{
+				?>
+					document.getElementsByTagName("body")[0].style.backgroundColor = '<?php echo $bgcolor ?>';
+
+
+				<?php
+				}?>
+}
+			
+	</script>

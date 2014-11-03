@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+@category    Morphes
+@package     MorphesPro_FilterSlider
+@copyright   Copyright (c) http://www.morphes.ru
+@license     http://www.morphes.ru/license  Proprietary License
+ -->
+<!-- BASED ON SNIPPET: New Module/etc/config.xml -->
+<config>
+	<!-- This section registers module with Magento system. -->
+	<modules>
+		<MorphesPro_FilterSlider>
+		  	<!-- This version number identifies version of database tables specific to this extension. It is written to
+		  	core_resource table.  -->
+		    <version>12.08.13.17</version>
+		</MorphesPro_FilterSlider>
+	</modules>
+	<!-- This section contains module settings which are merged into global configuration during each page load, 
+	each ajax request. -->
+	<global>
+		<!-- This section registers helper classes to be accessible through Mage::helper() method. MorphesPro_FilterSlider_Helper_Data
+		class is accessible through Mage::helper('morphespro_filterslider') call, other MorphesPro_FilterSlider_Helper_XXX_YYY classes are accessible 
+		through  Mage::helper('morphespro_filterslider/xxx_yyy') call. -->
+		<helpers>
+			<morphespro_filterslider>
+				<!-- This says that string 'morphespro_filterslider' corresponds to MorphesPro_FilterSlider_Helper pseudo-namespace in 
+				Mage::helper() calls. -->
+				<class>MorphesPro_FilterSlider_Helper</class>
+			</morphespro_filterslider>
+		</helpers>
+		<!-- BASED ON SNIPPET: Models/Model support (config.xml) -->
+		<!-- This section registers model classes to be accessible through Mage::getModel('<model type>') and through
+		Mage::getSingleton('<model type>') calls. That is, MorphesPro_FilterSlider_Model_XXX_YYY classes are accessible as 
+		'morphespro_filterslider/xxx_yyy' type strings both in getModel() and getSingleton() calls. -->
+		<models>
+			<!-- This says that string 'morphespro_filterslider' corresponds to MorphesPro_FilterSlider_Model pseudo-namespace in 
+			getModel() and getSingleton() calls. -->
+			<morphespro_filterslider>
+				<class>MorphesPro_FilterSlider_Model</class>
+				<!-- BASED ON SNIPPET: Resources/Declare resource section (config.xml) -->
+				<!-- This tells Magento to read config/global/models/morphespro_filterslider_resources sections and register
+				resource model information from there -->
+				<resourceModel>morphespro_filterslider_resources</resourceModel>
+				<!-- INSERT HERE: resource section name -->
+			</morphespro_filterslider>
+			<!-- BASED ON SNIPPET: Resources/Resource support (config.xml) -->
+			<!-- This says that string 'morphespro_filterslider' corresponds to MorphesPro_FilterSlider_Resource pseudo-namespace in 
+			getResourceModel() calls. -->
+			<morphespro_filterslider_resources>
+				<class>MorphesPro_FilterSlider_Resource</class>
+				<entities>
+					<!-- INSERT HERE: table-entity mappings -->
+				</entities>
+			</morphespro_filterslider_resources>
+			<!-- INSERT HERE: rewrites, ... -->
+		</models>
+		<!-- INSERT HERE: blocks, models, ... -->
+	</global>
+	<!-- BASED ON SNIPPET: Static Visuals/Adminhtml section (config.xml) -->
+	<!-- This section enables static visual changes in admin area. -->
+	<adminhtml>
+		<!-- BASED ON SNIPPET: Translation support/Adminhtml (config.xml) -->
+		<!-- This section registers additional translation file with our module-specific strings to be loaded 
+		during admin area request processing -->
+		<translate>
+			<modules>
+				<MorphesPro_FilterSlider>
+					<files>
+						<default>MorphesPro_FilterSlider.csv</default>
+					</files>
+				</MorphesPro_FilterSlider>
+			</modules>
+		</translate>
+		<!-- INSERT HERE: layout, translate, routers -->
+	</adminhtml>
+	<!-- BASED ON SNIPPET: Static Visuals/Frontend section (config.xml) -->
+	<!-- This section enables static visual changes in store frontend. -->
+	<frontend>
+		<!-- BASED ON SNIPPET: Static Visuals/Layout file support (config.xml) -->
+		<!-- This section registers additional layout XML file with our module-specific layout changes to be loaded
+		and executes during page rendering. -->
+		<layout>
+			<updates>
+				<morphespro_filterslider>
+					<file>morphespro_filterslider.xml</file>
+				</morphespro_filterslider>
+			</updates>
+		</layout>
+		<translate>
+			<modules>
+				<MorphesPro_FilterSlider>
+					<files>
+						<default>MorphesPro_FilterSlider.csv</default>
+					</files>
+				</MorphesPro_FilterSlider>
+			</modules>
+		</translate>
+		<!-- INSERT HERE: layout, translate, routers -->
+	</frontend>
+	<!-- INSERT HERE: adminhtml, frontend, ... -->
+
+	<!-- This section extends Morphes_Filters module functionality --> 
+	<morphes_filters>
+		<display><!-- display options for individual filters -->
+			<price> <!-- available display options for price filter -->
+				<slider translate="title" module="morphespro_filterslider">
+					<title>Slider</title><!-- this one is displayed in admin -->
+					<block>morphes_filters/filter</block>
+					<model>morphes_filters/filter_price</model>
+					<resource>morphespro_filterslider/price</resource>
+					<template>morphespro/filterslider/items.phtml</template><!-- PHTML to be rendered -->
+					<sort_order>300</sort_order><!-- Position in "Display as" list. The item with least position is the default one. -->
+				</slider>
+			</price>
+			<decimal> <!-- available display options for price filter -->
+				<slider translate="title" module="morphespro_filterslider">
+					<title>Slider</title><!-- this one is displayed in admin -->
+					<block>morphes_filters/filter</block>
+					<model>morphes_filters/filter_decimal</model>
+					<resource>morphespro_filterslider/decimal</resource>
+					<template>morphespro/filterslider/items.phtml</template><!-- PHTML to be rendered -->
+					<sort_order>300</sort_order><!-- Position in "Display as" list. The item with least position is the default one. -->
+				</slider>
+			</decimal>
+		</display>
+	
+	</morphes_filters>
+    <default>
+        <morphes_filters>
+            <display>
+                <price>slider</price>
+                <decimal>slider</decimal>
+            </display>
+        </morphes_filters>
+    </default>
+</config>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--
+ * @category   Community
+ * @package    IntellectMoney_Im
+ * @copyright  http://intellectmoney.ru
+ * @license    Open Software License (OSL 3.0)
+ * IntellectMoney payment module
+ * @author     intellectmoney.ru
+-->
+<config>
+    <modules>
+        <IntellectMoney_Im>
+            <version>1.0.1</version>
+        </IntellectMoney_Im>
+    </modules>
+    <global>
+        <models>
+            <im>
+                <class>IntellectMoney_Im_Model</class>
+            </im>
+        </models>
+        <blocks>
+            <im>
+                <class>IntellectMoney_Im_Block</class>
+            </im>
+        </blocks>
+        <resources>
+            <im_setup>
+                <setup>
+                    <module>IntellectMoney_Im</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </im_setup>
+            <im_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </im_write>
+            <im_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </im_read>
+        </resources>
+        <helpers>
+            <im>
+                <class>IntellectMoney_Im_Helper</class>
+            </im>
+        </helpers>
+    </global>
+    <frontend>
+        <secure_url>
+            <im_redirect>/im/redirect/</im_redirect>
+        </secure_url>
+        <routers>
+            <im>
+                <use>standard</use>
+                <args>
+                    <module>IntellectMoney_Im</module>
+                    <frontName>im</frontName>
+                </args>
+            </im>
+        </routers>
+        <translate>
+            <modules>
+                <IntellectMoney_Im>
+                    <files>
+                        <default>IntellectMoney_Im.csv</default>
+                    </files>
+                </IntellectMoney_Im>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <translate>
+            <modules>
+                <IntellectMoney_Im>
+                    <files>
+                        <default>IntellectMoney_Im.csv</default>
+                    </files>
+                </IntellectMoney_Im>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <payment>
+            <im>
+                <active>0</active>
+                <model>im/checkout</model>
+                <title>IntellectMoney</title>
+                <im_wallet>0</im_wallet>
+                <secret_key>0</secret_key>
+                <order_status>1</order_status>
+            </im>
+        </payment>
+    </default>
+</config>

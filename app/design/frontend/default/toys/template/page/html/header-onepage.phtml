@@ -1,0 +1,416 @@
+<?php
+//echo "<pre>";
+//Mage::log(Mage::getModel('geoip/abstract')->data['city'], null, 'ip.log');
+//print_r(Mage::getSingleton('core/session'));
+//echo "</pre>";
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php
+    $geoip_info = Mage::getModel('geoip/geoip')->getCollection();
+    $geoip_coll = $geoip_info->getData();
+    $store_config = Mage::getStoreConfig('general/region');
+?>
+<div class="header-container">
+    <div class="header">
+
+
+        <div class="quick-access">
+<?php 
+$session = Mage::getSingleton('core/session');
+$session_geo_ip = $session->getGeoIp();
+
+if(isset($session_geo_ip['is_changed'])) {
+    $model_city = $session->getGeoIp(); 
+} else {
+    $model_city = Mage::getModel('geoip/abstract')->data; 
+}?>
+<div style="clear: both;padding-bottom: 5px;">
+<?php if (isset($model_city['code']))// echo "Ваш город найден в нашей базе данных. Его код - " . $model_city['code'] . "<br/>"; else echo "К сожалению, вашего города в нашей базе данных нет."; ?>
+<div style="float: left;">Ваш регион:  <font style='color:#2f5b89 !important'><b><?php echo $model_city['city']; ?></b></font></div>
+<div style="float: left; margin-left: 8px;" class="actions"><font class='change-loc' onclick="getcity()">Изменить </font></div>
+</div>
+</div>
+           <div class='weloc'> <p class="welcome-msg"><?php echo $this->getWelcome() ?></p>
+<?php echo $this->getChildHtml('topLinks') ?>            
+        </div>
+        <div class="header-cart">			
+             <?php echo $this->getChildHtml('header_cart') ?>
+             <div class="top-search"><?php echo $this->getChildHtml('topSearch') ?></div>			
+        </div>	
+<div class='on-center' style='width:1000px;'>
+        <div class='on-center-col' style='width:185px; float: left;height:100px;'><?php if ($this->getIsHomePage()): ?>
+            <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+        <?php else: ?>
+            <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+            <?php endif ?></div>
+    <div class='on-center-col1'>
+Принимаем звонки:<br/>
+c 9:00 до 21:00<br/>
++7 495 <font class='big-tel'>258 00 76</font><br/>
+<font class='send-call' onclick='getCall()'>Обратный звонок</font>
+    </div>
+    <div class='on-center-col2'>
+         <img src='<?php echo $this->getSkinUrl('images/intex/car.png');?>'/><br/>
+         Доставка по Москве <br/>
+         или <a class='send-call call-link' href="/delivery">самовывоз</a>
+    </div>
+    <div class='on-center-col3'>
+         <a class='send-call call-link' href='/pay-on'>Оплата при получении</a> или<br/>
+         <div class='payment1'>
+	      <img src='<?php echo $this->getSkinUrl('images/intex/mastercard.png');?>'/>
+	      <img src='<?php echo $this->getSkinUrl('images/intex/wallet.png');?>'/>
+	      <img src='<?php echo $this->getSkinUrl('images/intex/qua.png');?>'/> 
+         </div>
+         <div class='payment2'>
+	      <img src='<?php echo $this->getSkinUrl('images/intex/visa.png');?>'/>
+	      <img src='<?php echo $this->getSkinUrl('images/intex/anot.png');?>'/>
+	      <img src='<?php echo $this->getSkinUrl('images/intex/sberbank.png');?>'/>  
+</div>        
+        </div>
+    </div>
+        <div class="store-language"><?php echo $this->getChildHtml('store_language') ?></div>
+        
+<?php echo $this->getChildHtml('topContainer'); ?>
+    </div>
+<?php echo $this->getChildHtml('topMenu') ?>
+<script type="text/javascript">
+    function changeCity(id) {
+        var url = '/geoip/index/changecity?id='+id;
+        var myAjax = new Ajax.Request(
+        url,
+        {
+            method: 'post',
+            postBody: '',
+            onException: function (xhr, e)
+            {
+                alert('Exception : ' + e);
+            },
+            onComplete: function (xhr)
+            { 
+console.log(xhr.responseText);
+                if(xhr.responseText=='ok') {
+                     setLocation('<?php echo $this->helper("core/url")->getCurrentUrl(); ?>');
+                } else {
+                     alert('Произошла ошибка! Попробуйте еще раз.');
+                } 
+            }
+
+        });
+    }
+
+    function getcity(){
+        
+        showLoadingCity();
+        var url = '/geoip/index/getcities';
+        // url = url.replace('checkout', 'j2tajaxcheckout/index/cart');
+       
+        var myAjax = new Ajax.Request(
+        url,
+        {
+            method: 'post',
+            postBody: '',
+            onException: function (xhr, e)
+            {
+
+
+                alert('Exception : ' + e);
+            },
+            onComplete: function (xhr)
+            { 
+                jQuery('#j2t-temp-div').html(xhr.responseText);
+
+                //var return_message = $('j2t-temp-div').down('.j2t_ajax_message').innerHTML;
+                //var middle_text = '<div class="j2t-cart-bts">'+$('j2t-temp-div').down('.back-ajax-add').innerHTML+'</div>';
+
+                //var content_ajax = return_message + middle_text;
+                var form = '';
+
+                //                    form = form + '<ul class="form-list"><li>';
+                //                    form = form + '<label for="nickname_field" class="required"><em>*</em>Ваши ФИО:</label>';
+                //                    form = form + '<div class="input-box">';
+                //                    form = form + '<input type="text" name="nickname" id="nickname_field" class="input-text fio required-entry" value="">';
+                //                    form = form + '</div></li><li>';
+                //                    form = form + '<label for="summary_field" class="required"><em>*</em>Ваш телефон/e-mail:</label>';
+                //                    form = form + '<div class="input-box">';
+                //                    form = form + '<input type="text" name="title" id="summary_field" class="input-text phone-mail required-entry" value="">';
+                //                    form = form + '</div></li></ul>';
+                //                    form = form + '</fieldset>';
+                //                    form = form + '<div class="buttons-set">';
+                //                    form = form + '<button title="" class="button" onClick=sendOrder("'+ url+'")><span><span>Заказать!</span></span></button>';
+                //                   form = form + '</div>';        
+                jQuery('#j2t_ajax_confirm').html('<div id="j2t_ajax_confirm_wrapper">'+xhr.responseText + form +'</div>');
+                //     var link_cart_txt = jQuery('#j2t-temp-div').down('.cart_content').innerHTML;
+
+                //    $$('.top-link-cart').each(function (el){
+                //         el.innerHTML = link_cart_txt;
+                //    });
+
+
+
+                //   var mini_cart_txt = $('j2t-temp-div').down('.cart_side_ajax').innerHTML;
+
+                //alert(mini_cart_txt);
+
+                //   $$('.mini-cart').each(function (el){
+                //      el.replace(mini_cart_txt);
+                //new Effect.Opacity(el, { from: 0, to: 1, duration: 1.5 });
+                //   });
+
+                //    $$('.block-cart').each(function (el){
+                //       el.replace(mini_cart_txt);
+                //new Effect.Opacity(el, { from: 0, to: 1, duration: 1.5 });
+                //   });
+
+
+                replaceDelUrls();
+                if (ajax_cart_show_popup){
+                    showConfirmCity();
+                } else {
+                    hideJ2tOverlay();
+                }
+            }
+
+        });
+
+    
+
+    }
+    function showLoadingCity(){
+        showJ2tOverlay();
+        var progress_box = $('j2t_ajax_progress');
+        progress_box.show();
+        progress_box.style.width = '500px';
+        progress_box.style.height = '500px';
+
+    
+        $('j2t_ajax_progress').innerHTML = $('j2t-loading-data').innerHTML;
+        progress_box.style.position = 'absolute';
+
+        j2tCenterWindowCity(progress_box);
+    }
+    function j2tCenterWindowCity(element) {
+        if($(element) != null) {
+
+            // retrieve required dimensions
+            var el = $(element);
+            var elDims = el.getDimensions();
+            var browserName=navigator.appName;
+            if(browserName==="Microsoft Internet Explorer") {
+
+                if(document.documentElement.clientWidth==0) {
+                    //IE8 Quirks
+                    //alert('In Quirks Mode!');
+                    var y=(document.viewport.getScrollOffsets().top + (document.body.clientHeight - elDims.height) / 2);
+                    var x=(document.viewport.getScrollOffsets().left + (document.body.clientWidth - elDims.width) / 2);
+                }
+                else {
+                    var y=(document.viewport.getScrollOffsets().top + (document.documentElement.clientHeight - elDims.height) / 2);
+                    var x=(document.viewport.getScrollOffsets().left + (document.documentElement.clientWidth - elDims.width) / 2);
+                }
+            }
+            else {
+                // calculate the center of the page using the browser andelement dimensions
+                var y = Math.round(document.viewport.getScrollOffsets().top + ((window.innerHeight - $(element).getHeight()))/2);
+                var x = Math.round(document.viewport.getScrollOffsets().left + ((window.innerWidth - $(element).getWidth()))/2);
+            }
+            // set the style of the element so it is centered
+            var styles = {
+                position: 'absolute',
+                top: y + 'px',
+                left : x + 'px'
+            };
+            el.setStyle(styles);
+
+
+
+
+        }
+    }
+    function showConfirmCity(){
+        showJ2tOverlay();
+        $('j2t_ajax_progress').hide();
+        var confirm_box = $('j2t_ajax_confirm');
+        confirm_box.show();
+        confirm_box.style.width = '600px';
+        confirm_box.style.height = '400px';
+        //j2t_ajax_confirm_wrapper
+        if ($('j2t_ajax_confirm_wrapper') && $('j2t-upsell-product-table')){
+            //alert($('j2t_ajax_confirm_wrapper').getHeight());
+            confirm_box.style.height = $('j2t_ajax_confirm_wrapper').getHeight() + 'px';
+            decorateTable('j2t-upsell-product-table');
+        }
+
+        $('j2t_ajax_confirm_wrapper').replace('<div id="j2t_ajax_confirm_wrapper">'+$('j2t_ajax_confirm_wrapper').innerHTML);
+
+        confirm_box.style.position = 'absolute';
+        j2tCenterWindow(confirm_box);
+    }
+
+    function showConfirmCall(){
+        showJ2tOverlay();
+        $('j2t_ajax_progress').hide();
+        var confirm_box = $('j2t_ajax_confirm');
+        confirm_box.show();
+        confirm_box.style.width = '500px';
+        confirm_box.style.height = '400px';
+        //j2t_ajax_confirm_wrapper
+        if ($('j2t_ajax_confirm_wrapper') && $('j2t-upsell-product-table')){
+            //alert($('j2t_ajax_confirm_wrapper').getHeight());
+            confirm_box.style.height = $('j2t_ajax_confirm_wrapper').getHeight() + 'px';
+            decorateTable('j2t-upsell-product-table');
+        }
+
+        $('j2t_ajax_confirm_wrapper').replace('<div id="j2t_ajax_confirm_wrapper">'+$('j2t_ajax_confirm_wrapper').innerHTML);
+
+        confirm_box.style.position = 'absolute';
+        j2tCenterWindow(confirm_box);
+    }
+
+jQuery.fn.ac = function(o) { 
+
+	var o = jQuery.extend({
+		url:'/geoip/index/getcountries',
+		onClose:function(suggest) {
+			setTimeout(function(){
+				suggest.slideUp('fast');
+			}, 100); 
+		},
+		dataSend:function(input) {  
+			return 'suggest_name=' + input.attr('name') + '&query=ac&word=' + word;
+		},
+		wordClick:function(input,link) {
+			input.val(link.attr('href')).focus();
+		}
+	}, o);
+
+	return jQuery(o).each(function(){ 
+
+		var onClose = o.onClose;
+		var input = jQuery('#one'); 
+		input.after('<div class="auto-suggest"></div>');
+
+		var suggest = input.next(); 
+		suggest.width(input.width() + 6);
+
+		input.keydown(function(e) { 
+			if (e.keyCode == 38 || e.keyCode == 40) {
+	   			var tag = suggest.children('a.selected'),
+	   			new_tag = suggest.children('a:first'); 
+	   			if (tag.length) { 
+	   			   	if (e.keyCode == 38) {
+	   			   		if (suggest.children('a:first.selected').length) {  
+		                	new_tag = suggest.children('a:last'); 
+		   				} else { 
+		   					new_tag = tag.prev('a');  
+		   				}
+		   			} else { 
+		   				if (!suggest.children('a:last.selected').length) new_tag = tag.next('a'); 
+		   			}
+		   			tag.removeClass('selected'); 
+		    	}
+		    	new_tag.addClass('selected');  
+	            input.val(new_tag.attr('href'));
+		    	return;
+			}
+			if (e.keyCode == 13 || e.keyCode == 27) {  
+	   			onClose(suggest);
+		    	return;
+			}
+		}).keyup(function(e) {
+	       	if (e.keyCode == 38 || e.keyCode == 40 || e.keyCode == 13 || e.keyCode == 27) return; 
+			word = input.val(); 
+			if (word) {
+				jQuery.post(o.url, o.dataSend(input), function(data){ 
+					if (data.length > 0) {
+						suggest.html(data).show().children('a').click(function(){
+							o.wordClick(input,jQuery(this)); 
+							return false;
+						});
+					} else {  
+						onClose(suggest); 
+					}
+				});
+			} else { 
+
+			setTimeout(function(){
+				suggest.slideUp('fast');
+			}, 100); 
+			}
+		});
+	});
+}
+
+function keyup(e) {
+
+suggest = jQuery('.auto-suggest');
+input = jQuery('#one');
+var url = '/geoip/index/getcountries';
+
+if (e == 38 || e == 40 || e == 13 || e == 27) return; 
+			word = input.val(); 
+var params = 'suggest_name=asdf&query=ac&word=' + word;
+			if (word) {
+				jQuery.post(url, params, function(data){ 
+
+					if (data.length > 0) {
+						suggest.html(data).show().children('font').click(function(){
+							o.wordClick(input,jQuery(this)); 
+							return false;
+						});
+					} else {  
+						setTimeout(function(){
+				suggest.slideUp('fast');
+			}, 100); 
+					}
+				});
+			} else { 
+	    		setTimeout(function(){
+				suggest.slideUp('fast');
+			}, 100); 
+			}
+
+}
+
+function getLocation() {
+code = jQuery('#city-code').val();
+changeCity(code);
+}
+
+function getCall() {
+    showLoadingCity();
+    var form = "<div class='send-call-wrapper'><div class='close-window' onclick='hideJ2tOverlay()'>&nbsp;</div><br><h1>Заказ услуги обратный звонок</h1><font class='send-call-header-text'>Если Вы не можете нам дозвониться - сообщите нам свою контактную информацию и мы Вам перезвоним, в течение 1 часа или в другое, указанное Вами время.</font><br><br>    <font class='send-call-your-data'>Ваши данные:</font><br><table border=0>       <tr>          <td class='first-col'>               Имя           </td>           <td class='second-col'>               <input type='text' id='call-name' class='send-call-input input-text'></input>           </td>      </tr>      <tr>           <td  class='first-col'>               Телефон           </td>           <td  class='second-col'>               <input type='text' class='send-call-input input-text' id='call-phone'></input>           </td>       </tr>       <tr>           <td  class='first-col'>               О чем Вы хотели поговорить?           </td>          <td  class='second-col'>               <textarea  class='send-call-input' id='call-text'></textarea>           </td>       </tr> </table></font><div class='buttons-set' style='clear:both;border-top:0px !important;text-align:center;width:100%'><button title='' class='css3buttongreen green-button' style='margin:0 auto; float: none !important;' onclick='sendCall()'><span><span>ПЕРЕЗВОНИТЕ МНЕ</span></span></button>                    </div></div>";
+    jQuery('#j2t_ajax_confirm').html('<div id="j2t_ajax_confirm_wrapper">'+form+'</div>');
+    replaceDelUrls();
+    if (ajax_cart_show_popup){
+         showConfirmCall();
+    } else {
+         hideJ2tOverlay();
+    }
+}
+</script>

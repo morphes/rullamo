@@ -1,0 +1,232 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   design_default
+ * @package    Flagbit
+ * @copyright  Copyright (c) 2009 Flagbit GmbH & Co. KG (http://www.flagbit.de)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/* @var $this Flagbit_Faq_Block_Frontend_List */
+    $geoip_info = Mage::getModel('geoip/geoip')->getCollection();
+    $geoip_coll = $geoip_info->getData();
+    $store_config = Mage::getStoreConfig('general/region');
+$session = Mage::getSingleton('core/session');
+$session_geo_ip = $session->getGeoIp();
+
+if(isset($session_geo_ip['is_changed'])) {
+    $model_city = $session->getGeoIp(); 
+} else {
+    $model_city = Mage::getModel('geoip/abstract')->data; 
+}
+
+?>
+ 
+
+<div class='faq-main-wrapper'>
+
+<div class="page-title">
+	<h1><?php echo $this->__('Задать вопрос или оставить отзыв:'); ?></h1>
+</div><br/>
+<div class="faq-input-fieldset">
+<form method="POST" id="faq-form" action="/faq/index/add">
+    <div class="short name">
+        <label for="name" class="required">
+        	Имя        </label>
+        <sup>*</sup>
+        <div class="data_area">
+            <input type="text" id="name" name="name" value="" title="Имя" class="faq-input">
+        </div>
+    </div>
+    <div class="short email">
+        <label for="email" class="required">
+        	E-mail        </label>
+        <sup>*</sup>
+        <div class="data_area">
+            <input type="text" id="email" name="email" value="" title="Email" class="faq-input">
+        </div>
+    </div>
+    <div class="short city">
+        <label for="city" class="required">
+        	Город       </label>
+        <sup>*</sup>
+        <div class="data_area">
+            <input type="text" id="city" name="city" title="City" class="faq-input" value=" <?php echo $model_city['city']; ?>"/>
+        </div>
+    </div>
+    <div class="faq_block">
+		<div class="op_block_title" style="margin: 4px 0 0px">
+	    	Ваш вопрос или отзыв	    </div>  
+                <div class="data_area" id="question-block">
+                    <textarea name="question" class="faq-textarea" id="question-field"></textarea>
+                </div>
+                </div>
+<br/></form>
+<button type="button" title="Отправить" class="button btn-details" onclick="validateAndSave(); return false;"><span><span>Отправить</span></span></button>
+</div><br/>
+<?php echo $this->getPagerHtml(); ?>
+<script type="text/javascript">
+    function validateAndSave() {
+        name = jQuery('#name').val();
+        email = jQuery('#email').val();
+        city = jQuery('#city').val();
+        question = jQuery('#question-field').val();
+        can_continue=true;
+        if(name.length<2) {
+            can_continue=false;
+            jQuery('#name').css('border', '1px dashed red');
+        } else {
+            can_continue=true;
+            jQuery('#name').css('border', '1px solid #b6b6b6');
+        }
+        if(email.length<2) {
+            can_continue=false;
+            jQuery('#email').css('border', '1px dashed red');
+        } else {
+            can_continue=true;
+            jQuery('#email').css('border', '1px solid #b6b6b6');
+        }
+        if(city.length<2) {
+            can_continue=false;
+            jQuery('#city').css('border', '1px dashed red');
+        } else {
+            can_continue=true;
+            jQuery('#city').css('border', '1px solid #b6b6b6');
+        }
+        if(question.length<2) {
+            can_continue=false;
+            jQuery('#question-field').css('border', '1px dashed red');
+        } else {
+            can_continue=true;
+            jQuery('#question-field').css('border', '1px solid #b6b6b6');
+        }
+        if(can_continue===true) {
+        jQuery.ajax({
+			url     : '/faq/index/add?name='+name+'&email='+email+'&city='+city+'&question='+question,
+			type    : 'POST',
+			dataType: 'html',
+			timeout : 9000,
+			error   : function() {
+				alert('Произошла ошибка. Пожалуйста, повторите попытку.');
+			},
+			success : function(html) {
+                            if(html=='ok') {
+                                alert('Ваш вопрос отправлен.');
+                                jQuery('#name').prop('disabled', true);
+                                jQuery('#email').prop('disabled', true);
+                                jQuery('#question-field').prop('disabled', true);
+                                jQuery('#city').prop('disabled', true);
+                            }
+			}
+         });
+        }
+    }
+</script>
+<?php if ($this->hasFaq()): ?>
+
+
+
+
+<br/>
+<h1 class="answers-and-questions"><?php echo $this->__('Ваши вопросы и отзывы:'); ?></h1>
+<br/>
+<dl class="faq-items">
+<?php foreach($this->getFaqCollection()->getData() as $item) { ?>
+<div class="faq-item-faq">
+    <div class="creation-date">
+         <?php $date = explode(" ", $item['creation_time']); 
+               echo "<h4>".$date['0']."</h4>"; ?>
+    </div>
+    <div class="faq-content">
+         <div class="faq-question">
+              <div class="faq-questioner-name">
+                    <?php echo "<h4>".$item['name'].":</h4>"; ?>
+              </div>
+              <div class="faq-questioner-question">
+                    <?php echo $item['question']; ?>
+              </div>
+         </div>
+         <div class="faq-answer">
+              <div class="faq-answerer-name">
+                    <?php echo '<h4>dachniki-club.ru:</h4>'; ?>
+              </div>
+              <div class="faq-answerer-question">
+                    <?php echo $item['answer']; ?>
+              </div>
+         </div>
+    </div>
+</div>
+<div style="clear:both;"></div>
+<?php } ?>
+<?php //echo "<pre>";
+//die(print_r($this->getFaqCollection()->getData())); ?>
+
+
+<?php echo $this->getPagerHtml(); ?>
+
+</div>`
+
+
+	<?php foreach ($this->getFaqCollection() as $faqItem): ?>
+	<dt id="faq-item-<?php echo $faqItem->getId() ?>" style="display:none">
+		<?php echo $this->htmlEscape($faqItem->getQuestion()) ?>
+	</dt>
+	<dd style="display:none">
+		<?php echo ($faqItem->getAnswerHtml() ? $faqItem->getAnswer() : '<p>' . implode('</p><p>', explode("\n", $this->htmlEscape($faqItem->getAnswer()))) . '</p>') ?>
+	</dd>
+	<?php endforeach; ?>
+</dl>
+<?php else: ?>
+<p class="faq-items"><?php echo $this->__('There are no FAQ items at the moment.') ?></p>
+<?php endif; ?>
+
+
+
+
+
+
+
+
+
+<?php if ($this->getCategoryCollection()) : ?>
+<dl class="faq-list" style="display:none">
+    <?php foreach ($this->getCategoryCollection() as $category) : ?>
+        <dt><?php echo $this->htmlEscape($category->getName()); ?></dt><dd><ul class="faq-list">
+        <?php foreach ($this->getItemCollectionByCategory($category) as $item) : ?>
+            <li>
+                <a href="#faq-item-<?php echo $item->getId() ?>">
+                    <?php echo $this->htmlEscape($item->getQuestion()); ?>
+                </a>
+            </li>
+        <?php endforeach; ?>
+        </ul></dd>
+    <?php endforeach; ?>
+</dl>
+<?php else : ?>
+<ul class="faq-list" style="display:none">
+    <?php foreach ($this->getFaqCollection() as $faqItem): ?>
+    <li>
+        <a href="#faq-item-<?php echo $faqItem->getId() ?>">
+            <?php echo $this->htmlEscape($faqItem->getQuestion()) ?>
+        </a>
+
+    </li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package>
+    <name>Mconnect_Productribbon</name>
+    <version>1.0.1</version>
+    <stability>beta</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL V3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>If you are looking to promote your products with product label or ribbon this extension is for you. Upload the transparent image from backend interface and extension will automatically show that image at suitable products.</summary>
+    <description>This extension supports label for following products .&#xD;
+&#xD;
+1) New Arrivals Products.&#xD;
+2) Best Sellers Products.&#xD;
+3) Product On Sale (To apply this label apply special price while adding product).&#xD;
+4) Most Reviewed Products.&#xD;
+Product Ribbon can displayed dynamically on the Product Listing and Detailed View page. This Magento Extension will allow your main image product to be displayed with a nice Ribbon on sales,new,best seller and top rated product.&#xD;
+eature&#xD;
+1) Apply attractive ribbon for on sales, new, best selling and top rated products.&#xD;
+2) Show multiple ribbons per product image.&#xD;
+3) Limit ribbons displaying based on conditions.&#xD;
+4) Upload  ribbon exactly the way you want. &#xD;
+5) The module supports to display in many modes.&#xD;
+6) Ribbon can be displayed anywhere in the catalog, search and product view&#xD;
+&#xD;
+&#xD;
+Other Feature &#xD;
+1) Administrator can Add/ Edit/ Delete the ribbons for the products in the website.&#xD;
+2) Administrator can manage the positioning of the ribbons to the product image.&#xD;
+Top - Left ,Top &#x2013; Right,Bottom &#x2013; Left,Bottom - Right.&#xD;
+3) Administrator can also manage the display settings for the ribbons to the product images&#xD;
+Product category listing page - Yes/ No&#xD;
+Product detailed view product gallery - Yes/ No&#xD;
+4) Admin Panel can easily manage the product labels style for listing and view page.&#xD;
+5)  &#x201C;New&#x201D; Ribbon to Newly Added products(sales,new,best seller and top rated ) automatically.&#xD;
+6) Administrator can also Enable/Disable the ribbon images added.&#xD;
+7) Easy customizable - no coding!&#xD;
+Installation&#xD;
+- Easy integration, no installation or setup is necessary on the server. All you have to do is upload your files.&#xD;
+For any kind of support, suggestions and feedback please write us on support@mconnectsolutions.com . We are always happy to help you.</description>
+    <notes>This is the beta version release for the extension.</notes>
+    <authors><author><name>M-connect  Solutions</name><user>auto-converted</user><email>darshit@mconnectsolutions.com</email></author></authors>
+    <date>2013-02-04</date>
+    <time>05:50:01</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Mconnect_Productribbon.xml" hash="8b0e1cf7fe30620a02a6bb9e56d2e945"/></dir></target><target name="magelocal"><dir name="Mconnect"><dir name="Productribbon"><dir name="Block"><dir name="Adminhtml"><dir name="Productribbon"><dir name="Edit"><dir name="Tab"><file name="Form.php" hash="24f09fadb656c5917931a251890575c7"/></dir><file name="Form.php" hash="873f4c70e3829255a42d808af47d4f97"/><file name="Tabs.php" hash="450206978e1bf7cb9c306bdc9ce1d5ca"/></dir><file name="Edit.php" hash="46c154c31fc527dd91e74390ac69eb22"/><file name="Grid.php" hash="f89916025235f1e23654f66eeacd76f8"/></dir><file name="Productribbon.php" hash="96d6a3afdc029096f22f11d5ccab5af4"/></dir><dir name="Product"><file name="List.php" hash="ee539750b7a3e43e0799f573a22ace86"/><file name="List.php~" hash="8e066df32f6532ca2e6ed7c6be0c8f63"/><file name="View.php~" hash="d28a2b4b81278ad58d9e1ee7daa12353"/></dir><file name="Productribbon.php" hash="f89f4a03dd48ef7c34aa86e3e32cffbd"/></dir><dir name="Helper"><file name="Data.php" hash="cbf33891b0842baaed21b6dfb5d47031"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Productribbon"><file name="Collection.php" hash="a30b4ecf959f9e73d7f4aa0c2c5cf7b2"/></dir><dir name="Productribbonbest"><file name="Collection.php" hash="45ecf789f8ece227de842e81210a1951"/></dir><dir name="Productribbonrivewed"><file name="Collection.php" hash="c6e0b125319b00f82f2694f7d38d2cf4"/></dir><file name="Productribbon.php" hash="bbe8f5de91a0342cdc8f37b3e06a22ad"/><file name="Productribbonbest.php" hash="5e11afbdbf07759daa23042c340ca197"/><file name="Productribbonrivewed.php" hash="737320427107579588f027847ff026e4"/></dir><file name="Productribbon.php" hash="d29558315f7bde1be7e9af373d86eb44"/><file name="Productribbonbest.php" hash="876aff9da1e7ce009383e32e8a73f88a"/><file name="Productribbonrivewed.php" hash="82694ef48782bf8dff7f32ac61ac45a5"/><file name="Ribbonposition.php" hash="db5cde18f6cf0109c1c5eb3a0b4048de"/><file name="Status.php" hash="99846ee5b49cde1ae865e7c21ede4296"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ProductribbonController.php" hash="6b35a93c602a2817de3ccdfef2ed4363"/></dir><file name="IndexController.php" hash="eca0483c942905dd23521b3e723ce96d"/></dir><dir name="etc"><file name="config.xml" hash="30e585c617b20eeb1258797aff28fdd1"/><file name="config.xml~" hash="6a38a321825ad262d2505047e947cdc0"/><file name="system.xml" hash="bc464e0cfa0ff6bb0a9697b868148453"/><file name="system.xml~" hash="572afaae4f892315086f115556043b6f"/></dir><dir name="sql"><dir name="productribbon_setup"><file name="mysql4-install-0.1.0.php" hash="1153304092e5534255a57d39d114e28d"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="productribbon.xml" hash="db8a19f5181f93d3a54b5c5a7b72426a"/></dir></dir></dir></dir><dir name="frontend"><dir name="default"><dir name="default"><dir name="template"><dir name="productribbon"><file name="list.phtml" hash="2850b89f8e5682af6de953e162ddc51e"/><file name="list.phtml~" hash="fb841e13324ebd0273d2827cffce5851"/><file name="media.phtml" hash="e5371bc744ef77f16057bf90ca2f37d6"/><file name="media.phtml~" hash="74d956dd35a43e0178dc8bacef00e6c8"/><file name="productribbon.phtml" hash="65dded6b88b912f130b3c71828b80f15"/><file name="productribbon.phtml~" hash="417edb4bd2a5c76d69e2f812ec158a9e"/></dir></dir><dir name="layout"><file name="productribbon.xml" hash="32c87e714b9208249ffbd82eeb83806e"/></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="css"><dir name="mconnect"><dir name="productribbon"><file name="mconnectproductribbon.css" hash="3f12fe396a8ed986e044f9642467baf0"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

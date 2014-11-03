@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- Copyright "Magento Team" - http://magento-team.com -->
+<config>
+    <modules>
+        <TM_CloudZoom>
+            <active>true</active>
+            <codePool>local</codePool>
+        </TM_CloudZoom>
+	</modules>
+</config>

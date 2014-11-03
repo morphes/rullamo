@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<adminhtml_sales_order_shipment_view>
+        <reference name="content">
+            <block type="sheepla/admin_shipment" name="sheepla" template="sheepla/shipment.phtml"></block>
+        </reference>
+	</adminhtml_sales_order_shipment_view>
+	<adminhtml_sheepla_admin_index>
+       <block type="adminhtml/sales_order" name="sales_order.grid.container"></block>
+    </adminhtml_sheepla_admin_index>
+    <adminhtml_sales_order_create_load_block_shipping_method>
+        <reference name="form">
+        	<action method="setTemplate"><name>sheepla/shippingmethodform.phtml</name></action>
+        </reference>
+    </adminhtml_sales_order_create_load_block_shipping_method>
+</layout>

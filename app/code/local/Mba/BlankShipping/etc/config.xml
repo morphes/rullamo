@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+	<default>
+		<carriers>
+			<blankshippingmodule>
+				<active>1</active>
+				<sallowspecific>0</sallowspecific>
+				<model>Mba_BlankShipping_Model_Carrier_ShippingMethod</model>
+				<name>Blank Shipping</name>
+				<title>Blank Shipping</title>
+				<specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+				<price>0</price>
+			</blankshippingmodule>
+		</carriers>
+	</default>
+
+	<modules>
+		<Mba_BlankShipping>
+			<version>0.1.0</version>
+		</Mba_BlankShipping>
+	</modules>
+
+	<global>
+
+		<models>
+			<blankshippingmodule>
+				<class>Mba_BlankShipping_Model</class>
+			</blankshippingmodule>
+		</models>
+
+		<resources>
+			<blankshippingmodule_setup>
+
+				<setup>
+					<module>Mba_BlankShipping</module>
+				</setup>
+
+				<connection>
+					<use>core_setup</use>
+				</connection>
+
+			</blankshippingmodule_setup>
+		</resources>
+
+	</global>
+
+</config>

@@ -1,0 +1,72 @@
+<!--  /**
+     * Mtoo Co.
+     *
+     * NOTICE OF LICENSE
+     *
+     * This source file is subject to the EULA
+     * that is bundled with this package in the file LICENSE.txt.
+     * It is also available through the world-wide-web at this URL:
+     * http://www.magento800.com/LICENSE.txt
+     *
+     * @category   Mtoo
+     * @package    Mtoo_Navitation
+     * @copyright  Copyright (c) 2010 Mtoo Co. (http://www.magento800.com)
+     * @license    http://www.magento800.com/LICENSE.txt
+     */
+/**
+ * This is template for Mtoo_Navigation_Block_Navigation
+ */
+ -->
+ <?php $currentUrl = $this->helper('core/url')->getCurrentUrl(false); ?>
+<div id="sidenav" class="sidenav-customer">
+  <!-- <div class="sidenav_h"> <a href="/SiteMap" id="sitemap">Shop All Categories</a> </div> -->
+  <div  id="sitemap_menu" class="sidebar_menu hide  <?php if ( Mage::getSingleton('cms/page')->getIdentifier()== 'home') { echo 'home-active'; } ?>" style="display:none;">
+    
+   			<?php foreach ($this->getStoreCategories() as $_category): ?>
+          <?php echo $this->drawItem($_category) ?>
+          <?php endforeach ?>
+      
+      </div>
+</div>
+<script type="text/javascript">
+var litem_width=$('sidenav').getWidth()-2;
+$$("div.litem").each (function (s){
+	s.setStyle({width:litem_width+"px"});
+});
+$$("div.litem").invoke("observe", "mouseover", function() {
+var offset = this.cumulativeOffset();
+var sidenav=$('sidenav').cumulativeOffset();
+var sidenav_width=$('sidenav').getWidth()-2;
+var offsetTop = offset[1];
+var height= this.down('div.subitem').getHeight();
+var sidenav_h =sidenav[1];
+if ((offsetTop-sidenav_h)>height)
+{
+	
+	offsetTop=(offsetTop-sidenav_h-(height/2));
+	this.down('div.subitem').setStyle({top:offsetTop+"px"});
+}
+
+this.addClassName('hoverClass');this.down('div.subitem').setStyle({display:'block',left:sidenav_width+"px"}) });
+$$("div.litem").invoke("observe", "mouseout", function() {
+this.removeClassName('hoverClass');this.down('div.subitem').setStyle({display:'none'}) });
+jQuery(document).ready(function(){
+    <?php if($currentUrl == Mage::getBaseUrl()) { ?>
+        jQuery('#sitemap_menu').css('display','block');    
+    <?php } ?>
+    var sitemap_menu = jQuery('#sitemap_menu');
+    jQuery('.home-link .parentMenu').not('.home-active .parentMenu').mouseenter(function(){        
+        // if(sitemap_menu.css('display')=='none') {
+        sitemap_menu.css('display', 'block');
+        // } else {
+        //     sitemap_menu.css('display','none')
+        // }
+    });
+    sitemap_menu.not('.home-active').mouseleave(function(){
+        jQuery(this).css('display','none')
+    });
+    jQuery('#sitemap_menu').click(function(){
+        jQuery(this).css('display','none');
+    });
+});
+</script>

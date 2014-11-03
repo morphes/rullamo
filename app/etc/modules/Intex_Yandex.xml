@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Intex_Yandex>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Intex_Yandex>
+    </modules>
+</config>

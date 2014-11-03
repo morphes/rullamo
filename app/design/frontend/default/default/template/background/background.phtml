@@ -1,0 +1,49 @@
+
+<script type="text/javascript">
+$js = jQuery.noConflict();
+$js(document).ready(function($js) {
+ 	changeBG();
+});
+function changeBG(){
+
+	<?php 
+
+				$backgroundImg = Mage::getModel('background/background')->getCollection()->addFieldToFilter("status",1);
+
+				foreach($backgroundImg as $bgimg){					
+				 $bgimage[]=$bgimg->getImageValue();
+				 $bgcolor[]=$bgimg->getColorValue();
+				 $bgstatus[]=$bgimg->getStatus();
+				 $bgoptions[]=$bgimg->getOptions();
+				}
+				if (count($backgroundImg)!=0) {
+					$count = 0;
+					foreach($bgoptions as $option) {
+						if($option=='0') {
+							if(isset($bgstatus[$count])) {
+								if($bgstatus[$count]==1){ ?>
+									document.getElementsByClassName("left-promo")[0].style.backgroundImage = "url('<?php echo $bgimage[$count]; ?>')";
+									jQuery('.left-promo-link').attr('href', '<?php echo $bgcolor[0]; ?>');
+						<?php	} }
+						}
+						if($option=='1') {
+							if(isset($bgstatus[$count])) { 
+								if($bgstatus[$count]==1){ ?>
+									document.getElementsByClassName("right-promo")[0].style.backgroundImage = "url('<?php echo $bgimage[$count]; ?>')";
+									jQuery('.right-promo-link').attr('href', '<?php echo $bgcolor[1]; ?>');
+							<?php } }
+						}
+						if($option=='2') {
+							if(isset($bgstatus[$count])) { 
+								if($bgstatus[$count]==1){ ?>
+									document.getElementsByTagName("body")[0].style.backgroundImage = "url('<?php echo $bgimage[$count]; ?>')";
+									jQuery('body').css('background-repeat','no-repeat');
+							<?php } }
+						}
+						$count++;
+					}		
+				}	
+					
+				?>
+			}
+	</script>

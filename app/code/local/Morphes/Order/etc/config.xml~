@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Morphes_Order>
+            <version>0.1.0</version>
+        </Morphes_Order>
+    </modules>
+    <global>
+        <blocks>
+            <morphes_order>
+                <class>Morphes_Order_Block</class>
+            </morphes_order>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <Morphes_Order>
+                <use>standard</use>
+                <args>
+                    <module>Morphes_Order</module>
+                    <frontName>sendorder</frontName>
+                </args>
+            </Morphes_Order>
+        </routers>
+        <layout>
+            <updates>
+                <morphes_order>
+                    <file>order.xml</file>
+                </morphes_order>
+            </updates>
+        </layout>
+    </frontend>
+</config>

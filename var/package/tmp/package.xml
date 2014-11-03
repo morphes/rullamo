@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Medma_Background_Setting</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license>OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension manages the body background of the whole store.</summary>
+    <description>This extension manages the body background of the whole store. This is very useful extension for the look &amp; feel of any store.&#xD;
+This extension adds the image as well as color which is to be displayed on the front-end.</description>
+    <notes>This is a stable version</notes>
+    <authors><author><name>Medma Infomatix</name><user>Medma_Infomatix</user><email>gaurav@medma.in</email></author></authors>
+    <date>2012-09-29</date>
+    <time>10:56:37</time>
+    <contents><target name="magelocal"><dir name="Medma"><dir name="Background"><dir name="Block"><dir name="Adminhtml"><dir name="Background"><dir name="Edit"><file name="Form.php" hash="d3b37e1e61ced49a7da4aba25f928be4"/><file name="Form.php~" hash="10cdf7b16156cc3adca5d4ff4f549123"/><dir name="Tab"><file name="Form.php" hash="295234c4b0e4810e65f1a231d9085c96"/></dir><file name="Tabs.php" hash="f265acb45bd2c140d7cf337b58dbf640"/><file name="Tabs.php~" hash="ad2951000fb9ea0bc48918710ff58cbe"/></dir><file name="Edit.php" hash="ef94ffa82c4220699475e1a96cd29598"/><file name="Grid.php" hash="8e6af9ae5b08116ff8fc9d9c051e9263"/><dir name="Renderer"><file name="Getimage.php" hash="d41d8cd98f00b204e9800998ecf8427e"/><file name="Productimage.php" hash="afd995017702088197b17a50568d85b6"/></dir></dir><file name="Background.php" hash="1650f6a519ab4bcb45450a3a28a114d6"/></dir></dir><dir name="Helper"><file name="Data.php" hash="104b4fee716ed1019915e17e014a0ddc"/></dir><dir name="Model"><file name="Background.php" hash="e2150534b535a4474d7080c3ad16eb12"/><dir name="Mysql4"><dir name="Background"><file name="Collection.php" hash="e5aaecb8993ee15a7cdaa12097a7bd20"/></dir><file name="Background.php" hash="5523cd67d5910d0ba08bbf1f900ac979"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="BackgroundController.php" hash="38ff71a561fd3a3f2b0e10dc3a3ebb36"/></dir></dir><dir name="etc"><file name="config.xml" hash="74332ac21bed8d0201bf051f76e20cc7"/></dir><dir name="sql"><dir name="background_setup"><file name="mysql4-install-0.1.0.php" hash="97966de6dfce64a8d864a6b5571f2faf"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Medma_Background.xml" hash="b3ed29016e4e2353bd6e6b214c41f441"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="background.xml" hash="f35db4541bb80eb98fed999741ef350a"/></dir><dir name="template"><dir name="background"><file name="background.phtml" hash="99998716627e37cd60111c35244ad914"/><file name="background.phtml~" hash="2498fbc3bf9160e55828f95fb146e69c"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,93 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<input type="hidden" id="location" value="<?php echo $this->helper("core/url")->getCurrentUrl(); ?>"/>
+<div class="header-container">
+    <div class="header">
+        <div class="quick-access">
+            <div class="quick-access-inner">            
+                <div class="appstockus-header-region">Ваш регион:  <span class="appstockus-your-region"><b></b></span></div>
+                <div class="actions appstockus-actions"><span class='change-loc' onclick="getcity()">Изменить </span></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery.get('/geoip/index/getcity', {}, function(response) { console.log(response);
+                    if(response!='change') {
+                        jQuery('.appstockus-your-region b').html(response);
+                    } else {
+                        changeCity('2137');
+                    }
+                });
+            });
+        </script>
+        <div class='weloc'> <p class="welcome-msg"><?php echo $this->getWelcome() ?></p>
+<?php echo $this->getChildHtml('topLinks') ?>            
+        </div>
+        <div class="header-cart">           
+            <?php echo $this->getChildHtml('header_cart') ?>
+            <div class="top-search"><?php echo $this->getChildHtml('topSearch') ?></div>            
+        </div>  
+        <div class='on-center appstockus-on-center'>
+            <div class='on-center-col appstockus-on-center-col'><?php if ($this->getIsHomePage()): ?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+<?php else: ?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                <?php endif ?></div>
+            <div class='on-center-col1'>
+                Принимаем звонки:<br/>
+                c 9:00 до 21:00<br/>
+                +7 495 <span class='big-tel'>258 00 76</span><br/>
+                <span class='send-call' onclick='getCall()'>Обратный звонок</span>
+            </div>
+            <div class='on-center-col2'>
+                <img src='<?php echo $this->getSkinUrl('images/intex/car.png'); ?>' alt='Доставка' title='Доставка'/><br/>
+                Доставка по Москве <br/>
+                или <a class='send-call call-link' href="/delivery">самовывоз</a>
+            </div>
+            <div class='on-center-col3'>
+                <a class='send-call call-link' href='/pay-on'>Оплата при получении</a> или<br/>
+                <div class='payment1'>
+                    <a href='/pay-on'><img src='<?php echo $this->getSkinUrl('images/intex/mastercard.png'); ?>'  alt='mastercard' title='mastercard'/></a>
+                    <a href='/pay-on'><img src='<?php echo $this->getSkinUrl('images/intex/wallet.png'); ?>'  alt='wallet' title='wallet'/></a>
+                    <a href='/pay-on'><img src='<?php echo $this->getSkinUrl('images/intex/qua.png'); ?>'  alt='qua' title='qua'/> </a>
+                </div>
+                <div class='payment2'>
+                    <a href='/pay-on'><img src='<?php echo $this->getSkinUrl('images/intex/visa.png'); ?>'  alt='visa' title='visa'/></a>
+                    <a href='/pay-on'><img src='<?php echo $this->getSkinUrl('images/intex/anot.png'); ?>'  alt='inmoney' title='inmoney'/></a>
+                    <a href='/pay-on'><img src='<?php echo $this->getSkinUrl('images/intex/sberbank.png'); ?>'  alt='сбербанк' title='сбербанк'/></a>  
+                </div>        
+            </div>
+        </div>
+        <div class="store-language"><?php echo $this->getChildHtml('store_language') ?></div>
+
+<?php echo $this->getChildHtml('topContainer'); ?>
+    </div>
+        <?php echo $this->getChildHtml('topMenu') ?>
+<?php $price_add = Mage::getStoreConfig('shipping/option/checkout_multiple_maximum_qty'); ?>

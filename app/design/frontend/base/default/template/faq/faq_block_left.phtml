@@ -1,0 +1,21 @@
+<div class="block side-nav-faq" id="categories_block_left_faq">
+	<div class="block-title">
+        <strong><span><a href='/faq'>Вопросы/Отзывы</a></span></strong>
+    </div>
+	<div class="block-content"> 
+<span class="appstockus-last-3">Последние 3 сообщения:</span>
+		<ul id="verticalcollapse_faq">
+		    <?php $count = 1; foreach ($this->getFaqCollection()->getData() as $item) { ?>		
+		          <li class="level0 nav-<?php echo $count; ?>">
+                               <div class='faq-block-name'><?php echo $item['name'].", ".$item['city'].":"; ?></div>
+ 			       <div class='faq-block-question'><?php echo $item['question']; ?></div>
+                               <div class='faq-block-answerer'>dachniki-club.ru:</div>
+                               <div class='faq-block-answer'><?php echo $item['answer']; ?></div>
+			   </li>           
+			   <?php $count++; ?>                      
+		    <?php } ?>
+                </ul><div class="all-messages"><a href='/faq' class="appstockus-faq-all-mess">Все сообщения</a></div>
+	</div>
+</div>
+<div class='blckbottom'>&nbsp;</div>
+

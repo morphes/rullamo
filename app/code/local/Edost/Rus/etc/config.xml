@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Edost
+ * @package     Edost_Rus
+ * @copyright   Copyright (c) 2011, 2012 eDost.ru (http://www.eDost.ru)
+ */
+-->
+<config>
+    <modules>
+        <Edost_Rus>
+            <version>1.0.6</version>
+        </Edost_Rus>
+    </modules>
+    <global>
+        <resources>
+            <rus_setup>
+                <setup>
+                    <module>Edost_Rus</module>
+                </setup>
+            </rus_setup>
+        </resources>
+        <models>
+            <rus>
+                <class>Edost_Rus_Model</class>
+            </rus>
+        </models>
+        <sales>
+            <shipping>
+                <carriers>
+                    <edost>
+                        <class>Edost_Rus_Model_Shipping_Carrier_Edost</class>
+                    </edost>
+                </carriers>
+            </shipping>
+        </sales>
+
+        <helpers>
+            <rus>
+                <class>Edost_Rus_Helper</class>
+            </rus>
+        </helpers>
+
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Edost_Rus>
+                    <files>
+                        <default>Edost_Rus.csv</default>
+                    </files>
+                </Edost_Rus>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <translate>
+            <modules>
+                <Edost_Rus>
+                    <files>
+                        <default>Edost_Rus.csv</default>
+                    </files>
+                </Edost_Rus>
+            </modules>
+        </translate>
+    </frontend>
+
+    <default>
+        <carriers>
+            <edost>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <cutoff_cost></cutoff_cost>
+                <gateway_url></gateway_url>
+                <id backend_model="adminhtml/system_config_backend_encrypted"></id>
+                <model>rus/shipping_carrier_edost</model>
+                <password backend_model="adminhtml/system_config_backend_encrypted"></password>
+                <title>Доставка</title>
+                <specificerrmsg>В данный город автоматический расчет доставки не осуществляется. О возможности и стоимости доставки, пожалуйста, уточните у менеджера.</specificerrmsg>
+                <max_package_weight>1000</max_package_weight>
+                <handling_type>F</handling_type>
+                <handling_action>O</handling_action>
+            </edost>
+
+        </carriers>
+    </default>
+
+
+</config>

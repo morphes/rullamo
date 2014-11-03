@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Morphes_Tabs>
+            <version>0.0.1</version>
+        </Morphes_Tabs>
+    </modules>
+
+    <global>
+
+        <blocks>
+            <catalog>
+                <rewrite>
+                    <product_view_tabs>Morphes_Tabs_Block_Tabs</product_view_tabs>
+                </rewrite>
+            </catalog>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                 <morphes_tabs>
+                     <file>morphes_tabs.xml</file>
+                 </morphes_tabs>
+            </updates>
+        </layout>
+    </frontend>
+</config>

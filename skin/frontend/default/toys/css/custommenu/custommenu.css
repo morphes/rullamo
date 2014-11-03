@@ -1,0 +1,113 @@
+#custommenu {
+    position:relative;
+	z-index:197;
+	background: url("../../images/nav_bg.png") no-repeat scroll center top transparent;
+    font-size: 13px;
+    height: 38px;
+    margin:0px auto 0; 
+}
+div.menu {
+	float: left;
+	background: url("../../images/nav_spacer.gif") no-repeat scroll right top transparent;
+    color: #FFFFFF;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 16px;
+}
+div.menu.act .parentMenu { background:url(../../images/nav_hoverbg.png) repeat-x left top; }
+div.menu.active .parentMenu{ background:url(../../images/nav_hoverbg.png) repeat-x left top; }
+div.menu:hover .parentMenu{ background:url(../../images/nav_hoverbg.png) repeat-x left top; }
+
+div.tm-custom-menu-popup {
+    position:absolute;
+    z-index:3000;
+    border:5px solid #446F98;
+    display: none;
+    background-color:#fff;
+    text-align:left;
+}
+div.menu {
+    padding:0 2px 0 0;
+}
+div.menu .parentMenu{
+    padding: 9px 10px;
+}
+div.tm-custom-menu-popup {
+    padding:5px;
+}
+div.menu a, div.tm-custom-menu-popup a {
+    text-decoration: none;
+    display:block;
+}
+div.tm-custom-menu-popup a.actParent {
+    color: #4D4D4D;
+}
+div.tm-custom-menu-popup a.act {
+    color: #A52A2A;
+}
+div.column {
+    float:left;
+    width:200px; /* column width */
+    padding:5px;
+}
+div.itemSubMenu {
+    margin-left:20px;
+}
+.clearBoth {
+    clear:both;
+}
+
+div.menu a{color:#FFFFFF}
+
+div.home-icon { padding:8px 10px; }
+
+div.menu.act a{ color:#fff; }
+div.menu.active {     }
+div.popup {
+    position:absolute;
+    z-index:3000;
+    border:1px solid #D5E6B7;
+    display: none;
+    background-color:#F5FBE9;
+    text-align:left;
+	padding-left:10px;
+	padding-right:10px;
+}
+div.home-link{ padding:0 2px 0 0;}
+div.home-link .parentMenu{  padding:9px 10px;  }
+div.home-link .parentMenu:hover{  background:url(../../images/nav_hover_homebg.png) repeat-x left top;  }
+div.home-active .parentMenu{  background:url(../../images/nav_hover_homebg.png) repeat-x left top;  }
+
+div.menu a, div.popup a {
+    text-decoration: none;
+    display:block;
+	color:#4B7700;
+}
+div.popup a.actParent {
+    color: #4B7700 ; font-weight:bold;
+}
+div.popup a.act {
+    color: #4B7700;
+}
+
+div.popup a:hover {color:#E45210;  text-decoration:underline;}
+
+div.column {
+    float:left;
+    width:190px; /* column width */
+    padding:5px;
+	
+}
+div.itemSubMenu {
+    margin-left:0px;
+}
+.clearBoth {
+    clear:both;
+}
+div.level1 a{ color:#173C62; height:25px; font-weight:bold;background: url("../../images/cat-sap.gif") repeat-x scroll 0 bottom transparent;}
+div.level1 a:hover{ color:#FF6C08;}
+div.level2 a{ color:#444;font-weight:normal; background:none; height:20px; font-size:11px;}
+div.level2 a:hover{ color:#FF6C08;}
+div.level3 { margin-left:8px;}
+div.parentMenu a{ color: #FFFFFF; font-size:13px; text-shadow:1px 1px #000;}

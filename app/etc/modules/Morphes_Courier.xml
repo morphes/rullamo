@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+         <modules>
+                <Morphes_Courier>
+                        <active>true</active>
+                        <codePool>local</codePool>
+                </Morphes_Courier>
+         </modules>
+</config>

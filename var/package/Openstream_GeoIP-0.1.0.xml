@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Openstream_GeoIP</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension allows you to use free GeoIP Lite database by MaxMind with your Magento installation.</summary>
+    <description>This extension connects MaxMind GeoIP Lite database to Magento and provides a set of methods to use it.</description>
+    <notes>Initial release.</notes>
+    <authors><author><name>openstream</name><user>auto-converted</user><email>info@openstream.ch</email></author></authors>
+    <date>2012-08-10</date>
+    <time>12:23:51</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Openstream_GeoIP.xml" hash="beda28109cb50e4c767314f32251733e"/></dir></target><target name="magecommunity"><dir name="Openstream"><dir name="GeoIP"><dir name="Block"><dir name="Adminhtml"><file name="Notifications.php" hash="d823ac39128374d62fd49b58d73b3941"/></dir><dir name="System"><dir name="Config"><file name="Status.php" hash="cc693eda6b3381ff6444944ce53bfe59"/><file name="Synchronize.php" hash="c18e8faa004b0d1b8fdafa2ff5f7997a"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="6ec62181f013f362d0d9ac3cec06e506"/></dir><dir name="Model"><file name="Abstract.php" hash="e97175fa8a5463c377e51569ec02b774"/><file name="Country.php" hash="4719a64fce6d6d374a18df12763ac2e4"/><file name="Cron.php" hash="420b866ce10d343a1b0fb491448dfb42"/><file name="Info.php" hash="c528a2e39e7a5a9c7b0785d29bd865f9"/><file name="Observer.php" hash="573056da148b802069af297531719194"/><file name="Wrapper.php" hash="fb3ab0d54085a0f975f438d64d2640e5"/></dir><dir name="controllers"><file name="ProcessController.php" hash="b434c163fad7b034dda1a96b9bd10b6c"/></dir><dir name="etc"><file name="config.xml" hash="39b12b4e7a02551b2403affe061b37c2"/><file name="system.xml" hash="9e7b8f83f4d08ce53062eaa89aa98bc0"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><dir name="openstream"><file name="geoip.xml" hash="9fa5c8c8ee6e3f86183ec570be71b8d1"/></dir></dir><dir name="template"><dir name="openstream"><dir name="geoip"><dir name="system"><dir name="config"><file name="synchronize.phtml" hash="fa67f4611b147672bbd6d2e0416b0eff"/></dir></dir><file name="notifications.phtml" hash="3f0a95cdc21383248bb92dad2ac37ce2"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

@@ -1,0 +1,138 @@
+<?php
+/**
+ * Created by ORBA|we-commerce your business -> orba.pl
+ * http://panel.sheepla.pl/Content/GetWidgetAPIJavaScript
+ * http://panel.sheepla.pl/Content/GetWidgetAPICss
+ * 
+ */
+
+if (Mage::getConfig()->getModuleConfig('Orba_Sheepla')->is('active', 'true')):
+    ?>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo Mage::getStoreConfig('sheepla/api_config/api_widget_css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl('css/sheepla/custom.css'); ?>">
+
+    <!--Importujemy bibliotekę JavaScript-->
+    <script type="text/javascript" src="<?php echo Mage::getStoreConfig('sheepla/api_config/api_widget_js'); ?>"></script>
+
+    <!--Otwieramy blok kodu typu javascript-->
+    <script type="text/javascript">
+        //tworzymy obiekt konfiguracji dla obienktu sheepla
+        sheepla.config = {
+            apikey: '<?php echo Mage::helper('sheepla/data')->getPublicApiKey(); ?>',
+            cultureId: '<?php echo Mage::helper('sheepla/data')->getCultureIdByLocaleCode(Mage::app()->getLocale()->getLocaleCode()); ?>'
+        };
+        //inicjalizujemy obiekt sheepla
+        sheepla.init();
+
+        sheepla.user.before.ui.lock_screen = function() {
+            if (chosen_address_id) {
+                var sufix = '-' + chosen_address_id;
+                sheepla.query("#sheepla-sdk-area" + sufix).find(":input").each(function() {
+                    sheepla.query(this).attr('id', sheepla.query(this).attr('id').replace(sufix, ''));
+                });
+            }
+        }
+
+        sheepla.user.after.ui.unlock_screen = function() {
+            if (chosen_address_id) {
+                var sufix = '-' + chosen_address_id;
+                sheepla.query("#sheepla-sdk-area" + sufix).find(":input").each(function() {
+                    sheepla.query(this).attr('id', sheepla.query(this).attr('id') + sufix);
+                });
+            }
+        }
+
+
+        var tmp_address_id = false;
+        var chosen_address_id = false;
+
+        sheepla.user.after_draw_special = function(area) {
+
+            //hide widget if sheepla area is blank
+            if (sheepla.query(area).is(':empty')) {
+                sheepla.query(area).hide("slide");
+            }
+
+            var sufix = '';
+            if (sheepla.query(area).attr('class') == 'sheepla-sdk-area-multi') {
+                var address_id = sheepla.query(area).attr('id').replace('sheepla-sdk-area-', '');
+                sufix = '-' + address_id;
+                sheepla.query(area).find(":input").each(function() {
+                    sheepla.query(this).attr('id', sheepla.query(this).attr('id') + sufix);
+                    sheepla.query(this).attr('name', sheepla.query(this).attr('name') + '[' + address_id + ']');
+                });
+                sheepla.query(area).find("label").each(function() {
+                    sheepla.query(this).attr('for', sheepla.query(this).attr('for') + sufix);
+                });
+                sheepla.query(area).mouseup(function() {
+                    chosen_address_id = address_id;
+                });
+                tmp_address_id = address_id;
+            }
+
+            sheepla.query('#shipping-method-buttons-container' + sufix).show();
+
+            if (sheepla.query('#sheepla-widget-plinpost-paczkomat' + sufix).length != 0) {
+                sheepla.query('#sheepla-widget-plinpost-paczkomat' + sufix).addClass('input-text required-entry');
+            }
+
+            if (sheepla.query('#sheepla-widget-plinpost-form-agree-checkbox' + sufix).length != 0) {
+                sheepla.query('#sheepla-widget-plinpost-form-agree-checkbox' + sufix).addClass('input-checkbox required-entry');
+            }
+
+            if (sheepla.query('#sheepla-widget-ruqiwipost-paczkomat' + sufix).length != 0) {
+                sheepla.query('#sheepla-widget-ruqiwipost-paczkomat' + sufix).addClass('input-text required-entry');
+            }
+
+            if (sheepla.query('#sheepla-widget-rupickpoint-paczkomat' + sufix).length != 0) {
+                sheepla.query('#sheepla-widget-rupickpoint-paczkomat' + sufix).addClass('input-text required-entry');
+            }
+
+        };
+
+        function sheepla_payment_method_change() {
+            sheepla.query(".sp-methods dd").hide();
+            var dd = sheepla.query(".sp-methods input[type=radio]:checked").parent("dt").next();
+            if (dd.is("dd")) {
+                dd.show().children().show();
+            }
+        }
+
+        function sheepla_onclick(templateId, containerClass, city, shippingMethod, clickedElement) {
+
+            //if its no sheepla method - hide container
+            if (templateId != false) {
+                sheepla.query(containerClass).show();
+            } else {
+                sheepla.query(containerClass).hide();
+            }
+
+            sheepla.query(containerClass + ' *').hide();
+            sheepla.query(".sheepla-sdk-area").appendTo(sheepla.query(clickedElement).parent());
+            if (templateId) {
+                sheepla.query('#shipping-method-buttons-container').hide();
+                sh_special = sheepla.get_map_widget(templateId, containerClass, city);
+            }
+
+            if (typeof sheepla.vars.reloadPaymentMethods != 'undefined' && sheepla.vars.reloadPaymentMethods) {
+                sheepla.query('#shipping-method-buttons-container').hide();
+                sheepla.ui.lock_area("#checkout-payment-method-load");
+                sheepla.query.ajax({
+                    data: {'shipping_method': shippingMethod},
+                    type: 'POST',
+                    url: '<?php echo Mage::getUrl('sheepla/checkout/getPaymentMethods'); ?>',
+                    success: function(data) {
+                        var parent = sheepla.query("#checkout-payment-method-load").parent();
+                        sheepla.query("#checkout-payment-method-load").remove();
+                        parent.append(data);
+                        if (!sheepla.vars.im_getting_specials) {
+                            sheepla.query('#shipping-method-buttons-container').show();
+                        }
+                    }
+                });
+            }
+        }
+
+    </script>
+<?php endif; ?>
