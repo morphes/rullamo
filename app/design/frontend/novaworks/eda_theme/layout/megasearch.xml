@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="top.search">
+            <action method="setTemplate" ifconfig="megasearch/settings/enabled">
+                <template>novaworks/megasearch/form.phtml</template>
+            </action>
+            <block type="megasearch/form_contents" name="top.search.content" as="topSearchContent" template="novaworks/megasearch/form/contents.phtml"/>
+        </reference>
+    </default>
+</layout> 

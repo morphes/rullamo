@@ -1,0 +1,76 @@
+<?php
+$storeId = Mage::app()->getStore()->getStoreId();
+$ajax_cart		 		= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_cart', $storeId); 
+$image_product_hover 	= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/image_product_hover', $storeId);
+$rating_wishlist_compare	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/rating_wishlist_compare', $storeId); 
+$quick_view	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_quickview', $storeId);  
+$thumb_width =  Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_width', $storeId);
+$thumb_height = Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_height', $storeId);
+$_productCollection=$this->getProductCollection();
+$r = $this->getFrontendHash();
+$_helper = $this->helper('catalog/output');
+?>
+<div class="slider-menu-products">
+	<h4 class="menu_heading">
+		<?php echo $this->getWidgetTitle();?>
+	</h4>
+	<div id="menu_slider_<?php echo $r;?>" class="product-menu-slider hidden-buttons">
+		<div class="slider-items slider-width-col<?php echo $this->getShowItems()?>">	
+			<?php $i=0; foreach ($_productCollection as $_product): ?>
+	            <?php
+	                $oType = false;
+	                $product = Mage::getModel('catalog/product');
+	                $product->load($_product->getId());
+	                foreach ($product->getOptions() as $o) {
+	                    $optionType = $o->getType();
+	                    if ($optionType == 'file') {
+	                        $oType = true;
+	                    }
+	                }
+	            ?>		
+			<!-- Item -->
+	   		<div class="item">
+				<div class="product-item-left">  
+		            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+
+							<div class="novas-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($thumb_width,$thumb_height); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+						 	</div>
+			               
+		            </a>
+			    </div>
+			    <div class="product-item-right">
+			        <h3 class="product-menu-name">
+				        <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a>
+				    </h3>
+					<?php echo $this->getPriceHtml($_product, true) ?>
+			    </div>
+		    </div>
+		    <!-- End Item -->
+	
+			<?php endforeach; ?>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	jQuery(document).ready(function($) {
+		jQuery("#menu_slider_<?php echo $r;?> .slider-items").owlCarousel({
+			items : <?php echo $this->getShowItems()?>, //10 items above 1000px browser width
+	    	itemsDesktop : [1000,<?php echo $this->getShowItemsDesktop()?>], //5 items between 1000px and 901px
+	      	itemsDesktopSmall : [900,<?php echo $this->getShowItemsDesktopSmall()?>], // 3 items betweem 900px and 601px
+	      	itemsTablet: [600,<?php echo $this->getShowItemsTablet()?>], //2 items between 600 and 0;
+	      	itemsMobile : [320,<?php echo $this->getShowItemsMobile()?>],
+	      	navigation : true,
+	      	navigationText : [" "," "],
+	      	slideSpeed : 500,
+	      	pagination : false
+    	});
+	}); 
+//]]>
+</script>
+
+
+
+
+
+

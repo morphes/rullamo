@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<widgets>
+    <widgetproductslist_products type="widgetproductslist/widget_products" translate="name description" module="widgetproductslist">
+        <name>Novaworks - Products List</name>
+        <description>List Products</description>
+        <parameters>
+            <widget_title>
+                <label>Widget Title</label>
+                <visible>1</visible>
+                <value>Widget Products List</value>
+                <type>text</type>
+            </widget_title>
+            <category_id>
+                <label>Categories</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>multiselect</type>
+                <source_model>widgetproductslist/categories</source_model>
+            </category_id>
+            <is_mode>
+                <label>Mode</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <source_model>widgetproductslist/mode</source_model>
+            </is_mode>
+            <widget_style>
+                <label>Style</label>
+                <visible>1</visible>
+                <required>0</required>
+                <type>select</type>
+                <source_model>widgetproductslist/styles</source_model>
+            </widget_style>
+            <template translate="label">
+                <label>Layout</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <notemp translate="label">
+                        <value></value>
+                        <label>Select Layout</label>
+                    </notemp>
+                    <productslist translate="label">
+                        <value>novaworks/widgetproductslist/productslist.phtml</value>
+                        <label>Products List</label>
+                    </productslist>
+                    <products_list_4col translate="label">
+                        <value>novaworks/widgetproductslist/products_list_4col.phtml</value>
+                        <label>Products Mini List</label>
+                    </products_list_4col>
+                    <products_list_1col translate="label">
+                        <value>novaworks/widgetproductslist/products_list_1col.phtml</value>
+                        <label>Products List in Sidebar</label>
+                    </products_list_1col>
+                    <productsscroller translate="label">
+                        <value>novaworks/widgetproductslist/productsscroller.phtml</value>
+                        <label>Products Scroller</label>
+                    </productsscroller>
+                    <products_menu translate="label">
+                        <value>novaworks/widgetproductslist/productsmenu.phtml</value>
+                        <label>Products Menu</label>
+                    </products_menu>
+                </values>
+            </template>
+             <show_quick_act translate="label">
+                            <label>Show Quick Action</label>
+			                <visible>1</visible>
+			                <required>1</required>
+			                <type>select</type>
+			                <values>
+			                    <default translate="label">
+			                        <value>1</value>
+			                        <label>Yes</label>
+			                    </default>
+			                    <no_option translate="label">
+			                        <value>0</value>
+			                        <label>No</label>
+			                    </no_option>
+			                </values>
+			                <description><![CDATA[(Show Add to cart button, Wishlist button, Compare button ...)]]></description>
+             </show_quick_act>
+              <show_quick_view translate="label">
+                            <label>Show Quick View Button</label>
+			                <visible>1</visible>
+			                <required>1</required>
+			                <type>select</type>
+			                <values>
+			                    <default translate="label">
+			                        <value>1</value>
+			                        <label>Yes</label>
+			                    </default>
+			                    <no_option translate="label">
+			                        <value>0</value>
+			                        <label>No</label>
+			                    </no_option>
+			                </values>
+             </show_quick_view>
+            <product_count>
+                <label>Qty</label>
+                <visible>1</visible>
+                <required>1</required>
+                <value>10</value>
+                <type>text</type>
+            </product_count>
+            <show_items>
+                <label>Show items</label>
+                <visible>1</visible>
+                <value>5</value>
+                <type>text</type>
+                <description><![CDATA[(Use Layout Products Scroller)]]></description>
+            </show_items>
+             <show_items_desktop>
+                <label>Show items in Desktop</label>
+                <visible>1</visible>
+                <value>4</value>
+                <type>text</type>
+                <description><![CDATA[(Use Layout Products Scroller. Number items between 1000px and 901px)]]></description>
+            </show_items_desktop>
+             <show_items_desktop_small>
+                <label>Show items in Desktop Small</label>
+                <visible>1</visible>
+                <value>3</value>
+                <type>text</type>
+                <description><![CDATA[(Use Layout Products Scroller. Number items betweem 900px and 601px)]]></description>
+            </show_items_desktop_small>
+              <show_items_tablet>
+                <label>Show items in Tablet</label>
+                <visible>1</visible>
+                <value>2</value>
+                <type>text</type>
+                <description><![CDATA[(Use Layout Products Scroller. Number items between 600px and 321px;)]]></description>
+            </show_items_tablet>
+               <show_items_mobile>
+                <label>Show items in Mobile</label>
+                <visible>1</visible>
+                <value>1</value>
+                <type>text</type>
+                <description><![CDATA[(Use Layout Products Scroller. Number items between 320px and 0px;)]]></description>
+            </show_items_mobile>
+            <is_column>
+                <label>Columns</label>
+                <visible>1</visible>
+                <value>5</value>
+                <type>text</type>
+                <description><![CDATA[(Use Layout Products List)]]></description>
+            </is_column>
+        </parameters>
+    </widgetproductslist_products>
+</widgets>

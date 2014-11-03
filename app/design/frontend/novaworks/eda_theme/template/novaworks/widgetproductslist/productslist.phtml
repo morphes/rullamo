@@ -1,0 +1,120 @@
+<?php
+$storeId = Mage::app()->getStore()->getStoreId();
+$ajax_cart		 		= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_cart', $storeId); 
+$image_product_hover 	= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/image_product_hover', $storeId);
+$rating_wishlist_compare	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/rating_wishlist_compare', $storeId); 
+$quick_view	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_quickview', $storeId);  
+$thumb_width =  Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_width', $storeId);
+$thumb_height = Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_height', $storeId);
+$_productCollection=$this->getProductCollection();
+$_helper = $this->helper('catalog/output');
+if($this->getIsColumn()==6) {
+	$col = 2;
+}elseif($this->getIsColumn()==4) {
+	$col = 3;
+}elseif($this->getIsColumn()==3) {
+	$col = 4;
+}elseif($this->getIsColumn()==2) {
+	$col = 6;
+}
+?>
+<div class="widget-list-items-products">
+<h4 class="spb_heading">
+	<p><?php echo $this->getWidgetTitle();?></p>
+	<div class="heading-icon"></div>
+</h4>
+		<?php $i=0; foreach ($_productCollection as $_product): ?>
+                    <?php
+                        $oType = false;
+                        $product = Mage::getModel('catalog/product');
+                        $product->load($_product->getId());
+                        foreach ($product->getOptions() as $o) {
+                            $optionType = $o->getType();
+                            if ($optionType == 'file') {
+                                $oType = true;
+                            }
+                        }
+                    ?>		
+        <?php if ($i++%$this->getIsColumn()==0): ?>
+        <div class="row products-grid">	
+        <?php endif ?>		
+   		<div class="col-md-<?php echo $col?> item">
+					<div class="item-product-image-box"> 
+				<?php include('labels.phtml')  ?> 
+	            <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+	                          <?php 
+	                if($image_product_hover) { ?>
+	                <div class="front margin-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($thumb_width,$thumb_height); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></div>
+	                <?php
+		                 $_gallery = Mage::getModel('catalog/product') -> load($_product -> getId()) -> getMediaGalleryImages();
+		                 foreach ($_gallery as $_image ):
+	                 ?>
+	                 <div class="product-img-additional back margin-image">
+	                 	<img src="<?php echo $this -> helper('catalog/image') -> init($_product, 'thumbnail', $_image -> getFile()) -> resize($thumb_width, $thumb_height);?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>"/>
+	                 </div>
+	                 <?php
+							break;
+							endforeach;
+					?>
+					<?php
+						}else{
+					?>
+						<div class="margin-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($thumb_width,$thumb_height); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+					 	</div>
+					<?php	
+						}
+					?>			               
+	            </a>
+	            <?php if($this->getShowQuickAct()) { ?>
+					<div class="novaworks-quick-act">	
+					<?php if($_product->isSaleable()): ?>
+						<?php if($ajax_cart):?> 	
+										<?php if ( !($_product->getTypeInstance(true)->hasRequiredOptions($_product) || $_product->isGrouped()) ): ?>
+											<a class="add_to_cart_small button-ajax-cart-id-<?php echo $_product->getId()?>" onclick="ajaxcart('<?php echo $this->getAddToCartUrl($_product) ?>','<?php echo $_product->getId()?>');"><i class="fa fa-plus"> </i><?php echo $this->__('Add to cart')?></a> 
+										<?php else:?>		
+											<a class="ajaxcart_colorbox add_to_cart_small" href="<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_product->getId()));?>"><i class="fa fa-plus"></i> <?php echo $this->__('Add to cart')?></a> 
+										<?php endif; ?> 
+										<?php else:?>
+											<a class="add_to_cart_small" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>');"><i class="fa fa-plus"></i> <?php echo $this->__('Add to cart')?></a> 
+										<?php endif; ?>
+					<?php endif; //end for saleable product ?>	
+										
+					<?php if($rating_wishlist_compare):?>	
+						<div class="quick-act-right">	
+						<?php if($quick_view && $this->getShowQuickView()):?>
+							<a class="act-quickview-button" href="<?php echo $this->getUrl('ajax/index/quickview',array('product_id'=>$_product->getId()));?>" data-id="<?php echo $_product->getId()?>"><i class="fa fa-search-plus"></i></a> 
+						<?php endif;?>	
+							<?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+								<a title="<?php echo $this->__('Compare')?>" class="act-add-to-compare button-ajax-compare-id-<?php echo $_product->getId()?>" href="<?php echo $_compareUrl ?>" data-id="<?php echo $_product->getId()?>"><i class="fa fa-exchange"></i></a> 
+							<?php endif; ?>
+							<?php if ($this->helper('wishlist')->isAllow()) : ?>
+								<a title="Wishlist" class="act-add-to-wishlist button-ajax-wishlist-id-<?php echo $_product->getId()?>" href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" data-id="<?php echo $_product->getId()?>"><i class="fa fa-star"></i></a> 
+							<?php endif; ?> 
+						</div>
+					<?php endif; ?> 
+					</div>
+					<?php }?>	
+		    </div>
+	        <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h3>
+			<?php echo $this->getPriceHtml($_product, true) ?>
+			<div class="categories-list-each">
+			<?php $categories = $_product->getCategoryIds(); ?>
+            <?php $j=0; foreach($categories as $k => $_category_id): ?>
+               <?php if($j < 2): $_category = Mage::getModel('catalog/category')->load($_category_id) ?>
+               <a href="<?php echo $_category->getUrl() ?>"><?php echo $_category->getName() ?></a><?php if($j < 1):?>,<?endif?>
+            <?php endif; $j++; endforeach; ?> 
+			</div>
+							<div class="rating-product-box">
+				            	<?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+							</div>				
+	    </div>
+        <?php if ($i%$this->getIsColumn()==0 || $i==$this->getProductCount()): ?>
+        </div>
+        <?php endif ?>
+		<?php endforeach; ?>
+</div>
+
+
+
+
+

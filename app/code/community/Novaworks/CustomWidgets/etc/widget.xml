@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<widgets>
+    <google_map type="customwidgets/widget_map" translate="label description" module="customwidgets">
+        <name>Novaworks - Google Maps</name>
+        <parameters>
+             <title>
+                <label>Widget Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>10</sort_order>
+                 <description><![CDATA[Heading text. Leave it empty if not needed.]]></description>
+            </title>
+             <address>
+                <label>Address</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>20</sort_order>
+                 <description><![CDATA[Enter the address that you would like to show on the map here, i.e. "Hanoi".]]></description>
+            </address>
+            <map_height>
+                <label>Map Height</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>400</value>
+                <sort_order>30</sort_order>
+                <description><![CDATA[Enter map height in pixels. Example: 300.]]></description>
+            </map_height>
+             <map_type translate="label">
+                <label>Map Type</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>40</sort_order>
+                <type>select</type>
+                <values>
+                    <map translate="label">
+                        <value>roadmap</value>
+                        <label>Map</label>
+                    </map>
+                    <satellite translate="label">
+                        <value>satellite</value>
+                        <label>Satellite</label>
+                    </satellite>
+                     <hybrid translate="label">
+                        <value>hybrid</value>
+                        <label>Hybrid</label>
+                    </hybrid>
+                    <terrain translate="label">
+                        <value>terrain</value>
+                        <label>Terrain</label>
+                    </terrain>
+                </values>
+                <description><![CDATA[Select map display type. NOTE, if you set a color below, then only the standard Map type will show.]]></description>
+            </map_type>
+            <map_zoom>
+                <label>Map Zoom</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <source_model>customwidgets/map_zoom</source_model>
+                <sort_order>50</sort_order>
+            </map_zoom>
+               <map_color>
+                <label>Map Color</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>55</sort_order>
+                 <description><![CDATA[If you would like, you can enter a hex color here to style the map by changing the hue. Please provide the # as well, e.g. #ff9900]]></description>
+            </map_color>
+               <map_saturation translate="label">
+                <label>Map Saturation</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>60</sort_order>
+                <type>select</type>
+                <values>
+                    <color translate="label">
+                        <value>color</value>
+                        <label>Color</label>
+                    </color>
+                    <mono translate="label">
+                        <value>mono</value>
+                        <label>Mono</label>
+                    </mono>
+                </values>
+                <description><![CDATA[Set whether you would like the map to be in color or mono (black/white).]]></description>
+            </map_saturation>
+            <custom_map_pin>
+                <label>Custom Map Pin</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>70</sort_order>
+                <description><![CDATA[Choose an image to use as the custom pin for the address on the map. Upload your custom map pin, the image size must be 150px x 75px.]]></description>
+
+            </custom_map_pin>
+               <full_screen translate="label">
+                <label>Fullscreen Display</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>80</sort_order>
+                <type>select</type>
+                <values>
+                    <color translate="label">
+                        <value>no</value>
+                        <label>No</label>
+                    </color>
+                    <mono translate="label">
+                        <value>yes</value>
+                        <label>Yes</label>
+                    </mono>
+                </values>
+                <description><![CDATA[If yes, the map will be displayed from screen edge to edge.]]></description>
+            </full_screen>
+              <extra_class>
+                <label>Extra class name</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>90</sort_order>
+                 <description><![CDATA[If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.]]></description>
+            </extra_class>
+        </parameters>
+    </google_map>
+    
+    <google_charts type="customwidgets/widget_charts" translate="label description" module="customwidgets">
+        <name>Novaworks - Google Chart</name>
+        <parameters>
+             <title>
+                <label>Widget Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>10</sort_order>
+                 <description><![CDATA[Heading text. Leave it empty if not needed.]]></description>
+            </title>
+             <chart_type translate="label">
+                <label>Chart Type</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>20</sort_order>
+                <type>select</type>
+                <values>
+                    <line translate="label">
+                        <value>lc</value>
+                        <label>Line</label>
+                    </line>
+                     <pie translate="label">
+                        <value>p3</value>
+                        <label>Pie</label>
+                    </pie>
+                    <pie2d translate="label">
+                        <value>p</value>
+                        <label>Pie 2D</label>
+                    </pie2d>
+                    <xyline translate="label">
+                        <value>lxy</value>
+                        <label>XY Line</label>
+                    </xyline>
+                    <scatter translate="label">
+                        <value>s</value>
+                        <label>Scatter</label>
+                    </scatter>
+                </values>
+                <description><![CDATA[Choose the type of chart you'd like to display.]]></description>
+            </chart_type>
+     
+             <chart_label>
+                <label>Chart Labels</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <sort_order>30</sort_order>
+                 <description><![CDATA[Enter the chart labels here, e.g. First+Label|Second+Label|Third+Label|Fourth+Label.]]></description>
+            </chart_label>
+             <chart_data>
+                <label>Chart Data</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <sort_order>40</sort_order>
+                 <description><![CDATA[Enter the chart data here, e.g. 41.12,32.35,21.52,5.01]]></description>
+            </chart_data>            
+             <chart_data_color>
+                <label>Chart Data Colours</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>50</sort_order>
+                 <description><![CDATA[Enter the chart data colours here (hex without the #), e.g. D73030,329E4A,415FB4,DFD32F]]></description>
+            </chart_data_color> 
+             <advanced_chart_data>
+                <label>Advanced Chart Data</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>60</sort_order>
+                 <description><![CDATA[Enter the any advanced chart data here]]></description>
+            </advanced_chart_data>
+            <chart_width>
+                <label>Chart Width</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>600</value>
+                <sort_order>70</sort_order>
+            </chart_width>
+           <chart_height>
+                <label>Chart Height</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>250</value>
+                <sort_order>80</sort_order>
+           </chart_height>
+           <extra_class>
+                <label>Extra class name</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>90</sort_order>
+                 <description><![CDATA[If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.]]></description>
+            </extra_class>
+        </parameters>
+    </google_charts>    
+    
+
+    <icon_font type="customwidgets/widget_icon" translate="label description" module="customwidgets">
+        <name>Novaworks - Icon Font</name>
+        <parameters>
+            <icon_name>
+                <label>Icon Name</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value></value>
+                 <description><![CDATA[Example: icon-power . You can check list icon at skin/frontend/novaworks/eda_theme/fontello/demo.html]]></description>
+                <sort_order>10</sort_order>
+            </icon_name>
+            <icon_size>
+                <label>Icon Size</label>
+                <visible>1</visible>
+                <type>text</type>
+                 <value></value>
+                <sort_order>20</sort_order>
+                <description><![CDATA[Example: 12px]]></description>
+            </icon_size>
+        </parameters>
+    </icon_font>
+    
+     <image_box type="customwidgets/widget_imagebox" translate="label description" module="customwidgets">
+        <name>Novaworks - Image Box</name>
+        <parameters>
+            <background_color>
+                <label>Background Color</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>0</sort_order>
+                 <description><![CDATA[Sample: #D73030]]></description>
+            </background_color>
+            <image>
+                <label>Background Image</label>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>10</sort_order>
+            </image>
+            <background_repeat translate="label">
+                <label>Background Repeat</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>20</sort_order>
+                <type>select</type>
+                <values>
+                    <no_repeat translate="label">
+                        <value>no-repeat</value>
+                        <label>No Repeat</label>
+                    </no_repeat>
+                    <repeat translate="label">
+                        <value>repeat</value>
+                        <label>Repeat</label>
+                    </repeat>
+                    <repeat_x translate="label">
+                        <value>repeat-x</value>
+                        <label>Repeat X</label>
+                    </repeat_x>
+                    <repeat_y translate="label">
+                        <value>repeat-y</value>
+                        <label>Repeat Y</label>
+                    </repeat_y>
+                </values>
+            </background_repeat>   
+            <background_position translate="label">
+                <label>Background Position</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>30</sort_order>
+                <type>select</type>
+                <values>
+                    <left_top translate="label">
+                        <value>left top</value>
+                        <label>Left Top</label>
+                    </left_top>
+                    <left_center translate="label">
+                        <value>left center</value>
+                        <label>Left Center</label>
+                    </left_center>
+                    <left_bottom translate="label">
+                        <value>left bottom</value>
+                        <label>Left Bottom</label>
+                    </left_bottom>
+                    <center_center translate="label">
+                        <value>center center</value>
+                        <label>Center</label>
+                    </center_center>
+                    <right_top translate="label">
+                        <value>right top</value>
+                        <label>Right Top</label>
+                    </right_top>
+                    <right_center translate="label">
+                        <value>right center</value>
+                        <label>Right Center</label>
+                    </right_center>
+                    <right_bottom translate="label">
+                        <value>right bottom</value>
+                        <label>Right Bottom</label>
+                    </right_bottom>
+                </values>
+            </background_position>          
+            <padding_top>
+                <label>Padding</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>70</value>
+                <sort_order>40</sort_order>
+            </padding_top>
+            <margin>
+                <label>Margin</label>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>40</value>
+                <sort_order>50</sort_order>
+            </margin>
+            <border>
+                <label>Border</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>0</value>
+                <sort_order>60</sort_order>
+            </border>
+            <border_color>
+                <label>Border</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>70</sort_order>
+                <description><![CDATA[Sample: #D73030]]></description>
+            </border_color>
+            <block_id type="complex" translate="label">
+                <visible>1</visible>
+                <label>Block Content</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/cms_block_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Block...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>80</sort_order>
+            </block_id>
+        </parameters>
+    </image_box>   
+    <parallax_background type="customwidgets/widget_parallax" translate="label description" module="customwidgets">
+        <name>Novaworks - Parallax Background</name>
+        <parameters>
+            <image>
+                <label>Image</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>widgetimagechooser/chooser</type>
+                <sort_order>10</sort_order>
+            </image>
+            <box_height>
+                <label>Box Height</label>
+                <required>1</required>
+                <visible>1</visible>
+                <type>text</type>
+                 <value>350</value>
+                <sort_order>20</sort_order>
+            </box_height>
+            <block_id type="complex" translate="label">
+                <visible>1</visible>
+                <label>Block Content</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/cms_block_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Block...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>30</sort_order>
+            </block_id>
+        </parameters>
+    </parallax_background>
+    <latest_tweets type="latesttweet/widget_latest" translate="label description" module="latesttweet">
+        <name>Novaworks - Latest Tweets</name>
+        <parameters>
+             <title>
+                <label>Widget Title</label>
+                <visible>1</visible>
+                <type>text</type>
+                <sort_order>10</sort_order>
+                <value>Latest Tweets</value>
+                 <description><![CDATA[Heading text. Leave it empty if not needed.]]></description>
+            </title>
+            <style translate="label">
+                <label>Style</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>20</sort_order>
+                <type>select</type>
+                <values>
+                    <dark translate="label">
+                        <value>dark</value>
+                        <label>Dark</label>
+                    </dark>
+                    <light translate="label">
+                        <value>light</value>
+                        <label>Light</label>
+                    </light>
+                </values>
+            </style>   
+            <list translate="label">
+                <label>List Template</label>
+                <visible>1</visible>
+                <required>1</required>
+                <sort_order>20</sort_order>
+                <type>select</type>
+                <values>
+                     <normal translate="label">
+                        <value>normal</value>
+                        <label>Normal</label>
+                    </normal>
+                    <large translate="label">
+                        <value>large</value>
+                        <label>Large</label>
+                    </large>
+                    <large translate="label">
+                        <value>footer-list</value>
+                        <label>Footer List</label>
+                    </large>
+                </values>
+            </list>  
+        </parameters>
+    </latest_tweets>
+    <templates type="customwidgets/widget_template" translate="label description" module="customwidgets">
+        <name>Novaworks - Template</name>
+        <parameters>
+            <wlayout>
+                <label>Layout</label>
+                <visible>1</visible>
+                <source_model>customwidgets/layout</source_model>
+                <type>customwidgets/adminhtml_system_config_form_field_imagessmall</type>
+                <sort_order>10</sort_order>
+            </wlayout>
+            <block_one type="complex" translate="label">
+                <visible>1</visible>
+                <label>Area 1</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/cms_block_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Block...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>20</sort_order>
+            </block_one>
+            <block_two type="complex" translate="label">
+                <visible>1</visible>
+                <label>Area 2</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/cms_block_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Block...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>30</sort_order>
+            </block_two>
+            <block_three type="complex" translate="label">
+                <visible>1</visible>
+                <label>Area 3</label>
+                <type>label</type>
+                <helper_block>
+                    <type>adminhtml/cms_block_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Block...</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>40</sort_order>
+            </block_three>
+        </parameters>
+    </templates>
+</widgets>

@@ -1,0 +1,212 @@
+body, .custom-html .block-content p, .my-account .welcome-msg {
+  color:#9b9b9b;
+  font-family:'Montserrat', sans-serif !important;
+  font-size:10px;
+}
+a, a:focus { color:#9b9b9b; }
+a:hover {
+  color:#9d2134 !important;
+  text-decoration:none;
+}
+.wrapper { background-color:#ffffff; }
+.header-1 { color:#9b9b9b; }
+.header-1 .mega-layout-custom-menu a, .header-1 .mega-layout-custom-menu a:focus, .shopping-bag-item a.cart-contents { color:#ffffff; }
+h1, h2, h3, h4, h5, h6, #default-menu #nav li a, #wide-menu #nav > li > a, #wide-menu #nav ul.level0 > li > a, .footer-info-top .footer-info li, .footer-info-container .footer-info .about-responsive h4, .footer-info .newsletter-box .form-subscribe-header, .bottom-menu-column h4, .footer-aditional .facebook h4, .footer-aditional .twitter h4, .category-title h1, .home-content h3.title, .who-we-are h1, .main .col-main .page-title h1, .col-main .cart-empty a, .about-content .wel-come h2, .about-content .center-title h1, .about-content h2, .afew-container .retina-ready h3, .afew-container .mobile-friendly h3, .afew-container .wide-or h3, .afew-container .responsive-layout h3, .post-list-item h2 a { font-family:'Montserrat', sans-serif; }
+h1, h2, h3, h4, h5, h6, .home-content h3.title, .who-we-are h1, .footer-info .newsletter-box .form-subscribe-header, .cart-accordion-heading .cart-accordion-toggle, .who-we-are h1.title, .who-we-are h2 { color:#202020 !important; }
+h5, h5 a, h3 a, #menubar-controls a { color:#9b9b9b; }
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .button:active, button:active, input[type="submit"]:active, input[type="reset"]:active, input[type="button"]:active, .a-few-features a:hover, #toTop { background-color:#9d2134; }
+.header-container { background-color:#000000; }
+.header-bottom { background-color:#9d2134; }
+.header-bottom #search_mini_form { background-color:#731826; }
+.circle-hover .circle-background { background-color:#9d2134; }
+.owl-theme .owl-controlls .owl-buttons div {
+  color:#f7f7f7;
+  background:#202020;
+}
+.owl-theme .owl-controlls .owl-buttons div:hover { color:#f7f7f7; }
+.owl-theme .owl-controlls .owl-buttons div:hover:hover { color:#9d2134 !important; }
+.block-newsletter .input-box button.button { background-color:#9d2134; }
+.block-newsletter .input-box button.button:hover { background-color:#202020; }
+.light-button .owl-theme .owl-controlls .owl-buttons div {
+  color:#9b9b9b;
+  background:#ffffff;
+}
+.light-button .owl-theme .owl-controlls .owl-buttons div:hover { color:#9b9b9b; }
+.light-button .owl-theme .owl-controlls .owl-buttons div:hover:hover { color:#9b9b9b !important; }
+.pt_vmegamenu div.pt_menu.act .parentMenu a, .pt_vmegamenu div.popup a.act, .pt_vmegamenu .itemSubMenu a.level2:hover, .pt_vmegamenu .itemMenu a.level1.nochild:hover { color:#9d2134 !important; }
+.pages ol li:hover { background:#9d2134; }
+.pages ol li.current {
+  background-color:#9d2134 !important;
+  border:1px solid #9d2134 !important;
+  color:#ffffff;
+}
+#poll-answers span.label label { color:#9b9b9b; }
+.header-container-1 .nav-container { border-top:5px solid #9d2134; }
+.my-account .welcome-msg { text-transform:none; }
+.header-container-1 .welcome-msg, .header-container-1 .mini-cart .cart-icon-top span.amount, span.amount span.price { color:#9d2134; }
+.mega-layout-custom-menu .menu-manager-menu li.active a, .mega-layout-custom-menu .menu-manager-menu li a:hover { color:#9d2134 !important; }
+.faq-items a:hover {
+  border:1px solid #9d2134;
+  background:#9d2134;
+  color:#ffffff !important;
+}
+.parallax-box ul.social-icon li { background-color:#ffffff; }
+.parallax-box ul.social-icon li:hover { background-color:#9d2134 !important; }
+.home-banner .view-more { background-color:#363636; }
+.home-banner .view-more:hover { background-color:#9d2134 !important; }
+.home-tab-mega ul > li.active > a, .home-tab-mega ul > li.active > a:hover, .home-tab-mega ul > li > a:hover {
+  background-color:#9d2134 !important;
+  color:#ffffff !important;
+}
+.sorter .view-mode .grid:hover, .sorter .view-mode strong, .sorter .view-mode a:hover, .ajax-loading, .sorter .view-mode strong, #twitter_update_list li .tweet-icon { background-color:#9d2134 !important; }
+#wide-menu #nav > li:hover > a, .block-inner-menu h4, .f-fix .special-price .price, .product-shop .block-detail-other span, #wide-menu #nav li a.level-top:hover, .home-content-container .filter-nav ul li a.selected, .block-box-inner h2 span { color:#9d2134 !important; }
+.nova-widget-style-mega-style h5.spb_heading { border-bottom:3px solid #9d2134; }
+.i-top-right ul li.selected, .home-content-container .main-container .filter-nav ul li a.selected { color:#9d2134 !important; }
+.block-tags .block-content .tags-list a:hover, .icon-ok { color:#9d2134; }
+#default-menu #nav li.active a span, #default-menu #nav li.level0.active a.level-top, #default-menu #nav li.level0:hover a.level-top, #default-menu #nav li.level0 a:hover { color:#9d2134; }
+#wide-menu #nav ul.level0 > li > a {
+  border-bottom:1px solid #9d2134 !important;
+  padding-bottom:10px;
+  display:inline-block;
+}
+#opc-login h3, #opc-login .buttons-set .f-left { color:#9d2134 !important; }
+#checkout-step-login .buttons-set .button {
+  background-color:#9d2134;
+  color:#ffffff;
+}
+#checkout-step-login .buttons-set .button:hover {
+  background-color:#202020;
+  color:#ffffff !important;
+}
+.novaworks-navigation #novaworks-nav li.level0 ul li a:hover { color:#9d2134 !important; }
+.footer-info-container .footer-info .nova-footer-info .nova-footer-box1 p.view-more a:hover { background-color:#9d2134; }
+.novaworks-navigation #novaworks-nav .active a { color:#9d2134 !important; }
+.banner-button-view { background-color:#202020; }
+.banner-button-view:hover { background-color:#9d2134; }
+.bag-buttons a {
+  background-color:#f0f0f0;
+  color:#202020;
+}
+a.checkout-button, a.create-account-button {
+  background:#202020;
+  color:#f7f7f7;
+}
+.bag-buttons a:hover, a.create-account-button:hover {
+  background:#9d2134;
+  color:#ffffff !important;
+}
+.block-compare .actions > .btn-clear-all-compare, .block-compare .actions > .button, .catalog-product-compare-index ul.add-to-links li a {
+  background-color:#202020;
+  color:#ffffff;
+}
+.block-compare .actions > .btn-clear-all-compare:hover, .block-compare .actions > .button:hover, .catalog-product-compare-index ul.add-to-links li a:hover {
+  background-color:#9d2134;
+  color:#ffffff !important;
+}
+a.checkout-button:hover {
+  background:#9d2134;
+  color:#ffffff;
+}
+.header-container-1 .novaworks-navigation { border-top:5px solid #9d2134; }
+.item h3.product-name a:hover { color:#9d2134 !important; }
+.header .i-header-content .nova-mgt-header-social-icons ul li { background-color:#444444; }
+.header .i-header-content .nova-mgt-header-social-icons ul li:hover { background-color:#9d2134; }
+.item-product-image-box .product-hover-box .act-quickview-button, .item-product-image-box .product-hover-box .act-imageview-button {
+  background-color:#ffffff;
+  color:#202020;
+}
+.item-product-image-box .product-hover-box .act-quickview-button:hover, .item-product-image-box .product-hover-box .act-imageview-button:hover {
+  background-color:#9d2134;
+  color:#ffffff !important;
+}
+.header .i-header-content .nova-mgt-header-social-icons ul li a i { color:#ffffff; }
+.header .i-header-content .nova-mgt-header-social-icons ul li a i:hover { color:#ffffff !important; }
+.novaworks-navigation #novaworks-nav li.level0 ul li a { color:#9b9b9b !important; }
+.item:hover .line, .banner-item:hover .line { background:#9d2134; }
+#wide-menu #nav > li.active > a, #wide-menu #nav > li.parent:hover > a, .header .mini-cart .block-content .price, #wide-menu #nav > li.parent.active > a, #wide-menu #nav ul.level0 > li > a, #wide-menu #nav ul li a:hover, .sorter .sort-by ul li a.active, .sorter .limiter ul li a.active, .special-price .price, .block .regular-price, .block .regular-price .price, .regular-price .price, .footer-info-container .footer-info .contact-us span, .products-list .desc a.link-learn, .block-tags .actions a:hover { color:#9d2134; }
+.footer-info-top .footer-info ul li a { color:#9b9b9b; }
+.footer-info-top i, .contact-us .phone, .contact-us .fax, .contact-us .support, .contact-us em, .contact-us i, .search-col .form-search:hover button.button, .header .i-header-content .nova-mgt-header-social-icons ul li a { color:#202020; }
+.faq-list dd ul li a, .who-top .col-md-2 div i { color:#202020; }
+.faq-list dd ul li a:hover, .who-top .col-md-2 div i:hover { color:#9d2134; }
+.quick-act a, .mini-cart-act a, .btn-compare-remove, .nova-slider-direction-nav a, .contact-us .social-icons a, .product-shop i, .descriptions-hidden a i, .shopping-cart a i { color:#202020; }
+.quick-act a:hover, .mini-cart-act a:hover, .btn-compare-remove:hover, .nova-slider-direction-nav a:hover, .contact-us .social-icons a:hover, .product-shop i:hover, .descriptions-hidden a i:hover, .shopping-cart a i:hover { color:#9d2134; }
+.block-account .block-content li.current, .block-account .block-content li a:hover, .col-main .cart-empty a { color:#9d2134; }
+.button, button, input[type="submit"], input[type="reset"], input[type="button"], .products-list .btn-cart { background-color:#202020; }
+.button:hover, button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .products-list .btn-cart:hover { background-color:#9d2134; }
+.box-icon .box-icon-name i { color:#9d2134; }
+a.novaworks-button-light, .box-icon .box-icon-name { border-color:#9d2134; }
+a.novaworks-button-light:hover, a.novaworks-button-dark:hover, .box-icon .box-icon-name:hover { background:#9d2134; }
+.novaworks-social-share ul li a i { color:#cccccc; }
+.novaworks-social-share ul li a i:hover { color:#9d2134; }
+.novaworks-social-share ul li a:hover { border-color:#9d2134; }
+.block-layered-nav dt { color:#9b9b9b; }
+.product-view .product-essential .btn-cart { background-color:#9d2134; }
+.product-view .product-essential .btn-cart:hover { background-color:#9d2134; }
+.block-tags .actions a { background-color:#202020; }
+.block-tags .actions a:hover { background-color:#9d2134; }
+.cart .totals .checkout-types li .button, .cart ul.checkout-types li button.button { background-color:#9d2134; }
+.cart .totals .checkout-types li .button:hover, .cart ul.checkout-types li button.button:hover { background-color:#202020; }
+.novaworks-new-badge {
+  background-color:#9d2134;
+  color:#ffffff;
+}
+.novaworks-sale-badge {
+  background-color:#fdaf08;
+  color:#202020;
+}
+.easy-slider, .easy-slider #controls a { background:; }
+.post-list-item h2 a {
+  font-size:22px;
+  text-transform:none;
+  font-weight:normal;
+  color:#202020;
+}
+.post-list-item h2 a:hover {
+  color:#9d2134;
+  text-decoration:none;
+}
+.post-list .pager .amount { line-height:30px; }
+.post-list .limiter label {
+  float:left;
+  line-height:30px;
+  margin-right:10px;
+  margin-bottom:0;
+}
+.post-list .limiter select {
+  width:50px;
+  margin-bottom:0;
+  margin-right:10px;
+}
+.post-list-item { border-bottom:#ebebeb solid 3px; }
+.last .post-list-item { border-bottom:0; }
+.featured-image {
+  border:1px solid #dddddd;
+  margin:4px 10px 10px 0 !important;
+  padding:1px;
+}
+.descriptions-hidden .quick-act { background:#202020; }
+.descriptions-hidden .quick-act:hover { background:#9d2134; }
+.top-dropdown li:hover a, .added { color:#9d2134 !important; }
+.resp-tabs-list li:hover, .resp-tab-active, h2.resp-tab-active, .slider-menu-products > h4.menu_heading { color:#9d2134 !important; }
+.alert-box h6, .twitter-posts a { color:#9d2134 !important; }
+.full-width-text { background-color:#9d2134; }
+.full-width-text:after { border-top-color:#9d2134; }
+#shopping-cart-table #empty_cart_button, #shopping-cart-table .btn-continue, #shopping-cart-table .btn-update, #discount-coupon-form .discount .discount-form .buttons-set .button span span, .shipping .shipping-form ul.form-list li.li-button .button span span, #shopping-cart-table .a-center-qty a, #shopping-cart-table .a-center-price span.price, #shopping-cart-table tbody .a-center-subtotal span.price, #shopping-cart-totals-table .a-right strong span.price, .bag-product-price span.price, .aux-currency > a, .notification-message span { color:#9d2134; }
+.footer-container, .footer-container h4 span {
+  background-color:transparent;
+  color:#efefef;
+}
+.footer-container .widget-text { color:#9b9b9b; }
+.footer-container a { color:#9b9b9b; }
+.footer-container a:hover { color:#9d2134; }
+.copyright-footer { background-color:transparent; }
+.footer address { color:#9b9b9b; }
+.footer address a { color:#ffffff; }
+.footer address a:hover { color:#9d2134; }
+.footer ul.links li a { color:#ffffff; }
+.footer-info-container .footer-info h2.block-title, .footer-info-container h1, .footer-info-container h2, .footer-info-container h3, .footer-info-container h4, .footer-info-container h5 { color:#efefef !important; }
+.footer-container h1, .footer-container h2, .footer-container h3, .footer-container h4, .footer-container h5 { color:#efefef !important; }
+.footer-info-container .footer-info .nova-footer-info .nova-footer-box2 .col-md-7 p.post { border-bottom:1px solid #1a1a1a; }
+#twitter_update_list li { border-bottom:1px solid #f0f0f0; }
+.tp-caption.big_orange, .tp-caption.medium_grey { font-family:'Montserrat', sans-serif !important; }
+.nova-widget-style-mega-style h4.spb_heading { border-color:#9d2134; }

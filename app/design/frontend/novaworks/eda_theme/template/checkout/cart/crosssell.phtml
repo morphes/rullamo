@@ -1,0 +1,146 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+$thumb_width 			=  Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_width', $storeId);
+$thumb_height 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_height', $storeId);
+$quick_view	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_quickview', $storeId); 
+$rating_wishlist_compare	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/rating_wishlist_compare', $storeId); 
+$ajax_cart		 		= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_cart', $storeId);
+$image_product_hover 	= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/image_product_hover', $storeId);
+$_maxItemCount = 20;
+?>
+<?php
+/**
+ * Cart cross sell items template
+ *
+ * @see Mage_Checkout_Block_Cart_Crosssell
+ */
+?>
+<?php if($this->getItemCount()): ?>
+<!--- Up-sell --->
+<script>
+	jQuery(document).ready(function($) {
+		jQuery("#upsell-product-table").owlCarousel({
+			items : 4, //10 items above 1000px browser width
+	    	itemsDesktop : [1024,4], //4 items between 1000px and 901px
+	      	itemsDesktopSmall : [800,3], // 3 items betweem 900px and 601px
+	      	itemsTablet: [600,2], //2 items between 600 and 0;
+	      	itemsMobile : [320,1],
+	      	navigation : true,
+	      	navigationText : ["",""],
+	      	pagination : false
+		});
+	}); 
+</script>
+<!--- End Up-sell --->
+
+<div class="cart-accordion-group box-cross-sell">
+  	<div class="cross-sell-title">
+		<h4 class="spb_heading">
+			<p><?php echo $this->__('CROSS- SELL PRODUCTS') ?></p>
+			<div class="heading-icon"></div>
+		</h4>
+
+    </div>
+    <div class="row">
+	    <div class="slider-items products-crosssell" id="upsell-product-table">
+		    <?php foreach ($this->getItems() as $_item): ?>
+		    <div class="item">
+				<div class="item-product-image-box"> 
+		            <?php include('labels.phtml')  ?>
+					<a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_item, 'small_image'), null, true) ?>" class="product-image">
+						<div class="margin-image">
+							<img src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize($thumb_width,$thumb_height); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_item, 'small_image'), null, true) ?>" />
+						</div>							               
+					</a>
+					<div class="product-intification-box"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+					<div class="product-hover-box">
+		            	<?php if($quick_view):?>
+						<a class="act-quickview-button cboxElement" href="<?php echo $this->getUrl('ajax/index/quickview',array('product_id'=>$_item->getId()));?>" data-id="<?php echo $_item->getId()?>">
+							<i class="fa fa-search-plus"></i>
+						</a> 
+						<?php endif;?>
+						<a class="act-imageview-button" href="<?php echo $_item->getProductUrl() ?>">
+							<i class="fa fa-chain"></i>
+						</a>
+					</div>
+		            <div class="rating-product">
+		        		<?php echo $this->getReviewsSummaryHtml($_item, 'short') ?>
+		        	</div>
+			    </div>
+		
+		
+    
+			        <h3 class="product-name">
+			        	<a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
+			        </h3>
+					<?php echo $this->getPriceHtml($_item, true) ?>
+					<div class="novaworks-quick-act">		
+									<?php if($_item->isSaleable()): ?>
+							<?php if($ajax_cart):?> 	
+						<?php if ( !($_item->getTypeInstance(true)->hasRequiredOptions($_item) || $_item->isGrouped()) ): ?>
+										<a class="add_to_cart_small button-ajax-cart-id-<?php echo $_item->getId()?>" onclick="ajaxcart('<?php echo $this->getAddToCartUrl($_item) ?>','<?php echo $_item->getId()?>');"><?php echo $this->__('Add to cart')?></a> 
+							<?php else:?>		
+								<a class="ajaxcart_colorbox add_to_cart_small" href="<?php echo $this->getUrl('ajax/index/options',array('product_id'=>$_item->getId()));?>">
+									<?php echo __('Add to Cart')?>
+								</a> 
+							<?php endif; ?> 
+							<?php else:?>
+								<a class="add_to_cart_small" onclick="setLocation('<?php echo $this->getAddToCartUrl($_item) ?>');">
+									<?php echo __('Add to Cart')?>
+								</a> 
+							<?php endif; ?>
+
+			                <?php else: ?>
+			                    <p class="availability out-of-stock pull-left" title="<?php echo $this->__('Out of stock') ?>">
+			                        <span class="out"><?php echo $this->__('Out of stock') ?></span>
+			                    </p>
+			                <?php endif; ?>
+						
+			
+							<?php if($rating_wishlist_compare || $quick_view):?>	
+								<div class="quick-act-right">	
+									<?php if($rating_wishlist_compare):?>									
+										<?php if ($this->helper('wishlist')->isAllow()): ?>
+											<a title="Wishlist" class="add_to_wishlist_small button-ajax-wishlist-id-<?php echo $_item->getId()?>" data-toggle="tooltip" href="<?php echo $this->helper('wishlist')->getAddUrl($_item) ?>" data-id="<?php echo $_item->getId()?>">
+												<i class="fa fa-heart-o"></i>
+											</a> 
+										<?php endif; ?>
+										<?php if($_compareUrl=$this->getAddToCompareUrl($_item)): ?>
+											<a title="Compare" class="add_to_compare_small button-ajax-compare-id-<?php echo $_item->getId()?>" data-toggle="tooltip"  href="<?php echo $_compareUrl ?>" data-id="<?php echo $_item->getId()?>">
+												<i class="fa fa-exchange"></i>
+											</a> 
+										<?php endif; ?> 								
+									<?php endif; ?> 							
+								</div>	
+							<?php endif;?>
+			
+				</div>				
+		    </div>            
+		    <?php endforeach; ?>
+		</div>
+	</div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,55 @@
+
+<?php
+ $storeId = Mage::app()->getStore()->getStoreId();
+ $custom_header					=	Mage::getStoreConfig('themeoptions_general/general_options/custom_header', $storeId);
+ $header_get = isset($_GET['header']) ? $_GET['header'] : '';
+ if($header_get) {
+	 $custom_header = $header_get;
+ }else{
+ 	$custom_header					=	Mage::getStoreConfig('themeoptions_general/general_options/custom_header', $storeId);
+ }
+?>
+<?php $_cartQty = $this->getSummaryCount() ?>
+<li class="parent shopping-bag-item">
+	<a class="cart-contents" href="<?php echo $this->getUrl('checkout/cart') ?>" title="<?php echo $this->__('View contents of your shopping cart') ?>">
+		<i class="fa fa-shopping-cart"></i>
+		<span class="labels"><?php echo $this->__('SHOPPING CART') ?></sapn>
+		<span class="amount">		
+			<?php if($_cartQty==0):?>
+			<span><?php echo '(0)'?></span>					
+			<?php else: ?>
+			    <span><?php echo '('.$_cartQty.')'?><?php echo $this->__(' for ') ?><?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()); ?></span>	
+			<?php endif ?>
+		</span>
+	</a>
+    <?php $_items = $this->getRecentItems(); ?>
+	<ul class="sub-menu">
+		<li>
+			<div class="shopping-bag">
+				<?php if($_cartQty==0):?>
+				<div class="bag-header"><?php echo $this->__('There is <a href="%s">0 item</a> in your cart.', $this->getUrl('checkout/cart')) ?></div>					
+				<?php elseif ($_cartQty==1): ?>
+				    <div class="bag-header"><?php echo $this->__('There is <a href="%s">1 item</a> in your cart.', $this->getUrl('checkout/cart')) ?></div>
+				<?php else: ?>
+				    <div class="bag-header"><?php echo $this->__('There are <a href="%s">%s items</a> in your cart.', $this->getUrl('checkout/cart'), $_cartQty) ?></div>
+				<?php endif ?>
+				<div class="bag-contents">
+				<?php foreach($_items as $_item): ?>
+				    <?php echo $this->getItemHtml($_item) ?>
+				<?php endforeach; ?>
+				</div>          
+				<script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
+				<div class="bag-buttons">
+					<a href="<?php echo $this->getUrl('checkout/onepage') ?>" class="sf-roll-button checkout-button">
+						<span><?php echo $this->__('Check Out') ?></span>
+						<span><?php echo $this->__('Check Out') ?></span>
+					</a>
+					<a href="<?php echo $this->getUrl('checkout/cart') ?>" class="sf-roll-button bag-button">
+						<span><?php echo $this->__('View Cart') ?></span>
+						<span><?php echo $this->__('View Cart') ?></span>
+					</a>
+				</div>
+			</div>
+		</li>
+	</ul>	            
+</li>

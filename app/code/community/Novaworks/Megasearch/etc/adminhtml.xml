@@ -1,0 +1,39 @@
+<?xml version="1.0"?> 
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <megasearch>
+                                        <title>Mega Search</title>
+                                    </megasearch>
+                                </children>
+                            </config>
+                        </children>
+                    </system>	
+                    <novaworks translate="title" module="megasearch">
+                        <title>Eda Options</title>
+                        <sort_order>200</sort_order>               
+                        <children>
+                            <megasearch translate="title" module="megasearch">
+                                <title>Mega Search</title>
+                                <sort_order>0</sort_order>
+                                <children>
+                                    <configuration>
+                                        <title>Configuration</title>
+                                        <sort_order>1</sort_order>
+                                        <action>adminhtml/system_config/edit/section/megasearch</action>
+                                    </configuration>
+                                </children>
+                            </megasearch>
+                        </children>
+                    </novaworks>					
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

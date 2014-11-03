@@ -1,0 +1,6 @@
+<div class="google-charts-widget">
+<?php if($this->getTitle()):?>
+<h3><?php echo $this->getTitle()?></h3>
+<?php endif;?>
+<img alt="<?php echo $this->getTitle()?>" src="https://chart.googleapis.com/chart?cht=<?php echo $this->getChartType()?>&chs=<?php echo $this->getChartWidth()?>x<?php echo $this->getChartHeight()?>&chd=t:<?php echo $this->getChartData()?>&chl=<?php echo $this->getChartLabel()?>&chco=<?php echo $this->getChartDataColor()?>" class="googlechart  <?php echo $this->getExtraClass()?>">
+</div>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Novaworks_Blog>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Novaworks_Blog>
+    </modules>
+</config>

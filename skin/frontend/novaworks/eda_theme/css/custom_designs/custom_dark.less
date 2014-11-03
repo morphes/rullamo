@@ -1,0 +1,617 @@
+@background_color : @d_background_color;
+@text_color : @d_text_color;
+@link_color : @d_link_color;
+@link_hover_color : @d_link_hover_color;
+@active_color : @d_active_color;
+@heading_color : @d_heading_color;
+@icons_color : @d_icons_color;
+@buttons_color : @d_buttons_color;
+@buttons_hover_color : @d_buttons_hover_color;
+@new_label_color : @d_new_label_color;
+@sale_label_color : @d_sale_label_color;
+
+body, .custom-html .block-content p,
+.my-account .welcome-msg
+ {
+	color: @text_color;
+	font-family: '@{body_font}',sans-serif !important;
+	font-size: @body_font_size;
+}
+
+a, a:focus {
+	color: @link_color;
+}
+a:hover, i:hover {
+	color: @link_hover_color !important;
+	text-decoration: none;
+}
+
+.wrapper {
+	background-color: @background_color;
+}
+h1, h2, h3, h4, h5, h6,
+#default-menu #nav li a,
+#wide-menu #nav > li > a,
+#wide-menu #nav ul.level0 > li > a,
+.footer-info-top .footer-info li,
+.footer-info-container .footer-info .about-responsive h4,
+.footer-info .newsletter-box .form-subscribe-header,
+.bottom-menu-column h4,
+.footer-aditional .facebook h4,
+.footer-aditional .twitter h4,
+.category-title h1,
+.home-content h3.title, .who-we-are h1,
+.main .col-main .page-title h1,
+.col-main .cart-empty a,
+.about-content .wel-come h2,
+.about-content .center-title h1,
+.about-content h2,
+.afew-container .retina-ready h3, .afew-container .mobile-friendly h3, .afew-container .wide-or h3, .afew-container .responsive-layout h3,
+.post-list-item h2 a
+ {
+	font-family: '@{heading_font}',sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+.home-content h3.title, .who-we-are h1,
+
+.footer-info .newsletter-box .form-subscribe-header,
+#shopping-cart-table .cart-price,
+.cart .totals .a-right .price,
+.cart-accordion-heading .cart-accordion-toggle, .who-we-are h1.title,.who-we-are h2 {
+	color: @heading_color !important;
+}
+.button:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover,
+.button:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active,
+.a-few-features a:hover,
+#cboxClose:hover,
+#toTop {
+	background-color: @active_color;
+}
+.top-header-container-2 {
+    background-color: @active_color;
+}
+.circle-hover .bd-bg { 
+	background-color: @active_color;
+}
+.mm-item-base .menu-static-blocks h2 {
+	color: @active_color !important;
+}
+.owl-theme .owl-controlls .owl-buttons div:hover,
+.owl-buttons i {
+  color: #363636;
+  &:hover {
+    color: @active_color !important;
+  }
+}
+.search-col input.input-text {
+    background-color: #2d2a29;
+}
+#poll-answers span.label label {
+	color: @link_color;
+}
+.sidebar .block-title, .sidebar #custom-html {
+    background-color: #FFFFFF;
+}
+.header-container-1 .nav-container {
+    border-top: 5px solid @active_color;
+}
+.my-account .welcome-msg {text-transform: none;}
+.header-container-1 .welcome-msg,
+.header-container-1 .mini-cart .cart-icon-top span.amount {
+    color: @active_color;
+}
+.sidebar .block .block-content a,
+.sidebar .block .block-content p {
+	color: #FFFFFF;
+}
+#novaworks-nav li.active a.level-top, #novaworks-nav li:hover a.level-top {
+    color: @active_color;
+}
+.columns-layout .category-title h1 {
+	color: #FFFFFF !important;
+}
+.price-box .special-price .price, .price-box .regular-price .price, .item h3.product-name a {
+    color: #FFFFFF !important;
+}
+.block-layered-nav dt {
+    color: #FFFFFF;
+}
+.sorter .sort-by .current {
+    background-color: #FFFFFF;
+}
+.sorter .limiter .current {
+    background-color: #FFFFFF;
+}
+.faq-list .round-number { 
+	border: 3px solid @active_color;
+}
+.top-header-container-2 {
+    background-color: @active_color;
+}
+#novaworks-nav .sub-wrapper .mm-item-base {
+    background-color: #212121;
+}
+.main-container .main .col-main .account-login .page-title {
+    border-bottom: 1px solid #494949;
+}
+.columns-layout .col-md-9 .products-list li.item {
+    border-bottom: 1px solid #494949;
+}
+.products-list .act-box ul.add-to-links li a.link-wishlist,
+.products-list .act-box ul.add-to-links li a.link-compare {
+    border: 1px solid #494949;
+}
+.product-shop .product-name h1 {
+    border-bottom: 1px dotted #494949;
+}
+.product-view .product-shop .short-description {
+    border-bottom: 3px solid #494949;
+    border-top: 1px dotted #494949;
+}
+.button-qty {
+    border: 1px solid #494949;
+}
+.desc-qty {
+    border-right: 0 !important;
+}
+.inc-qty {
+    border-left: 0 !important;
+}
+.product-shop div.add-to-link ul.add-to-links li, .product-options-bottom div.add-to-link ul.add-to-links li {
+    border: 1px solid #494949;
+}
+.resp-tabs-container {
+    background-color: #2D2A29;
+    padding: 0 15px;
+}
+.product-view .product-essential .product-name h1 {
+    color: #FFFFFF !important;
+}
+.resp-tabs-container .resp-tab-content h2 {
+    color: #FFFFFF !important;
+}
+.product-options dt label {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.faq-items a:hover {
+    border: 2px solid @active_color;
+    background: @active_color;
+    color: #FFF !important;
+}
+
+.home-banner .view-more {
+  background-color: #363636;
+  &:hover {
+    background-color: @active_color !important;
+  }
+}
+.sorter .view-mode .grid:hover, .sorter .view-mode strong,.sorter .view-mode a:hover, 
+.ajax-loading,
+.sorter .view-mode strong,#twitter_update_list li .tweet-icon {
+	background-color: @active_color !important;
+}
+#wide-menu #nav > li:hover > a,
+.block-inner-menu h4,
+.mini-cart .block-content .price,
+.f-fix .special-price .price,
+.product-shop .block-detail-other span,
+#wide-menu #nav li a.level-top:hover,
+.home-content-container .filter-nav ul li a.selected {
+	color: @active_color !important;
+}
+
+.i-top-right ul li.selected,
+.home-content-container .main-container .filter-nav ul li a.selected {
+	color: @active_color !important;
+}
+
+.i-top-right .shopping-cart a.mini-cart-title:hover {
+	color: #FFF !important;
+}
+
+.footer-info-container .footer-info .nova-footer-info .nova-footer-box2 .col-md-7 p.post span {
+	color: @active_color !important;
+}
+
+.block-tags .block-content .tags-list a:hover {
+  color: @active_color;
+}
+
+#default-menu #nav li.active a span,
+#default-menu #nav li.level0.active a.level-top,
+#default-menu #nav li.level0:hover a.level-top,
+#default-menu #nav li.level0 a:hover {
+	color: @active_color;
+}
+
+#wide-menu #nav ul.level0 > li > a {
+    border-bottom: 1px solid @active_color !important;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-info-container .footer-info .nova-footer-info .nova-footer-box1 p.view-more a:hover,
+.novaworks-navigation #novaworks-nav li.level0 ul li a:hover,
+ {
+    background-color: @active_color;
+}
+.novaworks-navigation #novaworks-nav li.level0 ul li.level1 a:hover {
+	background: lighten(@active_color, 35%);
+}
+.banner-button-view
+ {
+    background-color: @buttons_color;
+    &:hover {
+	  background-color: @buttons_hover_color;  
+    }
+}
+.alert-box {
+	border-bottom-color: @active_color;
+}
+.header-container-1 .novaworks-navigation {
+	border-top: 5px solid @active_color;
+}
+.owl-theme .owl-controlls .owl-buttons div:hover {
+	border-color: @active_color;
+}
+.tp-leftarrow,.tp-rightarrow {
+  background-color: #FFFFFF;
+  &:hover {
+    background-color: @active_color !important;
+  }
+}
+.item h3.product-name a:hover {
+	color: @active_color !important;
+}
+
+.header .i-header-content .nova-mgt-header-social-icons ul li {
+	background-color: #444;
+	&:hover {
+		background-color: @buttons_hover_color;
+	}
+}
+
+.header .i-header-content .nova-mgt-header-social-icons ul li a i {
+	color: #FFF;
+	&:hover {
+	color: #FFF !important;
+	}
+}
+.novaworks-navigation #novaworks-nav li.level0 ul li a {
+	color: @link_color !important;
+}
+#wide-menu #nav > li.active > a,#wide-menu #nav > li.parent:hover > a, 
+.header .mini-cart .block-content .price,
+#wide-menu #nav > li.parent.active > a,
+#wide-menu #nav ul.level0 > li > a,
+#wide-menu #nav ul li a:hover,
+.sorter .sort-by ul li a.active,
+.sorter .limiter ul li a.active,
+.special-price .price,
+.block .regular-price, 
+.block .regular-price .price,
+.regular-price .price,
+.footer-info-container .footer-info .contact-us span,
+.products-list .desc a.link-learn,
+.block-tags .actions a:hover {
+	color: @active_color;
+}
+.toolbar .pages ol li.current,
+.toolbar .pages ol li:hover {
+	background-color: @active_color;
+}
+
+.top-header-container-2 {
+    background-color: @active_color;
+}
+
+#novaworks-nav a, #megamenu a, #novaworks-nav li.level0 a {
+    color: #8b8b8b;
+}
+
+.footer-info-top .footer-info ul li a {
+	color: @text_color;
+}
+/* Icon */
+.footer-info-top i ,.contact-us .phone,.contact-us .fax,.contact-us .support,.contact-us em,.contact-us i,.search-col .form-search:hover button.button, .header .i-header-content .nova-mgt-header-social-icons ul li a {
+	color: @icons_color;
+}
+
+.faq-list dd ul li a,.who-top .col-md-2 div i, {
+  color: @icons_color;
+  &:hover{
+    color: @active_color;
+  }
+}
+.owl-theme .owl-controlls .owl-buttons div {
+	color: @icons_color;
+}
+.cart .cart-collaterals .checkout-types li .btn-proceed-checkout:hover span span {
+   color: @active_color;
+}
+
+.cart .cart-collaterals .checkout-types li .btn-proceed-checkout {
+  border: 2px solid #CCCCCC;
+  &:hover{
+    border: 2px solid @active_color;
+  }
+}
+
+.quick-act a,.mini-cart-act a,.btn-compare-remove,.nova-slider-direction-nav a,.contact-us .social-icons a,.product-shop i,
+.descriptions-hidden a i,.shopping-cart a i {
+	color: @icons_color;
+	&:hover{
+		color: @active_color;
+	}
+}
+
+.block-account .block-content li.current,.block-account .block-content li a:hover {
+  color: @active_color;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"],
+.products-list .btn-cart,#shopping-cart-table .btn-continue, 
+#shopping-cart-table .btn-update,.col-main .cart-empty a {
+	background-color: @buttons_color;
+	&:hover {
+		background-color: @buttons_hover_color;
+	}
+}
+
+.header-container-3 .cart-icon-top .cart_circle,
+.owl-theme .owl-controlls .active span,
+.owl-theme .owl-controlls .owl-page span:hover,
+.mini-products-list .product-details strong
+  {
+  background-color: @active_color;
+}
+
+.header-3 .mini-cart .cart_circle_1 {
+  border-top: 6px solid @active_color;
+}
+
+.nova-detail-link ul li.facebook a {
+  background-color: none;
+  &:hover {
+    background-color: #3A589D !important;
+    border-color: #3A589D !important;
+    color: #FFF !important;
+  }
+}
+
+.nova-detail-link ul li.twitter a {
+  background-color: none;
+  &:hover {
+    background-color: #2478BA !important;
+    border-color: #2478BA !important;
+    color: #FFF !important;
+  }
+}
+
+.nova-detail-link ul li.mail a {
+  background-color: none;
+  &:hover {
+    background-color: #998A45 !important;
+    border-color: #998A45 !important;
+    color: #FFF !important;
+  }
+}
+
+.nova-detail-link ul li.pinterest a {
+  background-color: none;
+  &:hover {
+    background-color: #CB2320 !important;
+    border-color: #CB2320 !important;
+    color: #FFF !important;
+  }
+}
+
+.nova-detail-link ul li a i {
+  color: #CCC;
+  &:hover {
+    color: #FFF;
+  }
+}
+.main-container .main .col-main .account-login .page-title h1 {
+    color: #FFFFFF !important;
+}
+.home-banner .title {
+    color: #FFFFFF !important;
+}
+.grid-banner {
+    border-bottom: none;
+}
+.form-subscribe #newsletter {
+    background-color: #2D2A29;
+}
+.form-subscribe-header label {
+    color: #FFFFFF;
+}
+.newsletter-box {
+    border-top: 1px solid #494949;
+}
+input.input-text, select, textarea:hover {
+    border-color: #494949;
+}
+.home-content-container .filter-nav ul li a {
+    color: #8B8B8B;
+}
+.breadcrumbs-container {
+    border-bottom: 1px solid #494949;
+}
+.columns-layout .breadcrumbs-inner {
+    border-bottom: 1px solid #494949;
+}
+.product-essential .product-shop .col-md-8 .price-box {
+    border-top: 1px dotted #494949;
+}
+.detail-availability span {
+    color: #FFFFFF;
+}
+.main-container {
+    border: none;
+}
+.left-categories ul li {
+    border-bottom: 1px solid #494949;
+}
+.home-banner .custom_content {
+    color: @d_text_color;
+}
+.account-login .content h2 {
+    color: #FFFFFF !important;
+}
+.product-view .product-img-box .product-image {
+    margin: 0 0 13px;
+    min-height: 478px;
+}
+.cart .totals .checkout-types li .button,.block-tags .actions a {
+	background-color: @buttons_color;
+	&:hover{
+		background-color: @active_color;
+	}
+}
+.novaworks-new-badge {
+	background-color: @new_label_color;
+}
+.novaworks-sale-badge {
+  background-color: @sale_label_color;
+}
+.easy-slider,.easy-slider #controls a {
+	background: @easyslider_background_color;
+}
+.post-list-item h2 a {
+	font-size: 22px;
+	text-transform: none;
+	font-weight: normal;
+	color: @heading_color;
+	&:hover {
+		color: @active_color;
+		text-decoration: none;
+	}
+}
+.post-list .pager .amount {
+line-height: 30px;
+}
+.post-list .limiter label {
+	float: left;
+	line-height: 30px;
+	margin-right: 10px;
+	margin-bottom:0;
+}
+.post-list .limiter select {
+	width: 50px;
+	margin-bottom: 0;
+	margin-right: 10px;
+}
+.post-list-item {
+	border-bottom: #ebebeb solid 3px;
+}
+.last .post-list-item  {
+	border-bottom:0;
+}
+.featured-image {
+    border: 1px solid #DDDDDD;
+    margin: 4px 10px 10px 0 !important;
+    padding: 1px;
+}
+.descriptions-hidden .quick-act {
+	background: @buttons_color;
+	&:hover {
+		background: @buttons_hover_color;
+	}
+}
+.top-dropdown li:hover a, .added {
+	color: @active_color !important; 
+}
+.resp-tabs-list li:hover, .resp-tab-active,
+h2.resp-tab-active
+ {
+	background-color: @active_color !important;
+}
+.alert-box h6  {
+	color: @active_color !important;
+}
+/* Footer Design */
+
+.footer-info-container {
+	background-color: transparent;
+	padding-bottom: 20px;
+}
+.footer-container {
+    background-color: transparent;
+}
+.copyright-footer {
+    background-color: @footer_copyright_background;
+}
+.footer-info-container {
+	color: @footer_one_text_color;
+}
+.footer-info-container a { 
+	color:@footer_one_link_color;
+	&:hover {
+		color:@footer_one_link_hover_color;
+	}
+}
+.footer-info-container .collapsible .mobile-coll-arrow {
+	border: 1px solid lighten(@footer_one_background, 50%) !important;
+    color: lighten(@footer_one_background, 50%) !important;
+}
+.footer-container .footer-aditional, .footer-aditional .twitter {
+	color: @footer_second_text_color;
+}
+.footer-container .footer-aditional a, .footer-aditional .twitter a {
+	color:@footer_one_link_color;
+	&:hover {
+		color:@footer_one_link_hover_color;
+	}	
+}
+.footer-container .collapsible .mobile-coll-arrow {
+	border: 1px solid lighten(@footer_second_background, 50%) !important;
+    color: lighten(@footer_second_background, 50%) !important;
+}
+.footer address {
+	color: @footer_copyright_text_color;
+}
+.footer address a {
+	color:@footer_copyright_link_color;
+	&:hover {
+		color:@footer_copyright_link_hover_color;
+	}		
+}
+.footer-info-container .footer-info h2.block-title,
+.footer-info-container h1, 
+.footer-info-container h2,
+.footer-info-container h3,
+.footer-info-container h4,
+.footer-info-container h5 {
+	color: @footer_one_heading_color !important;
+}
+.footer-container h1, 
+.footer-container h2,
+.footer-container h3,
+.footer-container h4,
+.footer-container h5 {
+	color: @footer_one_heading_color !important;
+}
+.footer-info-container .footer-info .nova-footer-info .nova-footer-box2 .col-md-7 p.post {
+	border-bottom: 1px solid lighten(@footer_one_background, 10%);
+}
+#twitter_update_list li {
+	border-bottom: 1px solid lighten(@footer_second_background, 10%);
+}
+.footer-info-container .footer-info .nova-footer-info .nova-footer-box1 p.view-more a {
+	color:@footer_one_link_color;
+	&:hover {
+		color:@footer_one_link_hover_color;
+	}	
+}
+

@@ -1,0 +1,21 @@
+<?php 
+$layout = $this->getWlayout();
+?>
+
+<div class="nova-widget-layout row">
+<?php if($layout == '3_columns_2'):?>
+	<div class="col-md-3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockOne())->toHtml();?></div>
+	<div class="col-md-6"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockTwo())->toHtml();?></div>
+	<div class="col-md-3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockThree())->toHtml();?></div>
+<?php elseif($layout == '2_columns_left'):?>
+	<div class="col-md-3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockOne())->toHtml();?></div>
+	<div class="col-md-9"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockTwo())->toHtml();?></div>
+<?php elseif($layout == '2_columns_right'):?>
+	<div class="col-md-9"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockOne())->toHtml();?></div>
+	<div class="col-md-3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockTwo())->toHtml();?></div>
+<?php else:?>
+	<div class="col-md-6"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockOne())->toHtml();?></div>
+	<div class="col-md-3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockTwo())->toHtml();?></div>
+	<div class="col-md-3"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockThree())->toHtml();?></div>
+<?php endif;?>
+</div>

@@ -1,0 +1,57 @@
+<?php
+$storeId = Mage::app()->getStore()->getStoreId();
+$ajax_cart		 		= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_cart', $storeId); 
+$image_product_hover 	= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/image_product_hover', $storeId);
+$rating_wishlist_compare	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/rating_wishlist_compare', $storeId); 
+$quick_view	 			= Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/ajax_quickview', $storeId);  
+$thumb_width =  Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_width', $storeId);
+$thumb_height = Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/standard_image_height', $storeId);
+$_productCollection=$this->getProductCollection();
+$r = $this->getFrontendHash();
+$_helper = $this->helper('catalog/output');
+?>
+<div class="nova-widget-style-<?php echo $this->getWidgetStyle()?> row">
+<div class="col-md-12">
+<h5 class="spb_heading">
+	<p><?php echo $this->getWidgetTitle();?></p>
+	<div class="heading-icon"></div>
+</h5>
+<ul class="mini-list mini-sidebar">
+<?php $i=0; foreach ($_productCollection as $_product): ?>
+<li class="clearfix"><figure><a href="<?php echo $_product->getProductUrl() ?>"><img alt="<?php echo $this->htmlEscape($_product->getName()) ?>" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($thumb_width,$thumb_height); ?>"></a></figure><div class="product-details"><h5><a href="<?php echo $_product->getProductUrl() ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h5><?php echo $this->getPriceHtml($_product, true) ?>
+		            <div class="rating-product-box">
+			            <?php
+	                    $_reviews = Mage::getModel('review/review')->getResourceCollection();              
+	                      $_reviews->addStoreFilter( Mage::app()->getStore()->getId() )  
+	                                ->addEntityFilter('product', $_product->getId())
+	                              ->addStatusFilter( Mage_Review_Model_Review::STATUS_APPROVED )  
+	                              ->setDateOrder()  
+	                              ->addRateVotes(); 
+                    
+                            $avg = 0; 
+                            $ratings = array(); 
+                            if (count($_reviews) > 0){
+                            foreach ($_reviews->getItems() as $_review): ?>
+                            <?php foreach( $_review->getRatingVotes() as $_vote ): ?>
+                                    <?php $ratings[] = $_vote->getPercent();   ?>
+                                <?php endforeach; ?>
+                            <?php endforeach;   
+                            $avg = array_sum($ratings)/count($ratings); 
+                            ?> 
+                     
+                    <div class="rating-box">  
+                      <div class="rating" style="width: <?php echo ceil($avg) ; ?>%;"></div>  
+                    </div>					
+                    <?php }?>
+                    </div>
+</div></li>
+
+<?php endforeach; ?>
+</ul>			
+		</div>
+
+</div>
+
+
+
+

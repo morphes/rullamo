@@ -1,0 +1,5 @@
+<div class="block-box-one alt-bg" style="background-image:url(<?php echo $this->getImageUrl() ?>); height:<?php echo $this->getBoxHeight() ?>px">
+	<div class="block-content">
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockId())->toHtml();?>
+	</div>
+</div>

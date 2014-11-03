@@ -1,0 +1,29 @@
+<?php if ($posts = $this->getRecent()): ?>
+<div class="row">
+	<div class="col-md-12">
+		<h4 class="spb_heading">
+			<p><?php echo $this->getWidgetTitle(); ?></p>
+			<div class="heading-icon"></div>
+		</h4>
+	</div>
+</div>
+<ul class="recent-posts row clearfix">
+	<?php foreach ($posts as $post): ?>
+	<li class="recent-post clearfix" itemscope="">
+		<?php if($img = $post->getPostImage(420,315)): ?>
+		<figure>
+			<a class="link-to-post" href="<?php echo $post->getAddress(); ?>">
+			<div class="overlay"><div class="thumb-info"><i class="fa fa-file-alt"></i></div></div>
+			<img width="420" height="315" alt="<?php echo $post->getTitle(); ?>" src="<?php echo Mage::getBaseUrl('media').$img; ?>" itemprop="image"></a>
+		</figure>
+		<?php endif; ?>
+		<div class="post-item-details clearfix">
+			<?php echo Mage::helper('blog')->__('By'); ?> <span><?php echo $post->getUser(); ?></span> <?php echo Mage::helper('blog')->__('on'); ?> <span class="post-date"><?php echo Mage::helper('core')->formatDate($post->getCreatedTime(),'medium', false); ?></span>
+		</div>
+		<div class="details-wrap">
+			<h5><a href="<?php echo $post->getAddress(); ?>"><?php echo $post->getTitle(); ?></a></h5>
+			<div class="excerpt"><p><?php echo $post->getShortContent(); ?></p></div>
+		</div>
+	</li>
+	<?php endforeach; ?>
+</ul><?php endif; ?>

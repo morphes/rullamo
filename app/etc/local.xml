@@ -41,9 +41,9 @@
             <default_setup>
                 <connection>
                     <host><![CDATA[localhost]]></host>
-                    <username><![CDATA[dachniki2_db]]></username>
-                    <password><![CDATA[dachniki2]]></password>
-                    <dbname><![CDATA[dachniki2_db]]></dbname>
+                    <username><![CDATA[root]]></username>
+                    <password><![CDATA[root]]></password>
+                    <dbname><![CDATA[rullamo]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>

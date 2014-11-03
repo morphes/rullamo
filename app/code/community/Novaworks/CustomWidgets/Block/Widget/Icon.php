@@ -1,0 +1,5 @@
+<?php
+class Novaworks_CustomWidgets_Block_Widget_Icon extends Novaworks_CustomWidgets_Block_Icon implements Mage_Widget_Block_Interface
+{
+
+}

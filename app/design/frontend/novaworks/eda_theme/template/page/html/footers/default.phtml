@@ -1,0 +1,190 @@
+<?php
+ /**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+ $storeId = Mage::app()->getStore()->getStoreId();
+ $fb_url				=	Mage::getStoreConfig('themeoptions_general/general_options/your_fb_url', $storeId);
+ $fb_skin				=	Mage::getStoreConfig('themeoptions_general/general_options/fb_skin', $storeId);
+ $gotop_button			=	Mage::getStoreConfig('themeoptions_general/general_options/gotop_button', $storeId); 
+ $popup_newsletter 		= 	Mage::getStoreConfig('themeoptions_general/prodcuts_list_page/popup_newsletter', $storeId); 
+ $routeName = Mage::app()->getRequest()->getRouteName();
+?>
+<div class="footer-bg">
+	<div class="footer-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-sm-4">
+					<?php if ($block_footer_1 = $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_1')->toHtml()): ?>
+					<div class="widget-heading clearfix">
+						<h4>
+							<div class="heading-icon"></div>
+							<span><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('block_footer_1')->getTitle()?></span>
+						</h4>
+					</div>
+					<div class="widget-text">
+					    	<?php echo $block_footer_1; ?>
+					</div>
+					<?php endif;?>	
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<?php if ($block_footer_2 = $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_2')->toHtml()): ?>
+					<div class="widget-heading clearfix">
+						<h4>
+							<div class="heading-icon"></div>
+							<span><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('block_footer_2')->getTitle()?></span>
+						</h4>
+					</div>
+					<div class="widget-text">
+					    	<?php echo $block_footer_2; ?>
+					</div>
+					<?php endif;?>	
+				</div>
+				<div class="col-md-2 col-sm-4">
+					<?php if ($block_footer_3 = $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_3')->toHtml()): ?>
+					<div class="widget-heading clearfix">
+						<h4>
+							<div class="heading-icon"></div>
+							<span><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('block_footer_3')->getTitle()?></span>
+						</h4>
+					</div>
+					<div class="widget-text">
+					    	<?php echo $block_footer_3; ?>
+					</div>
+					<?php endif;?>	
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<?php if ($block_footer_4 = $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_4')->toHtml()): ?>
+					<div class="widget-heading clearfix">
+						<h4>
+							<div class="heading-icon"></div>
+							<span><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('block_footer_4')->getTitle()?></span>
+						</h4>
+					</div>
+					<div class="widget-text">
+						<?php
+							$filter = new Mage_Widget_Model_Template_Filter();
+							$_widget = $filter->filter('{{widget type="latesttweet/widget_latest" title="Latest Tweets" list="footer-list" style="dark"}}');
+							echo $_widget;
+						?>
+					</div>
+					<?php endif;?>	
+				</div>	
+				<div class="col-md-3 col-sm-6">
+					<?php if ($block_footer_5 = $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_5')->toHtml()): ?>
+					<div class="widget-heading clearfix">
+						<h4>
+							<div class="heading-icon"></div>
+							<span><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('block_footer_5')->getTitle()?></span>
+						</h4>
+					</div>
+					<div class="widget-text">
+					    	<?php echo $block_footer_5; ?>
+					</div>		
+					<?php endif;?>	
+				</div>				
+								
+			</div>
+		</div>
+	</div>
+	
+	<div class="copyright-footer">
+		<div class="container">
+		<div class="footer">
+			<div class="row">	    
+		    	<div class="footer-copyright-left col-xs-12 col-sm-12 col-md-8">		    		
+			    	<?php echo $this->getChildHtml('footer_links') ?>
+			    	<address><?php echo $this->getCopyright() ?></address>	    	
+		    	</div>
+		    	<div class="footer-copyright-right col-xs-12 col-sm-12 col-md-4">
+					<?php if ($block_footer_paypal = $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_paypal')->toHtml()): ?>
+					<div class="paypal-logo">
+					    	<?php echo $block_footer_paypal; ?>
+					</div>
+					<?php endif;?>		 
+		    	</div>
+		    </div>
+	    </div>
+		</div>
+	</div>
+</div>
+<?php
+	if($gotop_button):
+?>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery().UItoTop({ easingType: 'easeOutQuart' });		
+});
+</script>
+<?php endif;?>
+
+<!--- Brand List --->
+<script>
+	jQuery(document).ready(function($) {
+		jQuery(".brand_list").owlCarousel({
+			items : 6, //10 items above 1000px browser width;
+			itemsDesktop : [1000,6], //6 items between 1000px and 901px;
+			itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px;
+			itemsTablet: [600,2], //2 items between 600 and 0;
+			itemsMobile : [320,1], //1 items between 600 and 0;
+			navigation : true,
+			navigationText : ["<i class=\"icon-left-open\"></i>","<i class=\"icon-right-open\"></i>"], 
+			pagination : false
+		});
+	}); 
+</script>
+<!--- End Brand List --->
+
+<?php if($routeName == 'cms' && $identifier == Mage::getStoreConfig('web/default/cms-index-index')): ?>
+	<?php if($popup_newsletter) { ?>
+	
+	 <div id="login-box" class="login-popup">
+	
+		<!-- Modal Popup -->
+		<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div id="x" class="x" data-dismiss="modal"></div>		
+			<div class="newsletter-sign-box">
+				<div class="newsletter">
+					<?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe1.phtml')->toHtml(); ?>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<?php
+		}
+	?>
+<?php endif;?>
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('#myModal').modal('show')
+	});
+</script>
+
+
+
+
+
+

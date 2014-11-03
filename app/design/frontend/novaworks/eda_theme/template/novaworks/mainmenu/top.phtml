@@ -1,0 +1,83 @@
+<!-- navigation BOF -->
+<?php 
+$megaeffect = Mage::getStoreConfig('themeoptions_general/menu/effect');
+$_menu = $this->renderCategoriesMenuHtml(FALSE, 0, 'level-top', 'sub-wrapper' );
+$routeName = Mage::app()->getRequest()->getRouteName();
+$identifier = Mage::getSingleton('cms/page')->getIdentifier(); 
+ 
+?>
+<div class="novaworks-mobile-navbar">
+<nav>
+                <ul id="mobile-menu">
+                    <li class="<?php if($routeName == 'cms' && $identifier == 'home') {echo " active";}?>"><a href="<?php echo $this->getBaseUrl(); ?>"><?php echo $this->__('Home'); ?></a>
+                    
+                    
+                    </li>
+                    <?php echo $this->renderCategoriesMenuHtml(TRUE, 0, 'level-top'); ?>
+                </ul>
+</nav>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('#mobile-menu').slicknav({
+		openedSymbol: '-',
+		closedSymbol: '+',
+		allowParentLinks: true
+	});
+});
+</script>
+</div>
+<?php if($_menu): ?>
+<div class="novaworks-navigation hidden-xs">
+	<div class="novaworks-main-menu">
+		<ul id="novaworks-nav" class="megamenu">
+			<?php if(Mage::getStoreConfig('themeoptions_general/menu/home')){?>
+			<li class="level0 home level-top<?php if($routeName == 'cms' && $identifier == 'home') {echo " active";}?> m-dropdown parent parent">
+				<a href="<?php echo $this->getBaseUrl(); ?>" class="level-top"><span><?php echo $this->__('Home'); ?></span></a>
+			</li> 
+			<?php }?>
+			<?php
+			echo $_menu;
+			if(Mage::getStoreConfig('themeoptions_general/menu/enable_custom')){
+				$getidentifier = Mage::getStoreConfig('themeoptions_general/menu/static_identifier');
+				$arrayidentifier = explode("\r\n", $getidentifier); 
+				foreach($arrayidentifier as $mcustom){ 
+					$custom_menu = Mage::getModel('cms/block')->load($mcustom);
+					if($custom_menu->getIsActive()) {
+						echo '
+						<li class="level0 level-top parent custom-block">
+							<a href="#" class="level-top">
+								<span>'.$custom_menu->getTitle().'</span>
+							</a>
+							<div class="sub-wrapper">'.$this->getLayout()->createBlock('cms/block')->setBlockId($mcustom)->toHtml().'</div>
+						</li>';
+					}
+				} 
+				$pageid = Mage::getStoreConfig('themeoptions_general/menu/page_id');
+				$arraypageid = explode("\r\n", $pageid);
+				foreach($arraypageid as $id){ 
+					$page = Mage::getModel('cms/page')->load($id);  
+					if($page->getIsActive()) {
+				?> 
+					<li class="level0 level-top parent custom-block <?php if($routeName == 'cms' && $identifier == $page->getIdentifier()) {echo " active";}?>">
+						<a href="<?php echo Mage::helper('cms/page')->getPageUrl($id);?>" class="level-top">
+							<span><?php echo $page->getTitle();?></span>
+						</a> 
+					</li> 
+				<?php 
+					}
+				}
+			}
+			?>
+		</ul>
+	</div>
+</div> 
+<script type="text/javascript">
+    jQuery(function(){
+        jQuery(".megamenu").megamenu({
+            'animation':'<?php echo $megaeffect;?>',
+            'mm_timeout': 150
+	    });
+    });
+</script>
+<?php endif ?>
+<!-- navigation EOF -->

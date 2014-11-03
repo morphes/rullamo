@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Novaworks_Imagezoom>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Novaworks_Imagezoom>
+    </modules>
+</config>

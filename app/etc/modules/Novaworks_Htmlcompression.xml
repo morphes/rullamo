@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Novaworks_Htmlcompression>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Novaworks_Htmlcompression>
+    </modules>
+</config>

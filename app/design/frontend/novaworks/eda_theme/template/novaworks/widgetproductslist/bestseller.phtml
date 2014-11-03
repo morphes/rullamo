@@ -1,0 +1,94 @@
+<?php
+$theme = $this->helper('mtcosmetic');
+$helpImg = $this->helper('mttheme/image');
+$imgWidth = $theme->getCfg('category/image_width') ? $theme->getCfg('category/image_width') : 295;
+$imgHeight = $theme->getCfg('category/image_height') ? $theme->getCfg('category/image_height') : 295;
+if($theme->getCfg('category/aspect_ratio')){
+    $imgHeight = 0;
+}
+//Block parameters
+$columnCount = $this->getIsColumn(); //show_products
+$itemWidth = $this->getItemWidth(); //get item width
+$style = 'style="width: '.$itemWidth.'px;"';
+$_productCollection=$this->getProductCollection();
+$_helper = $this->helper('catalog/output');
+if(count($_productCollection)>0){
+?>
+<div class="block-bestseller container">
+    <div class="block-container">
+        <div class="row show-grid">
+            <?php if($this->getWidgetTitle()){?>
+                <div class="mt-block-title col-lg-12">
+                    <div class="block-title">
+						<div class="mt-product-title">
+							<span>
+								<span>
+									  <?php echo $this->getWidgetTitle();?>
+								</span>
+							</span>
+						</div>
+                    </div>
+                </div>
+            <?php }?>
+        </div>
+    </div>
+    <div id="mtcontainer" class="block-content">
+        <?php $_collectionSize = $_productCollection->count() ?>
+        <?php $i = 0; foreach ($_productCollection as $_product): ?>
+        <?php $n = $i%$columnCount;?>
+        <?php if ($i++%$columnCount==0): ?>
+        <?php
+            $oType = false;
+            $product = Mage::getModel('catalog/product');
+            $product->load($_product->getId());
+            foreach ($product->getOptions() as $o) {
+                $optionType = $o->getType();
+                if ($optionType == 'file') {
+                    $oType = true;
+                }
+            }
+        ?>
+        <div class="mini-products-list show-grid">
+        <?php endif ?>
+            <div class="item pull-left <?php if($n == 0):?>first<?php elseif($n == 3): ?>last<?php endif;?>" <?php echo $style;?>>
+                <div class="catpanel ">
+                    <div class="content products-list ">
+                        <div class="product-image col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            <div class="product-thumb">
+                                <a class="product-image  " href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" >
+									<?php //echo $this->helper('mtcosmetic')->getLabel($_product);  ?>
+									<img src="<?php echo $helpImg->getImg($_product, $imgWidth, $imgHeight, 'small_image'); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+									<?php if ($theme->getCfg('category/alt_image')): ?>
+										<?php echo $theme->getAltImgHtml($_product, $imgWidth, $imgHeight); ?>
+									<?php endif; ?>
+								</a> 
+						       
+							</div>
+                        </div>
+						
+                        <div class="top-actions-inner product-details col-lg-8 col-md-8 col-sm-8 col-xs-8">
+						     <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h3>
+                            <?php if ($_product->getShortDescription()):?>
+								<div class="short-description hidden-tablet hidden-phone">		
+									<?php 
+									if($striptags_config){
+										$short_desc = strip_tags($_product->getShortDescription(), '<p>');
+									}else{
+										$short_desc = $_product->getShortDescription();
+									}?>
+								   <?php echo $this->helper('core/string')->truncate($short_desc,30) ?>		 
+								</div>
+							<?php endif;?>	
+                            <?php echo $this->getReviewsSummaryHtml($_product) ?> 
+                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php if ($i%$columnCount==0 || $i==$_collectionSize): ?>
+        </div>
+        <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+</div>
+<?php }?>

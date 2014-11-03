@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss" ifconfig="vmegamenu/general/leftmenu"><stylesheet>novaworks/css/leftvmegamenu.css</stylesheet></action>
+            <action method="addCss" ifconfig="vmegamenu/general/rightmenu"><stylesheet>novaworks/css/rightvmegamenu.css</stylesheet></action>
+        </reference>
+        <reference name="left">
+            <block type="vmegamenu/vmegamenu" name="catalog.leftvmegamenu" before="catalog.leftnav">
+                <action method="setTemplate" ifconfig="vmegamenu/general/leftmenu"><template>novaworks/vmegamenu/vmegamenu.phtml</template></action>
+            </block>
+        </reference>
+        <reference name="right">
+            <block type="vmegamenu/vmegamenu" name="catalog.rightvmegamenu" before="catalog.rightnav">
+                <action method="setTemplate" ifconfig="vmegamenu/general/rightmenu"><template>novaworks/vmegamenu/vmegamenu.phtml</template></action>
+            </block>    
+        </reference>
+    </default>
+</layout> 

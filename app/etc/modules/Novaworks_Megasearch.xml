@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Novaworks_Megasearch>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Novaworks_Megasearch>
+    </modules>
+</config> 

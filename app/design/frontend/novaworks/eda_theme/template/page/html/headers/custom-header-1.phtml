@@ -1,0 +1,166 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+ $storeId = Mage::app()->getStore()->getStoreId();
+ $block_top_bar_left 	= $this->getLayout()->createBlock('cms/block')->setBlockId('block_top_bar_left')->toHtml();
+ $block_top_bar_center 	= $this->getLayout()->createBlock('cms/block')->setBlockId('block_top_bar_center')->toHtml();
+ $block_top_bar_right 	= $this->getLayout()->createBlock('cms/block')->setBlockId('block_top_bar_right')->toHtml();
+ $media_path	   		= Mage::getBaseUrl('media') . 'theming/';
+ $site_logo 			= Mage::getStoreConfig('themeoptions_theming/design_logo/logo', $storeId);
+ $retina_logo 			= Mage::getStoreConfig('themeoptions_theming/design_logo/retina_logo', $storeId);
+ $mega_custom_menu 		= Mage::getStoreConfig('themeoptions_theming/theme_header/mega_custom_menu', $storeId);
+if ($block_top_bar_left || $block_top_bar_right):
+?>
+
+<div class="promotions-txt-container">
+	<div class="container">
+		<div class="row">
+				<?php if ($block_top_bar_left): ?>
+				<div class="top-bar-left col-lg-6 col-sm-6 col-md-6">
+					<?php echo $block_top_bar_left;?>
+				</div>
+				<?php endif?>
+				
+				<?php if ($block_top_bar_right): ?>
+				<div class="top-bar-right col-lg-6 col-sm-6 col-md-6">
+					<?php echo $block_top_bar_right;?>
+				</div>
+				<?php endif?>
+		</div>
+	</div>
+</div>
+<?php endif?>
+<div class="header-container">
+	<div class="top-header top-header-1">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-4">
+					<!-- Header Top Links -->
+					<div class="header-links">							
+						<?php echo $this->getChildHtml('topLinks') ?>
+					</div> 
+					<!-- End Header Top Links -->
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-8">
+					<nav class="header-menu">
+						<ul class="menu">						
+							<?php echo $this->getChildHtml('currency') ?>	 
+						</ul>
+					</nav>
+					<div class="header-language">
+						<?php echo $this->getChildHtml('store_language') ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-1 logo-fade" id="header-section">
+		<header class="clearfix" id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xs-4">
+						<!-- Header Logo -->
+						<div class="header-logo">
+							<div class="logo-center clearfix" id="logo">
+				    			<h1 class="logo">
+					    			<a href="<?php echo $this->getUrl('') ?>">
+									<?php 
+									if($site_logo):
+									?>
+									<img alt="<?php echo $this->getLogoAlt() ?>" src="<?php echo $media_path.$site_logo ?>" class="standard">
+									<?php
+									else:
+									?>
+									<img alt="<?php echo $this->getLogoAlt() ?>" src="<?php echo $this->getLogoSrc() ?>" class="standard">
+									<?php 
+									endif;
+									if($retina_logo):	
+									?>
+									<img alt="<?php echo $this->getLogoAlt() ?>" src="<?php echo $media_path.$retina_logo ?>" class="retina">
+									<?php endif;?>
+									</a>
+					    		</h1>
+					    	</div>
+						</div>
+						<!-- End Header Logo -->
+					</div>
+					<div class="col-md-8 col-xs-8 header-right header-right-1">
+						<div class="row">
+						<div class="welcome-msg col-md-12">
+							<?php echo $this->getWelcome() ?>
+						</div>	
+						<nav class="header-menu col-md-12">
+							<ul class="menu">
+								<?php echo $this->getChildHtml('top_cart_sidebar') ?>
+							</ul>
+						</nav>
+						</div>
+					</div>
+				</div> <!-- CLOSE .row -->
+			</div> <!-- CLOSE .container -->
+		</header>
+		
+		<div class="main-navigation">
+			<div class="container">
+				<!-- Header Top Menu -->
+				<div class="header-topMenu">
+					<div class="header-topMenu-inner">
+						<?php echo $this->getChildHtml('topMenu') ?>							
+					</div>
+				</div>
+			</div>
+			<!-- End Header Top Menu -->
+		</div>
+		
+		<div class="mega-custom-menu">
+		<?php if($mega_custom_menu):?>
+			<div class="container">
+				<!-- Custom Menu -->
+				<nav class="mega-layout-custom-menu">
+					<?php echo $this->getLayout()->createBlock('scandi_menumanager/menu')->setMenuId($mega_custom_menu)->toHtml() ?>	
+				</nav>
+				<!-- End Custom Menu -->
+			</div>
+			<?php endif;?>
+		</div>
+		
+		<!-- Search-col -->
+		<div class="container">
+			<div class="header-bottom">
+				<?php echo $this->getChildHtml('topSearch') ?>
+				<?php echo $this->getLayout()->createBlock('vmegamenu/vmegamenu')->setTemplate('novaworks/vmegamenu/vmegamenu.phtml')->toHtml()?>
+			</div>
+		</div>
+		<!-- End Search-col -->
+	</div>
+</div>
+
+
+
+
+

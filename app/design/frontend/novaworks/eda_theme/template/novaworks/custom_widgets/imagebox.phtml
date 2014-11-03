@@ -1,0 +1,14 @@
+<?php 
+$get_boder = $this->getBorder();
+$get_padding = $this->getPaddingTop();
+$get_margin = $this->getMargin();
+$border = isset($get_boder) ? intval($get_boder) : 0;
+$padding = isset($get_padding) ? intval($get_padding) : 0;	
+$margin = isset($get_margin) ? intval($get_margin) : 0;	
+?>
+
+<div class="row">
+	<div class="novaworks-imagebox-widget alt-bg col-sm-12" style="background: <?php echo $this->getBackgroundColor()?> url('<?php echo $this->getImageUrl() ?>') <?php echo $this->getBackgroundRepeat() ?> <?php echo $this->getBackgroundPosition() ?>; padding-top: <?php echo $padding?>px; padding-bottom: <?php echo $padding?>px; margin-top:<?php echo $margin?>px; margin-bottom:<?php echo $margin?>px; border-top: <?php echo $this->getBorderColor()?> <?php echo $this->getBorder()?>px solid; border-bottom: <?php echo $this->getBorderColor()?> <?php echo $border?>px solid;">
+		<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId($this->getBlockId())->toHtml();?>
+	</div>
+</div>

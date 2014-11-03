@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Novaworks_WidgetProductsList>
+            <version>2.2.0</version>
+        </Novaworks_WidgetProductsList>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <widgetproductslist>
+                    <file>novaworks_widgetproductslist.xml</file>
+                </widgetproductslist>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <models>
+            <widgetproductslist>
+                <class>Novaworks_WidgetProductsList_Model</class>
+            </widgetproductslist>
+        </models>
+        <blocks>
+            <widgetproductslist>
+                <class>Novaworks_WidgetProductsList_Block</class>
+            </widgetproductslist>
+        </blocks>
+        <helpers>
+            <widgetproductslist>
+                <class>Novaworks_WidgetProductsList_Helper</class>
+            </widgetproductslist>
+        </helpers>
+    </global>
+</config>

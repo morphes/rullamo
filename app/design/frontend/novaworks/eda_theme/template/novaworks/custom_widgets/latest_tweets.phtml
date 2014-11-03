@@ -1,0 +1,59 @@
+<?php if($this->isEnabled() && $tweets = $this->getLatestTweets()): ?>
+
+<?php
+	if($this->getList()=='footer-list') { ?>
+
+<div class="tweets">
+		<?php foreach($tweets as $tweet): ?>
+		<div class="tweets-list">
+			<div class="tweet-text"><?php echo (string) trim($tweet["tweet"]); ?></div>
+			<div class="twitter_intents">
+				<a class="timestamp" href="https://twitter.com/swiftideas/status/<?php echo (string) trim($tweet["tweet_id"]); ?>" target="_blank"><?php echo (string) trim($tweet["time"]); ?></a>
+			</div>
+		</div>
+		<?php endforeach; ?>
+</div>
+
+<?php
+	} else {
+?>
+
+<div class="latest-tweets-widget text-<?php echo $this->getList()?> style-<?php echo $this->getStyle()?>">
+	<div class="heading-wrap">
+		<h4 class="spb_heading">
+			<p><?php echo $this->getTitle()?></p>
+			<div class="heading-icon"></div>
+		</h4>
+	</div>
+	<div class="tweets-slider content-slider hidden-buttons light-button">
+		<ul class="slides">
+			<?php foreach($tweets as $tweet): ?>
+			<li>
+				<div class="tweet-text"><?php echo (string) trim($tweet["tweet"]); ?></div>
+				<div class="twitter_intents">
+					<a class="reply" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo (string) trim($tweet["tweet_id"]); ?>"><i class="fa fa-reply"></i></a>
+					<a class="retweet" href="https://twitter.com/intent/retweet?tweet_id=<?php echo (string) trim($tweet["tweet_id"]); ?>"><i class="fa fa-retweet"></i></a>
+					<a class="favorite" href="https://twitter.com/intent/favorite?tweet_id=<?php echo (string) trim($tweet["tweet_id"]); ?>"><i class="fa fa-star"></i></a>
+					<a class="timestamp" href="https://twitter.com/swiftideas/status/<?php echo (string) trim($tweet["tweet_id"]); ?>" target="_blank"><?php echo (string) trim($tweet["time"]); ?></a>
+				</div>
+			</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+	jQuery(document).ready(function($) {
+		jQuery(".tweets-slider .slides").owlCarousel({
+			items : 1, //10 items above 1000px browser width
+	      	navigation : true,
+	      	navigationText : ["<i class=\"fa fa-chevron-left\"></i>","<i class=\"fa fa-chevron-right\"></i>"],
+	      	slideSpeed : 500,
+	      	pagination : false
+    	});
+	}); 
+//]]>
+</script>
+
+<?php } ?>
+<?php endif; ?>
