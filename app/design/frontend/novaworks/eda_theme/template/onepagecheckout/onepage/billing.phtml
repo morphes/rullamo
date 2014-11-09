@@ -127,7 +127,7 @@ $has_addr	= $this->customerHasAddresses();
 					<?php if($state_r === 'required'){ echo ' <sup>*</sup> ';}?>
 					<div class="data_area">
 						<select id="billing:region_id" name="billing[region_id]" title="<?php echo $this->__('Город/Регион') ?>" class="validate-select<?php if($state_r === 'required') { echo ' required-entry';}?>" style="display:none;">
-							<option value=""><?php echo $this->__('Select One') ?></option>
+							<option value=""><?php echo $this->__('Выберите') ?></option>
 						</select>
 <?php $geo = Mage::getSingleton('core/session')->getGeoIp();?> 
 						<!--<script type="text/javascript">

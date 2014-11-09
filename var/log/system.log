@@ -4065,3 +4065,131 @@
 2014-11-09T22:05:06+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
 2014-11-09T22:05:06+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
 2014-11-09T22:05:16+00:00 ERR (3): Notice: Undefined variable: identifier  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/html/footers/default.phtml on line 158
+2014-11-09T22:06:21+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 31
+2014-11-09T22:06:21+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 32
+2014-11-09T22:06:21+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 37
+2014-11-09T22:10:43+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 31
+2014-11-09T22:10:43+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 32
+2014-11-09T22:10:43+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 37
+2014-11-09T22:11:15+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 155
+2014-11-09T22:11:15+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 156
+2014-11-09T22:11:15+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 159
+2014-11-09T22:11:15+00:00 ERR (3): Warning: include(): Filename cannot be empty  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:15+00:00 ERR (3): Warning: include(): Failed opening '' for inclusion (include_path='/Applications/MAMP/htdocs/rullamo/app/code/local:/Applications/MAMP/htdocs/rullamo/app/code/community:/Applications/MAMP/htdocs/rullamo/app/code/core:/Applications/MAMP/htdocs/rullamo/lib:.:/Applications/MAMP/bin/php/php5.5.10/lib/php:/Applications/MAMP/htdocs/rullamo/lib/Soczed/less')  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:15+00:00 ERR (3): Warning: include(): Filename cannot be empty  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:15+00:00 ERR (3): Warning: include(): Failed opening '' for inclusion (include_path='/Applications/MAMP/htdocs/rullamo/app/code/local:/Applications/MAMP/htdocs/rullamo/app/code/community:/Applications/MAMP/htdocs/rullamo/app/code/core:/Applications/MAMP/htdocs/rullamo/lib:.:/Applications/MAMP/bin/php/php5.5.10/lib/php:/Applications/MAMP/htdocs/rullamo/lib/Soczed/less')  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:16+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /Applications/MAMP/htdocs/rullamo/lib/Zend/Controller/Response/Abstract.php:766
+[2] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Model/App.php:354
+[5] /Applications/MAMP/htdocs/rullamo/app/Mage.php:689
+[6] /Applications/MAMP/htdocs/rullamo/index.php:101
+</pre>
+2014-11-09T22:11:18+00:00 ERR (3): Notice: Undefined index: postcode  in /Applications/MAMP/htdocs/rullamo/app/code/local/IWD/OnepageCheckout/controllers/IndexController.php on line 653
+2014-11-09T22:11:18+00:00 ERR (3): Warning: include(): Filename cannot be empty  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:18+00:00 ERR (3): Warning: include(): Failed opening '' for inclusion (include_path='/Applications/MAMP/htdocs/rullamo/app/code/local:/Applications/MAMP/htdocs/rullamo/app/code/community:/Applications/MAMP/htdocs/rullamo/app/code/core:/Applications/MAMP/htdocs/rullamo/lib:.:/Applications/MAMP/bin/php/php5.5.10/lib/php')  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:18+00:00 ERR (3): Warning: include(): Filename cannot be empty  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:18+00:00 ERR (3): Warning: include(): Failed opening '' for inclusion (include_path='/Applications/MAMP/htdocs/rullamo/app/code/local:/Applications/MAMP/htdocs/rullamo/app/code/community:/Applications/MAMP/htdocs/rullamo/app/code/core:/Applications/MAMP/htdocs/rullamo/lib:.:/Applications/MAMP/bin/php/php5.5.10/lib/php')  in /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Block/Template.php on line 241
+2014-11-09T22:11:18+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /Applications/MAMP/htdocs/rullamo/lib/Zend/Controller/Response/Abstract.php:766
+[2] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Controller/Response/Http.php:83
+[3] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /Applications/MAMP/htdocs/rullamo/app/code/core/Mage/Core/Model/App.php:354
+[5] /Applications/MAMP/htdocs/rullamo/app/Mage.php:689
+[6] /Applications/MAMP/htdocs/rullamo/index.php:101
+</pre>
+2014-11-09T22:12:13+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:13+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:13+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:13+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:13+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:13+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:23+00:00 ERR (3): Notice: Undefined variable: identifier  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/html/footers/default.phtml on line 158
+2014-11-09T22:12:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:23+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:23+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:23+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:23+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:23+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:29+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:29+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:29+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:29+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:29+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:12:29+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:21+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:21+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:21+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:21+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:21+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:26+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:26+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:26+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:26+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:26+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:26+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:39+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:39+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:39+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:39+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:39+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:39+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:42+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:42+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:42+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:43+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:43+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:43+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:13:53+00:00 ERR (3): Notice: Undefined variable: identifier  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/html/footers/default.phtml on line 158
+2014-11-09T22:14:17+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 155
+2014-11-09T22:14:17+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 156
+2014-11-09T22:14:17+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 159
+2014-11-09T22:14:18+00:00 ERR (3): Notice: Undefined index: postcode  in /Applications/MAMP/htdocs/rullamo/app/code/local/IWD/OnepageCheckout/controllers/IndexController.php on line 653
+2014-11-09T22:14:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:14:35+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:14:35+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:14:35+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:14:35+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:14:35+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:05+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:05+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:05+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:05+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:05+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:05+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:09+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 20: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:09+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:09+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:09+00:00 ERR (3): Warning: simplexml_load_string(): Entity: line 17: parser error : Start tag expected, '&lt;' not found  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:09+00:00 ERR (3): Warning: simplexml_load_string():   in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:09+00:00 ERR (3): Warning: simplexml_load_string(): ^  in /Applications/MAMP/htdocs/rullamo/lib/Varien/Simplexml/Config.php on line 510
+2014-11-09T22:15:31+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 155
+2014-11-09T22:15:31+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 156
+2014-11-09T22:15:31+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 159
+2014-11-09T22:15:33+00:00 ERR (3): Notice: Undefined index: postcode  in /Applications/MAMP/htdocs/rullamo/app/code/local/IWD/OnepageCheckout/controllers/IndexController.php on line 653
+2014-11-09T22:16:14+00:00 DEBUG (7): SMTPPro is enabled, sending email in Aschroder_SMTPPro_Model_Email_Template
+2014-11-09T22:16:15+00:00 DEBUG (7): Preparing the Google Apps/Gmail Email transport, email to send with is: admin@rullamo.ru
+2014-11-09T22:16:15+00:00 DEBUG (7): Returning transport
+2014-11-09T22:16:15+00:00 DEBUG (7): About to send email
+2014-11-09T22:16:18+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 31
+2014-11-09T22:16:18+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 32
+2014-11-09T22:16:18+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 37
+2014-11-09T22:24:28+00:00 ERR (3): Notice: Undefined variable: identifier  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/html/footers/default.phtml on line 158
+2014-11-09T22:24:40+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 155
+2014-11-09T22:24:40+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 156
+2014-11-09T22:24:40+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 159
+2014-11-09T22:24:41+00:00 ERR (3): Notice: Undefined index: postcode  in /Applications/MAMP/htdocs/rullamo/app/code/local/IWD/OnepageCheckout/controllers/IndexController.php on line 653
+2014-11-09T22:26:27+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 155
+2014-11-09T22:26:27+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 156
+2014-11-09T22:26:27+00:00 ERR (3): Notice: Undefined variable: country_r  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/onepagecheckout/onepage/billing.phtml on line 159
+2014-11-09T22:26:29+00:00 ERR (3): Notice: Undefined index: postcode  in /Applications/MAMP/htdocs/rullamo/app/code/local/IWD/OnepageCheckout/controllers/IndexController.php on line 653
+2014-11-09T22:26:53+00:00 DEBUG (7): SMTPPro is enabled, sending email in Aschroder_SMTPPro_Model_Email_Template
+2014-11-09T22:26:53+00:00 DEBUG (7): Preparing the Google Apps/Gmail Email transport, email to send with is: admin@rullamo.ru
+2014-11-09T22:26:53+00:00 DEBUG (7): Returning transport
+2014-11-09T22:26:53+00:00 DEBUG (7): About to send email
+2014-11-09T22:26:55+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 31
+2014-11-09T22:26:55+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 32
+2014-11-09T22:26:55+00:00 ERR (3): Notice: Undefined variable: storeId  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/2columns-right.phtml on line 37
+2014-11-09T22:27:06+00:00 ERR (3): Notice: Undefined variable: identifier  in /Applications/MAMP/htdocs/rullamo/app/design/frontend/novaworks/eda_theme/template/page/html/footers/default.phtml on line 158
