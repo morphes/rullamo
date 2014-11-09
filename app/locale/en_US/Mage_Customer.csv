@@ -6,7 +6,7 @@
 "'%value%' appears to be a local network name but local network names are not allowed","'%value%' appears to be a local network name but local network names are not allowed"
 "'%value%' appears to be an IP address, but IP addresses are not allowed","'%value%' appears to be an IP address, but IP addresses are not allowed"
 "'%value%' does not appear to be a valid local network name","'%value%' does not appear to be a valid local network name"
-"* Required Fields","* Required Fields"
+"* Required Fields","* Обязательные Поля"
 "ALL GROUPS","ALL GROUPS"
 "Account Dashboard","Account Dashboard"
 "Account Information","Account Information"

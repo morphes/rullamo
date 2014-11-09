@@ -28,4 +28,8 @@ class Flagbit_Faq_Helper_Data extends Mage_Core_Helper_Abstract
         $config = Mage::getStoreConfig($path, Mage::app()->getStore());
         return $config;
     }
+
+    public function getFaqIndexUrl() {
+        return true;
+    }
 }

@@ -55,7 +55,12 @@ if($preset==1) {
     <div class="page<?php if($box_shadow): echo" box-shadow"; endif?><?php if(!$background_image): echo" no-background"; endif?>">
         <?php echo $this->getChildHtml('header') ?>
         <div class="main-container col1-layout home-content-container">
-        <div class="novaworks-main-content">      	
+        <div class="novaworks-main-content">
+            <?php
+            $filter = new Mage_Widget_Model_Template_Filter();
+            $_widget = $filter->filter('{{widget type="revslider/slider_preview" id="1"}}');
+            echo $_widget;
+            ?>
             <div class="main home-content container">
 				<div class="row columns-layout">
                     <div class="col-main col-md-12">

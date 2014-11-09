@@ -23,10 +23,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="local.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+      <file leaf-file-name="shipping.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/checkout/cart/shipping.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="44" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.8242424" vertical-offset="85" max-vertical-offset="1581">
+            <state line="75" column="206" selection-start="4807" selection-end="4807" vertical-scroll-proportion="-4.7115383" vertical-offset="639" max-vertical-offset="2210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/code/community/Novaworks/Ajax/controllers/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="287" column="68" selection-start="10928" selection-end="10932" vertical-scroll-proportion="0.33242875" vertical-offset="4634" max-vertical-offset="8007">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="media.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/novaworks/imagezoom/media.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="27" selection-start="2685" selection-end="2690" vertical-scroll-proportion="-4.7115383" vertical-offset="741" max-vertical-offset="3774">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="novaworks.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/novaworks/novaworks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="74" selection-start="6298" selection-end="6298" vertical-scroll-proportion="-9.769231" vertical-offset="2806" max-vertical-offset="5423">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mage_Oauth.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Oauth.csv">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="114" column="56" selection-start="6036" selection-end="6036" vertical-scroll-proportion="-10.679245" vertical-offset="1372" max-vertical-offset="2108">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/checkout/cart.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="144" selection-start="5197" selection-end="5197" vertical-scroll-proportion="-4.7115383" vertical-offset="1251" max-vertical-offset="3315">
+              <folding>
+                <marker date="1415566781000" expanded="true" signature="6687:6719" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mage_Persistent.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Persistent.csv">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="40" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.2592592" vertical-offset="0" max-vertical-offset="1190">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mage_Sales.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Sales.csv">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="40" selection-start="826" selection-end="826" vertical-scroll-proportion="-3.8490567" vertical-offset="0" max-vertical-offset="15045">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mage_Wishlist.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Wishlist.csv">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="40" selection-start="368" selection-end="368" vertical-scroll-proportion="-1.6037736" vertical-offset="0" max-vertical-offset="1717">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/errors/default/report.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="47" selection-start="4444" selection-end="4444" vertical-scroll-proportion="-5.673077" vertical-offset="861" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
@@ -42,8 +137,39 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/page/home-page.phtml" />
+        <option value="$PROJECT_DIR$/app/code/community/Openstream/GeoIP/Model/Abstract.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Codnitive/Extifcon/Model/Core/Layout.php" />
+        <option value="$PROJECT_DIR$/app/code/community/Flagbit/Faq/Helper/Data.php" />
+        <option value="$PROJECT_DIR$/app/code/core/Mage/Core/Block/Template.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/skin/frontend/base/default/js/opcheckout.js" />
+        <option value="$PROJECT_DIR$/app/etc/modules/IWD_OnepageCheckout.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/base/default/layout/onepagecheckout.xml" />
+        <option value="$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/novaworks/widgetproductslist/productsscroller.phtml" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Adminhtml.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Bundle.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Catalog.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Checkout.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Customer.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Install.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Persistent.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Sales.csv" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Wishlist.csv" />
+        <option value="$PROJECT_DIR$/errors/default/report.phtml" />
+        <option value="$PROJECT_DIR$/app/locale/en_US/Mage_Oauth.csv" />
+        <option value="$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/checkout/cart.phtml" />
+        <option value="$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/css/styles.css" />
+        <option value="$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/checkout/cart/shipping.phtml" />
         <option value="$PROJECT_DIR$/app/etc/local.xml" />
+        <option value="$PROJECT_DIR$/js/novaworks/novaworks.js" />
+        <option value="$PROJECT_DIR$/app/code/community/Novaworks/Ajax/controllers/IndexController.php" />
       </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <option name="servers">
+      <server deployment_server="84a9c129-8005-4b02-a258-353d40d03316" host="dr" name="Unnamed" port="8888" use_path_mappings="true" validation_dir="$PROJECT_DIR$/../dr/dreamroomer/public" />
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
@@ -81,6 +207,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -109,7 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -123,17 +250,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="etc" />
+              <option name="myItemId" value="novaworks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,6 +269,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../dr/dreamroomer/public" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -160,18 +287,18 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -198,9 +325,428 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/code/community/Flagbit/Faq/Helper/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Core/Block/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="57" selection-start="7395" selection-end="7395" vertical-scroll-proportion="0.0" vertical-offset="4590" max-vertical-offset="6154">
+          <folding>
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Openstream/GeoIP/Model/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="16" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1397" column="0" selection-start="22741" selection-end="22807" vertical-scroll-proportion="0.0" vertical-offset="23487" max-vertical-offset="105077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/css/slicknav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="44" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.8242424" vertical-offset="85" max-vertical-offset="1581">
+        <state line="45" column="44" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/page/home-page.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="89" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2256" column="17" selection-start="40854" selection-end="40854" vertical-scroll-proportion="0.0" vertical-offset="37988" max-vertical-offset="271201">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="36" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1462">
+          <folding>
+            <marker date="1415134419000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Codnitive/Extifcon/Model/Core/Layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="24" selection-start="3992" selection-end="3992" vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="2567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Flagbit/Faq/Helper/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Core/Block/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="57" selection-start="7395" selection-end="7395" vertical-scroll-proportion="0.0" vertical-offset="4590" max-vertical-offset="6154">
+          <folding>
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Openstream/GeoIP/Model/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="16" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1397" column="0" selection-start="22741" selection-end="22807" vertical-scroll-proportion="0.0" vertical-offset="23487" max-vertical-offset="105077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/css/slicknav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="44" selection-start="1658" selection-end="1658" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/page/home-page.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="89" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/css/slicknav.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1397" column="0" selection-start="22741" selection-end="22807" vertical-scroll-proportion="0.0" vertical-offset="23487" max-vertical-offset="105077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Openstream/GeoIP/Model/Abstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="16" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Codnitive/Extifcon/Model/Core/Layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="24" selection-start="3992" selection-end="3992" vertical-scroll-proportion="0.0" vertical-offset="1887" max-vertical-offset="2567">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Core/Block/Template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="57" selection-start="7395" selection-end="7395" vertical-scroll-proportion="0.0" vertical-offset="4590" max-vertical-offset="6154">
+          <folding>
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134373000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Flagbit/Faq/Helper/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="20" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="36" selection-start="2497" selection-end="2497" vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1853">
+          <folding>
+            <marker date="1415134419000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1415134419000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/base/default/js/opcheckout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="0" selection-start="4466" selection-end="4466" vertical-scroll-proportion="0.0" vertical-offset="1734" max-vertical-offset="16456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/etc/modules/IWD_OnepageCheckout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="23" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/layout/onepagecheckout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="62" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Novaworks/WidgetProductsList/Helper/Data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Novaworks/WidgetProductsList/Block/Products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="110" selection-start="3440" selection-end="3443" vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="6120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/core/Mage/Widget/Block/Interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="10" selection-start="1120" selection-end="1120" vertical-scroll-proportion="-5.6538463" vertical-offset="23" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Novaworks/WidgetProductsList/Block/Widget/Products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="146" selection-end="146" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/src/Mage_Widget_Block_Interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="10" selection-start="1120" selection-end="1120" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/novaworks/widgetproductslist/productsscroller.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="28" selection-start="1810" selection-end="1810" vertical-scroll-proportion="-20.26923" vertical-offset="0" max-vertical-offset="2465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Adminhtml.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="40" selection-start="1872" selection-end="1872" vertical-scroll-proportion="-4.6226416" vertical-offset="61" max-vertical-offset="20434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Bundle.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="40" selection-start="74" selection-end="74" vertical-scroll-proportion="-0.3207547" vertical-offset="0" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Catalog.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="40" selection-start="232" selection-end="232" vertical-scroll-proportion="-2.2452831" vertical-offset="0" max-vertical-offset="14178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Checkout.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="40" selection-start="196" selection-end="196" vertical-scroll-proportion="-0.6415094" vertical-offset="0" max-vertical-offset="5797">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Customer.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="40" selection-start="1330" selection-end="1330" vertical-scroll-proportion="-2.5660377" vertical-offset="0" max-vertical-offset="8007">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Install.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="36" selection-start="8812" selection-end="8812" vertical-scroll-proportion="-4.6226416" vertical-offset="1353" max-vertical-offset="2227">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Persistent.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="40" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.2592592" vertical-offset="0" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Sales.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="40" selection-start="826" selection-end="826" vertical-scroll-proportion="-3.8490567" vertical-offset="0" max-vertical-offset="15045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Wishlist.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="40" selection-start="368" selection-end="368" vertical-scroll-proportion="-1.6037736" vertical-offset="0" max-vertical-offset="1717">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/errors/default/report.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="47" selection-start="4444" selection-end="4444" vertical-scroll-proportion="-5.673077" vertical-offset="861" max-vertical-offset="1598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/locale/en_US/Mage_Oauth.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="56" selection-start="6036" selection-end="6036" vertical-scroll-proportion="-10.679245" vertical-offset="1372" max-vertical-offset="2108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/checkout/cart.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="144" selection-start="5197" selection-end="5197" vertical-scroll-proportion="-4.7115383" vertical-offset="1251" max-vertical-offset="3315">
+          <folding>
+            <marker date="1415566781000" expanded="true" signature="6687:6719" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skin/frontend/novaworks/eda_theme/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3526" column="25" selection-start="63751" selection-end="63751" vertical-scroll-proportion="0.41951838" vertical-offset="59611" max-vertical-offset="271201">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/checkout/cart/shipping.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="206" selection-start="4807" selection-end="4807" vertical-scroll-proportion="-4.7115383" vertical-offset="639" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/etc/local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="50" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.6147132" vertical-offset="272" max-vertical-offset="1581">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/novaworks/novaworks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="74" selection-start="6298" selection-end="6298" vertical-scroll-proportion="-9.769231" vertical-offset="2806" max-vertical-offset="5423">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/design/frontend/novaworks/eda_theme/template/novaworks/imagezoom/media.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="27" selection-start="2685" selection-end="2690" vertical-scroll-proportion="-4.7115383" vertical-offset="741" max-vertical-offset="3774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/code/community/Novaworks/Ajax/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="287" column="68" selection-start="10928" selection-end="10932" vertical-scroll-proportion="0.33242875" vertical-offset="4634" max-vertical-offset="8007">
           <folding />
         </state>
       </provider>

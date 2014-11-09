@@ -6,7 +6,7 @@
         <remove name="left"/>
         <remove name="right"/>
         <reference name="root">
-            <action method="setTemplate"><template>page/1column-checkout.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="head">
             <action method="addItem" ifconfig="onepagecheckout/general/enabled"><type>skin_css</type><name>css/onepagecheckout.css</name></action>

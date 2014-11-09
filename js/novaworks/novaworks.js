@@ -178,7 +178,7 @@ function ajaxcart(url,id) {
                         }else{
                             bootbox.alert('<p class="error-msg">' + data.message + '</p>');
                         }   
-                        jQuery(".button-ajax-cart-id-"+id).html('Added');
+                        jQuery(".button-ajax-cart-id-"+id).html('Добавлено');
 
                         setAjaxData(data,false);
                             

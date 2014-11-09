@@ -44,7 +44,7 @@ class Novaworks_Ajax_IndexController extends Mage_Checkout_CartController
 				);
 
 				if (!$cart->getQuote()->getHasError()){
-					$message = $this->__('<span>%s</span> <p>was added to your shopping cart.</p>', Mage::helper('core')->htmlEscape($product->getName()));
+					$message = $this->__('<span>%s</span> <p>добавлено в корзину.</p>', Mage::helper('core')->htmlEscape($product->getName()));
 					$response['status'] = 'SUCCESS';
 					$response['message'] = $message;
 					//New Code Here
@@ -123,7 +123,7 @@ class Novaworks_Ajax_IndexController extends Mage_Checkout_CartController
             );
             if (!$this->_getSession()->getNoCartRedirect(true)) {
                 if (!$cart->getQuote()->getHasError()){
-                    $message = $this->__('<span>%s</span> <p>was added to your shopping cart.</p>', Mage::helper('core')->htmlEscape($item->getProduct()->getName()));
+                    $message = $this->__('<span>%s</span> <p>успешно добавлен в корзину.</p>', Mage::helper('core')->htmlEscape($item->getProduct()->getName()));
 					$response['status'] = 'SUCCESS';
 					$response['message'] = $message;
 					//New Code Here
@@ -148,7 +148,7 @@ class Novaworks_Ajax_IndexController extends Mage_Checkout_CartController
 				$response['message'] = $msg;
         } catch (Exception $e) {
 				$response['status'] = 'ERROR';
-				$response['message'] = $this->__('Cannot add the item to shopping cart.');
+				$response['message'] = $this->__('Не получилось добавить товар в корзину.');
 				Mage::logException($e);
         }
         $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($response));

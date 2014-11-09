@@ -92,7 +92,7 @@
 "Proceed With Automatic Download (%s)","Proceed With Automatic Download (%s)"
 "Provide a complete base URL for SSL connection. For example: %s","Provide a complete base URL for SSL connection. For example: %s"
 "Report All Bugs","Report All Bugs"
-"Required Fields","Required Fields"
+"Required Fields","Обязательные Поля"
 "Response from server isn\'t valid.","Response from server isn\'t valid."
 "Run admin interface with SSL","Run admin interface with SSL"
 "Run this in your shell from Magento root folder:","Run this in your shell from Magento root folder:"

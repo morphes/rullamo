@@ -1,0 +1,167 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+<div class="bottom-bg">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php //echo $this->getChildHtml('header') ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='header-container'>
+     <div class='header' style='height: 110px;width: 149px; float: left;'>
+          <div class='logo'>
+               <a href='/'><?php echo '<img src="'.$this->getSkinUrl('images/logo.png').'"/>'; ?></a>
+          </div>
+     </div>
+     <div class='morphes-col1'>
+          <div class='in-morphes-col1'>
+              <font class='morphes-header'>Поможем оформить</font>
+                   <div class='morphes-text1'>
+                        <div class='in-morphes-text1'>
+                             <?php echo '<img class="morphes-img" src="'.$this->getSkinUrl('images/intex/tel.png').'"/>'; ?>
+                             +7 495 <font class="big-tel">258 00 76</font>
+                        </div>
+                   </div>
+                   <div class='morphes-text2'>
+                        <font class='morphes-text'>c 9<sup>00</sup> до 21<sup>00</sup> ежедневно</font>
+                   </div>
+           </div>
+     </div>
+     <div class='morphes-col2'>
+          <div class='in-morphes-col2'>
+            <font class='morphes-header'>Все формы оплаты</font>
+            <div class='morphes-text3'>
+                 Выбирайте и платите так, <br/>как Вам более удобно.
+            </div>
+          </div>
+     </div>
+     <div class='morphes-col3'>
+          <div class='in-morphes-col3'>
+            <font class='morphes-header'>Обмен/возврат</font>
+            <div class='morphes-text4'>
+                 в течение 14 дней без <br/>
+                 скандалов и экспертиз.
+            </div>
+          </div>
+     </div>
+     <div class='morphes-col4'>
+          <div class='in-morphes-col4'>
+            <font class='morphes-header'>Ответственная доставка</font>
+            <div class='morphes-text5'>
+                 Привезем в удобное для вас время, <br/>
+                 пунктуальные и вежливые курьеры.
+            </div>
+          </div>
+     </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------------->
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">					
+                    <?php echo $this->getChildHtml('global_messages') ?>
+					<?php echo $this->getChildHtml('home_content') ?>
+<div class="main-description">
+<div class="main-content-top"><div><div>&nbsp;</div></div></div>
+<div class="main-border-left">
+	<div class="main-border-right">                        	
+	<div class="main-content">
+					<?php echo $this->getChildHtml('breadcrumbs') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+</div>
+</div></div>
+<div class="main-content-bottom"><div><div>&nbsp;</div></div></div>
+</div>		
+
+                </div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

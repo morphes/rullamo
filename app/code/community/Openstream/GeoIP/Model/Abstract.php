@@ -41,7 +41,9 @@ class Openstream_GeoIP_Model_Abstract
             $founded_id = $find_ip['geoip_id'];
             $model->load($founded_id);
             $data['code'] = $model->getCityCode();
-            $data['city'] = $only_cities[$data['code']];
+            if(isset($only_cities[$data['code']])) {
+                $data['city'] = $only_cities[$data['code']];
+            }
             $found = 'yes';
         }
     	$this->data = $data;

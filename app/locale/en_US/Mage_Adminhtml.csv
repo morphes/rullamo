@@ -16,7 +16,7 @@
 "(You have to increase php memory_limit before changing this value)","(You have to increase php memory_limit before changing this value)"
 "(\\t for tab)","(\\t for tab)"
 "* - If indexing is in progress, it will be killed and new indexing process will start.","* - If indexing is in progress, it will be killed and new indexing process will start."
-"* Required Fields","* Required Fields"
+"* Required Fields","* Обязательные поля"
 "- Click on any of the time parts to increase it","- Click on any of the time parts to increase it"
 "- Hold mouse button on any of the above buttons for faster selection.","- Hold mouse button on any of the above buttons for faster selection."
 "- Use the %s buttons to select month","- Use the %s buttons to select month"
